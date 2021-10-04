@@ -1,0 +1,13 @@
+@mixin font($font_name, $font_style, $font_weight, $font_file)
+	@font-face
+		font-family: $font_name
+		font-style: $font_style
+		font-weight: $font_weight
+		font-display: swap
+		src: url('../fonts/#{$font_file}.woff') format('woff'), url('../fonts/#{$font_file}.woff2') format('woff2')
+
+@include font('Futura PT', normal, 400, 'FuturaPT-Book')
+@include font('Futura PT', normal, 500, 'FuturaPT-Demi')
+@include font('Futura PT', normal, 600, 'FuturaPT-Medium')
+@include font('Futura PT', normal, 700, 'FuturaPT-Heavy')
+@include font('Futura PT', normal, 800, 'FuturaPT-Bold')

@@ -1,0 +1,41 @@
+@import '../helpers/helpers'
+
+/* ==========================================================================
+	 Import Bootstrap components
+	 ========================================================================== */
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss'
+@import 'node_modules/bootstrap/scss/bootstrap-grid.scss'
+@import 'node_modules/bootstrap/scss/_transitions.scss'
+@import 'node_modules/bootstrap/scss/_modal.scss'
+
+
+/* ==========================================================================
+	 Bootstrap Grid
+	 ========================================================================== */
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl
+	padding-left: 30px
+	padding-right: 30px
+	+media-breakpoint-down(xs)
+		padding-left: 15px
+		padding-right: 15px
+
+[class*="col"]
+	min-width: 0 // Fix Swiper width in Bootstrap columns
+
+.row-items-60
+	> [class*="col"]
+		margin-bottom: 60px
+		+media-breakpoint-down(xs)
+			margin-bottom: 40px
+
+.row-items-40
+	> [class*="col"]
+		margin-bottom: 40px
+		+media-breakpoint-down(xs)
+			margin-bottom: 30px
+
+.row-items-30
+	> [class*="col"]
+		margin-bottom: 30px
+	+media-breakpoint-down(xs)
+		margin-bottom: 20px
