@@ -5,7 +5,7 @@ let preprocessor = 'sass', // Preprocessor (sass, scss, less, styl)
 		imageswatch  = 'jpg,jpeg,png,webp,svg', // List of images extensions for watching & compression (comma separated)
 		sourceDir    = 'app', // Source directory path without «/» at the end
 		projectDir   = 'dist', // Dist directory path without «/» at the end
-		online       = true; // If «false» - Browsersync will work offline without internet connection
+		online       = false; // If «false» - Browsersync will work offline without internet connection
 
 /**
 * Project path
@@ -19,7 +19,7 @@ let path = {
 		fonts: projectDir + '/fonts/'
 	},
 	src: {
-		html: [sourceDir + '/*.html', '!' + sourceDir + '/_*.html'],
+		pug: [sourceDir + '/pug/pages/*.pug'],
 		css: sourceDir + '/' + preprocessor +'/**/*.' + preprocessor,
 		// js: [sourceDir + '/js/app.js', sourceDir + '/js/vendors.js'],
 		js: sourceDir + '/js/*.js',
@@ -27,7 +27,7 @@ let path = {
 		fonts: sourceDir + '/fonts/*.ttf'
 	},
 	watch: {
-		html: sourceDir + '/**/*.html',
+		pug: sourceDir + '/pug/**/*.pug',
 		css: sourceDir + '/' + preprocessor +'/**/*.' + preprocessor,
 		js: sourceDir + '/js/**/*.js',
 		img: sourceDir + '/images/**/*.{' + imageswatch + '}',
@@ -46,6 +46,7 @@ const browsersync  = require('browser-sync').create();
 const babel        = require('gulp-babel');
 const fileinclude  = require('gulp-file-include');
 const del          = require('del');
+const pug          = require('gulp-pug');
 const sass         = require('gulp-sass');
 const scss         = require('gulp-sass');
 const cleancss     = require('gulp-clean-css');
@@ -82,10 +83,12 @@ function clean() {
 /**
 * HTML watch function
 */
-function html() {
-	return src(path.src.html)
-		.pipe(fileinclude())
-		.pipe(dest(path.build.html))
+function pug2html() {
+	return gulp.src(path.src.pug)
+		.pipe(pug({
+			pretty: '\t'
+		}))
+		.pipe(gulp.dest(path.build.html))
 		.pipe(browsersync.stream())
 }
 
@@ -103,12 +106,12 @@ function styles() {
 }
 
 /**
-* JS watch function
+* JavaScript watch function
 */
 function scripts() {
 	return src(path.src.js)
 		.pipe(fileinclude())
-		// .pipe(babel())
+		.pipe(babel())
 		.pipe(dest(path.build.js))
 		.pipe(browsersync.stream())
 }
@@ -174,18 +177,20 @@ gulp.task('fonts', function() {
 		.pipe(dest(path.build.fonts))
 })
 
+
+
 /**
 * Watch files function
 */
 function watchFiles() {
-	gulp.watch([path.watch.html], { usePolling: true }, html)
+	gulp.watch([path.watch.pug], { usePolling: true }, pug2html)
 	gulp.watch([path.watch.css], { usePolling: true }, styles)
 	gulp.watch([path.watch.js], { usePolling: true }, scripts)
 	gulp.watch([path.watch.img], { usePolling: true }, images)
 	gulp.watch([path.watch.svgIcons], { usePolling: true }, svgSprite)
 }
 
-const build = gulp.series(clean, gulp.parallel(scripts, styles, html, images, svgSprite));
+const build = gulp.series(clean, gulp.parallel(scripts, styles, pug2html, images, svgSprite));
 const watch = gulp.parallel(build, watchFiles, browserSync);
 
 exports.svgSprite     = svgSprite;
@@ -194,7 +199,7 @@ exports.clean         = clean;
 exports.scripts       = scripts;
 // exports.scriptsMinify = scriptsMinify;
 exports.styles        = styles;
-exports.html          = html;
+exports.pug2html      = pug2html;
 exports.build         = build;
 exports.watch         = watch;
 exports.default       = watch;
