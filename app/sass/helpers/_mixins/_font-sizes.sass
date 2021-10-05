@@ -1,5 +1,9 @@
 // Font sizes mixin
 @mixin font-size($size)
+	@if $size == 'xxl'
+		font-size: 76px
+		line-height: 1.15
+
 	@if $size == 'xl'
 		font-size: 52px
 		line-height: 1.3

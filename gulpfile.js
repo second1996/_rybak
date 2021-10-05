@@ -43,6 +43,7 @@ let path = {
 const {src, dest}  = require('gulp');
 const gulp         = require('gulp');
 const browsersync  = require('browser-sync').create();
+const notify       = require('gulp-notify');
 const babel        = require('gulp-babel');
 const fileinclude  = require('gulp-file-include');
 const del          = require('del');
@@ -87,6 +88,12 @@ function pug2html() {
 	return gulp.src(path.src.pug)
 		.pipe(pug({
 			pretty: '\t'
+		}))
+		.on('error', notify.onError(function (error) {
+			return {
+				title: 'Pug',
+				message: error.message
+			};
 		}))
 		.pipe(gulp.dest(path.build.html))
 		.pipe(browsersync.stream())

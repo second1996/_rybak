@@ -4,5 +4,12 @@ block vars
 	- var title = 'Головна сторінка'
 
 block content
-	main
-		div.container
+	main.page-main
+
+		+b.SECTION.h-heroes
+			+e.content
+				.container
+					h1.title.text-white.text-xxl ТМ "Рибак"<br> насолоджуйся традиціями
+					p.descr.text-white Наша продукція – це не лише якісна сировина, сучасне обладнання, дотримання українських та світових стандартів. Це передусім любов до своєї праці і до українців, для яких виготовляється продукція.
+			+e.photo
+				img(src="./images/heroes-photo.jpg" alt="ТМ \"Рибак\" насолоджуйся традиціями")

@@ -1,3 +1,35 @@
 block header
-	header
-		
+	+b.HEADER.header
+		.container
+			+e.inner
+				+b.logo
+					+e.link(href="index.html")
+						+e.img(src="./images/logo.svg" alt="ТМ \"Рибак\"")
+				+b.navigation
+					+e.UL.list
+						+e.item
+							+e.link(href="#") Компанія
+							+e.UL.dropdown
+								li
+									a(href="#") Про нас
+								li
+									a(href="#") Виробництво
+						+e.item
+							+e.link(href="#") Продукція
+						+e.item
+							+e.link(href="#") Магазини
+						+e.item
+							+e.link(href="#") Співпраця
+						+e.item
+							+e.link(href="#") Контакти
+				+b.contacts
+					+e.main
+						.phone
+							+phone("+38 (067) 340-58-01")
+						.email
+							+email("info@tmrybak.com.ua")
+					+e.social
+						a(href="https://www.facebook.com/")
+							+icon('facebook')
+						a(href="https://www.instagram.com/")
+							+icon('instagram')

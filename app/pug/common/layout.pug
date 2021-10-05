@@ -1,20 +1,29 @@
+include ../bemto/bemto
 include ../mixins
+
+-
+	set_bemto_settings({
+		flat_elements: false,
+		prefix: '',
+		element: '-',
+		modifier: '--'
+	})
 
 block vars
 
 doctype html
-html(lang='uk')
+html(lang="uk")
 	block head
 		head
-			meta(charset='utf-8')
+			meta(charset="utf-8")
 			title= title
-			meta(name='description' content='Корпоративний сайт для компанії')
-			meta(name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1')
+			meta(name="description" content="Корпоративний сайт для компанії")
+			meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1")
 
-			link(rel='icon' href='./images/favicon.png')
+			link(rel="icon" href="./images/favicon.png")
 
-			link(rel='stylesheet' href='./css/vendors/bootstrap.css')
-			link(rel='stylesheet' href='./css/main.css')
+			link(rel="stylesheet" href="./css/vendors/bootstrap.css")
+			link(rel="stylesheet" href="./css/main.css")
 	body
 		block header
 			include header
@@ -26,9 +35,9 @@ html(lang='uk')
 		block footer
 			include footer
 		|
-		script(src='/js/jquery.js')
-		script(src='/js/bootstrap.bundle.js')
-		script(src='/js/vendors.js')
-		script(src='/js/app.js')
-		script(src='/js/sliders.js')
+		script(src="/js/jquery.js")
+		script(src="/js/bootstrap.bundle.js")
+		script(src="/js/vendors.js")
+		script(src="/js/app.js")
+		script(src="/js/sliders.js")
 		block scripts

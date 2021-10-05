@@ -43,6 +43,7 @@
 	},
 	"dependencies": {
 		"@fancyapps/fancybox": "^3.5.7",
+		"gulp-notify": "^4.0.0",
 		"jquery": "^3.6.0"
 	}
 }
