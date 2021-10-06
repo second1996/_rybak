@@ -15,3 +15,40 @@ block content
 				//- img(src="./images/heroes-photo.jpg" alt="ТМ \"Рибак\" насолоджуйся традиціями")
 				video(autoplay muted playsinline loop)
 					source(src="https://rodynna-kovbaska.ua/themes/rk/assets/static/v/rk-top.mp4" type="video/mp4")
+
+		+b.SECTION.h-advantages.section.mt-120
+			.container
+				.section-heading.mb-48
+					h3.suptitle Що ми робимо?
+					h2.title РИБАК — це
+				.row.row-items-30.row-cols-3
+					.col
+						+e.item
+							.picture.mb-24
+								img(src="./images/icons/campfire.svg" alt="Копчення на дровах")
+								+icon('icon-mask')
+							h2.title.mb-12.text-sm.w-demi Копчення на дровах
+							p.descr.mb-0 Всі ковбаси отримали найвищу оцінку експертів, адже основна частина їх виготовляється за ДСТУ із використанням лише високоякісної сировини.
+					.col
+						+e.item
+							.picture.mb-24
+								img(src="./images/icons/meat.svg" alt="Власне виробництво")
+								+icon('icon-mask')
+							h2.title.mb-12.text-sm.w-demi Власне виробництво
+							p.descr.mb-0 Доставка продукції клієнтам здійснюється в будь-яку точку України транспортом зі спеціалізованим холодильним обладнанням, що дає змогу зберегти всі якісні характеристики продукції.
+					.col
+						+e.item
+							.picture.mb-24
+								img(src="./images/icons/delivery.svg" alt="Доставка два рази на день")
+								+icon('icon-mask')
+							h2.title.mb-12.text-sm.w-demi Доставка два рази на день
+							p.descr.mb-0 Запрошуємо до співпраці магазини, супермаркети, гуртівні, та дилерів. Пропонуємо вигідні умови співпраці. Широкий асортимент м’ясних та ковбасних виробів, більше 150 найменувань.
+
+		+b.SECTION.h-gallery.section.mt-120
+			.container
+				+e.content
+					h2.mb-24.text-xl Фотогалерея
+					.descr
+						p Доставка продукції клієнтам здійснюється в будь-яку точку України транспортом зі спеціалізованим холодильним обладнанням, що дає змогу зберегти всі якісні характеристики продукції.
+					.button
+						a(href="#").btn Переглянути

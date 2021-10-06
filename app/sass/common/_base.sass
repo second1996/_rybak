@@ -1,7 +1,7 @@
 @import '../helpers/helpers'
 
 ::selection
-	background-color: #000
+	background-color: $red-200
 	color: $white
 
 // html, body
@@ -11,7 +11,7 @@ body
 	overflow-x: hidden
 	position: relative
 	min-width: 320px
-	color: #000
+	color: $text
 	font-family: $userfont
 	font-size: 20px
 	font-weight: $w-book
@@ -45,7 +45,12 @@ img
 	height: auto
 
 h1, h2, h3, h4, h5, h6
-	font-weight: $w-bold
+	font-weight: $w-heavy
+
+h1
+	+font-size(xxl)
+h2
+	+font-size(xl)
 
 hr
 	display: block

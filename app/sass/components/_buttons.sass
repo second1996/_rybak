@@ -2,29 +2,45 @@
 	 Base customize for button
 	 ========================================================================== */
 .btn
+	overflow: hidden
+	position: relative
+	z-index: 1
 	display: inline-flex
 	align-items: center
 	justify-content: center
-	height: 48px
-	padding-left: 40px
-	padding-right: 40px
-	border-radius: 4px
-	border: 1px solid $trsp
-	background-color: $trsp
-	color: #000
+	height: 64px
+	padding:
+		left: 48px
+		right: 48px
+	border-radius: 32px
+	border: none
+	background: $trsp
+	color: $white
 	font-family: inherit
-	font-size: 15px
-	font-weight: 500
+	font-size: 18px
+	font-weight: $w-book
 	line-height: 1
 	text-align: center
 	white-space: nowrap
 	outline: none !important
 	user-select: none
 	transition: $trs
+	&::before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		z-index: -1
+		background: $red-200 url('../images/button-bg.svg') no-repeat center/cover
+		transition: transform .3s ease
 	&:hover
-		color: inherit
+		color: $white
+		&::before
+			transform: scale(1.5) rotate(10deg)
 	&:focus
-		box-shadow: 0 0 0 4px rgba(#000, 0.25)
+		box-shadow: 0 0 0 4px rgba($red-200, 0.2)
 	&:disabled
 		background-color: #999
 		color: #000
