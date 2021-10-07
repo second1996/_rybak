@@ -1,0 +1,86 @@
+.footer
+	margin-top: 160px
+	background-color: #3F3F3F
+	&-main
+		padding-top: 68px
+		padding-bottom: 50px
+
+	&-title
+		padding-top: 18px
+		margin-bottom: 40px
+
+	&-suptitle
+		display: block
+		color: #AAAAAA
+		+font-size(xxs)
+	
+	&-info
+		margin-right: 130px
+		.logo
+			&-link
+				display: inline-block
+			&-img
+				width: 100%
+				max-height: 58px
+		.adress,
+		.social
+			margin-top: 30px
+		.adress
+			&-link
+				display: inline-block
+		.social
+			&-title
+				margin-bottom: 8px
+			&-list
+				display: inline-flex
+				align-items: center
+				> a
+					display: inline-flex
+					align-items: center
+					justify-content: center
+					width: 36px
+					height: 36px
+					border-radius: 3px
+					background-color: $red-200
+					color: $white
+					font-size: 18px
+					&:not(:last-child)
+						margin-right: 12px
+					&:hover
+						background-color: $lightred
+						color: $red-200
+
+	&-nav
+		&-list
+			> li
+				margin-bottom: 12px
+				> a
+					display: inline-block
+					color: rgba($white, 0.7)
+					+font-size(xs)
+					&:hover
+						color: $white
+
+	&-bottom
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding:
+			top: 28px
+			bottom: 28px
+		border-top: 1px solid rgba($white, 0.15)
+
+	&-copyright
+		color: #A0A0A0
+		font-size: 16px
+
+	&-madeby
+		font-size: 16px
+		text-align: right
+		> a
+			color: $white
+			border-bottom: 1px solid $trsp
+			&:hover
+				border-bottom-color: rgba($white, 0.25)
+			> span
+				color: red

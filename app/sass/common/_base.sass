@@ -38,6 +38,10 @@ a
 	&:hover
 		color: $red-200
 		text-decoration: none
+	&.link-white
+		color: $white
+		&:hover
+			color: rgba($white, 0.7)
 
 img
 	display: inline-block
@@ -45,6 +49,7 @@ img
 	height: auto
 
 h1, h2, h3, h4, h5, h6
+	color: $dark
 	font-weight: $w-heavy
 
 h1
@@ -90,3 +95,10 @@ hr
 		border-top-color: $trsp
 		transform-origin: 50%
 		animation: spinner 1s infinite linear
+
+.rybak-pattern
+	user-select: none
+	pointer-events: none
+	width: 60px
+	height: 74px
+	background-image: url('../images/pattern.svg')

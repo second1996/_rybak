@@ -10,3 +10,14 @@ mixin phone(number)
 //- Email formater
 mixin email(mail)
 	a(href="mailto:" + mail) #{mail}
+
+//- Button
+mixin btn(link, text)
+	a(href=link).btn #{text}
+
+//- Button with arrow
+mixin btn-arrow(link, text)
+	a(href=link).btn-arrow
+		span #{text}
+		em
+			+icon('arrow')
