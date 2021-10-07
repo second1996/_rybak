@@ -1,42 +1,82 @@
 +b.FOOTER.footer
 	.container
-		+e.main.row
-			+e.info.col-3
-				+b.logo
-					+e.A.link(href="index.html")
-						+e.IMG.img(src="./images/logo-light.svg" alt="ТМ \"Рибак\"")
-				+b.adress
-					+e.SPAN.title.footer-suptitle Головний офіс
-					+e.A.link.link-white(href="#") Івано-Франківська обл., Тисменицький р-н, с. Ямниця, вул. Галицька, 2Г.
-				+b.social
-					+e.SPAN.title.footer-suptitle Ми в соцмережах
-					+e.list
-						a(href="https://www.facebook.com/")
-							+icon('facebook')
-						a(href="https://www.instagram.com/")
-							+icon('instagram')
-			+b.footer-nav.col-4
-				h5.footer-title.text-white.text-sm Навігація по сайту
-				.row.row-cols-2
-					.col
-						+e.UL.list
-							li
-								a(href="#") Про нас
-							li
-								a(href="#") Продукція
-							li
-								a(href="#") Програма лояльності
-							li
-								a(href="#") Мережа магазинів
-					.col
-						+e.UL.list
-							li
-								a(href="#") Вакансії
-							li
-								a(href="#") Новини
-							li
-								a(href="#") Контакти
-		+e.bottom
-			+e.copyright ТМ “Рибак” © 2008-2021. Всі права захищені.
-			+e.madeby
-				a(href="https://aprostir.com" target="_blank") Made with <span>❤</span> by aprostir
+		+e.inner
+
+			+e.main.row.justify-content-between
+				+e.info.col-3
+					+b.logo
+						+e.A.link(href="index.html")
+							+e.IMG.img(src="./images/logo-light.svg" alt="ТМ \"Рибак\"")
+					+b.adress
+						+e.SPAN.title.footer-suptitle Головний офіс
+						+e.A.link.link-white(href="https://goo.gl/maps/BrXCx8HPzcSQwxHd7" target="_blank" rel="nofollow noopener") Івано-Франківська обл., Тисменицький р-н, с. Ямниця, вул. Галицька, 2Г.
+					+b.social
+						+e.SPAN.title.footer-suptitle Ми в соцмережах
+						+e.list
+							a(href="https://www.facebook.com/")
+								+icon('facebook')
+							a(href="https://www.instagram.com/")
+								+icon('instagram')
+
+				+b.footer-nav.col-4
+					h5.footer-title.text-white.text-sm Навігація по сайту
+					.row.row-cols-2
+						.col
+							+e.UL.list
+								li
+									a(href="#") Про нас
+								li
+									a(href="#") Продукція
+								li
+									a(href="#") Програма лояльності
+								li
+									a(href="#") Мережа магазинів
+						.col
+							+e.UL.list
+								li
+									a(href="#") Вакансії
+								li
+									a(href="#") Новини
+								li
+									a(href="#") Контакти
+
+				+b.footer-contacts.col-4
+					h5.footer-title.text-white.text-sm Контактна інформація
+					.row.row-cols-2.row-items-30
+						.col
+							+e.item
+								+e.SPAN.title.footer-suptitle Відділ збуту
+								.phone
+									+phone("067 635 70 42")
+								.phone
+									+phone("067 341 03 00")
+								.email
+									+email("sale@tmrybak.com.ua")
+						.col
+							+e.item
+								+e.SPAN.title.footer-suptitle Відділ закупок сировини
+								.phone
+									+phone("067 635 70 89")
+								.email
+									+email("postach@tmrybak.com.ua")
+						.col
+							+e.item
+								+e.SPAN.title.footer-suptitle Адміністрація
+								.phone
+									+phone("067 340 58 01")
+								.email
+									+email("info@tmrybak.com.ua")
+						.col
+							+e.item
+								+e.SPAN.title.footer-suptitle Відділ персоналу
+								.phone
+									+phone("095 147 48 71")
+								.email
+									+email("hr@tmrybak.com.ua")
+
+			+e.bottom
+				+e.copyright ТМ “Рибак” © 2008-2021. Всі права захищені.
+				+e.madeby
+					a(href="https://aprostir.com" target="_blank") Made with <span>❤</span> by aprostir
+
+include mobile-menu

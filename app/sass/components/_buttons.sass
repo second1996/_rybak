@@ -1,21 +1,14 @@
 /* ==========================================================================
 	 Base customize for button
 	 ========================================================================== */
-.btn
-	overflow: hidden
-	position: relative
-	z-index: 1
+button, .btn
+	user-select: none
 	display: inline-flex
 	align-items: center
 	justify-content: center
-	height: 64px
-	padding:
-		left: 48px
-		right: 48px
 	border-radius: 32px
 	border: none
 	background: $trsp
-	color: $white
 	font-family: inherit
 	font-size: 18px
 	font-weight: $w-book
@@ -23,8 +16,22 @@
 	text-align: center
 	white-space: nowrap
 	outline: none !important
-	user-select: none
 	transition: $trs
+	&:focus
+		box-shadow: 0 0 0 4px rgba($red-200, 0.2)
+	&:disabled
+		background-color: #999
+		color: $dark
+
+.btn
+	overflow: hidden
+	position: relative
+	z-index: 1
+	height: 64px
+	padding:
+		left: 48px
+		right: 48px
+	color: $white
 	&::before
 		content: ''
 		position: absolute
@@ -39,11 +46,6 @@
 		color: $white
 		&::before
 			transform: scale(1.5) rotate(10deg)
-	&:focus
-		box-shadow: 0 0 0 4px rgba($red-200, 0.2)
-	&:disabled
-		background-color: #999
-		color: #000
 
 
 /* ==========================================================================
@@ -85,3 +87,32 @@
 			transition: transform .3s ease
 		> .icon
 			fill: $white
+
+
+/* ==========================================================================
+	 Burger button
+	 ========================================================================== */
+.btn-burger
+	border-radius: 0
+	color: $dark
+	font-size: 32px
+	&:hover
+		color: $red-200
+	&:focus
+		box-shadow: none
+
+
+/* ==========================================================================
+	 Close button
+	 ========================================================================== */
+.btn-close
+	border-radius: 0
+	color: $dark
+	padding: 0
+	font-size: 18px
+	&:hover
+		color: $red-200
+	&:focus
+		box-shadow: none
+	&:active
+		transform: scale(0.9)

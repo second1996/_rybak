@@ -1,6 +1,21 @@
 .footer
+	overflow: hidden
 	margin-top: 160px
 	background-color: #3F3F3F
+	&-inner
+		position: relative
+		&::before
+			content: ''
+			pointer-events: none
+			position: absolute
+			top: -52px
+			margin-bottom: 15px
+			right: -110px
+			width: 530px
+			height: 580px
+			background: url('../images/rybak-symbol.svg') no-repeat top left / contain
+			opacity: 0.03
+
 	&-main
 		padding-top: 68px
 		padding-bottom: 50px
@@ -8,6 +23,7 @@
 	&-title
 		padding-top: 18px
 		margin-bottom: 40px
+		line-height: 1.3
 
 	&-suptitle
 		display: block
@@ -15,7 +31,7 @@
 		+font-size(xxs)
 	
 	&-info
-		margin-right: 130px
+		margin-right: 90px
 		.logo
 			&-link
 				display: inline-block
@@ -55,11 +71,56 @@
 			> li
 				margin-bottom: 12px
 				> a
+					position: relative
 					display: inline-block
 					color: rgba($white, 0.7)
-					+font-size(xs)
+					font-size: 18px
+					line-height: 1.3
+					&::before
+						content: ''
+						position: absolute
+						top: 0
+						left: -12px
+						width: 3px
+						height: 100%
+						background-color: $red-200
+						opacity: 0
+						transform: scaleY(0)
+						transition: $trs
 					&:hover
 						color: $white
+						&::before
+							opacity: 1
+							transform: none
+
+	&-contacts
+		&-title
+			margin-bottom: 8px
+		&-item
+			.phone > a
+				font-weight: $w-heavy
+			.email > a
+				+font-size(xxs)
+			.phone,
+			.email
+				> a
+					color: $white
+					&::before
+						content: ''
+						position: absolute
+						top: 0
+						left: -12px
+						width: 3px
+						height: 100%
+						background-color: $red-200
+						opacity: 0
+						transform: scaleY(0)
+						transition: $trs
+					&:hover
+						color: $white
+						&::before
+							opacity: 1
+							transform: none
 
 	&-bottom
 		display: flex

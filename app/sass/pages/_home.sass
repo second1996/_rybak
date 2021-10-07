@@ -8,7 +8,7 @@
 		align-items: center
 		height: 100%
 		.title
-			max-width: 80%
+			max-width: 90%
 			margin-bottom: 32px
 			animation: fadeInUp 1s ease 0.25s both
 		.descr
@@ -71,11 +71,21 @@
 			height: 440px
 			border-radius: 6px
 			object-fit: cover
+			+media-breakpoint-down(xl)
+				width: 300px
+				height: 400px
+			+media-breakpoint-down(lg)
+				width: 270px
+				height: 370px
 		.photo-01
 			top: -50px
 			z-index: 1
+			+media-breakpoint-down(lg)
+				top: 0
 		.photo-02
 			margin-left: 60px
+			+media-breakpoint-down(lg)
+				display: none
 		.rybak-pattern
 			position: absolute
 			left: -75px
@@ -83,8 +93,14 @@
 			width: 600px
 			height: 226px
 			opacity: 0.7
+			+media-breakpoint-down(lg)
+				display: none
 	&-content
 		max-width: 580px
 		padding-left: 90px
+		+media-breakpoint-down(xl)
+			padding-left: 30px
+		+media-breakpoint-down(lg)
+			max-width: 100%
 
 

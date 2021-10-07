@@ -35,13 +35,51 @@ $(document).ready(function() {
 	 * Smooth scroll (anchors)
 	 *-------------------------------------------------------------------------------------------------------------------------------------------
 	*/
-	$('a[data-anchor]').bind('click.smoothscroll', function(){
+	$('a[data-anchor]').bind('click.smoothscroll', function() {
 		var target = $(this).attr('href'),
 				bl_top = $(target).offset().top - 75;
 
 		$('body, html').animate({scrollTop: bl_top}, 1000)
 
 		return false
+	})
+
+
+	/**
+	*-------------------------------------------------------------------------------------------------------------------------------------------
+	* Site header: Toggle mobile menu
+	*-------------------------------------------------------------------------------------------------------------------------------------------
+	*/
+	function mmenuBackdrop() {
+		if (!$('.mmenu-backdrop').length) {
+			$('body').append('<div class="mmenu-backdrop fade"></div>')
+			$('.mmenu-backdrop').delay(5).queue(function() {
+				$(this).addClass('show').dequeue()
+				$(this).on('click', function () {
+					mmenuBackdrop()
+					$('body').removeClass('lock-scroll')
+					$('.mmenu').removeClass('_is-active')
+				})
+			})
+		} else {
+			$('.mmenu-backdrop').remove()
+		}
+	}
+
+	// Open menu
+	$('.header .menu-burger .btn-burger').on('click', function() {
+		mmenuBackdrop()
+
+		$('body').addClass('lock-scroll')
+		$('.mmenu').addClass('_is-active')
+	})
+
+	// Close menu
+	$('.mmenu .mmenu-heading .btn-close').on('click', function() {
+		mmenuBackdrop()
+
+		$('body').removeClass('lock-scroll')
+		$('.mmenu').removeClass('_is-active')
 	})
 
 })

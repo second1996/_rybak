@@ -1,0 +1,55 @@
++b.mmenu
+	+e.wrapper
+
+		+e.heading
+			.title.text-sm Меню
+			.close
+				button.btn-close
+					+icon('close')
+
+		+e.main
+			+b.menu
+				+e.UL.list
+					+e.item.menu-item-has-children
+						+e.link(href="#") Компанія
+						+e.UL.dropdown
+							li
+								a(href="#") Про нас
+							li
+								a(href="#") Виробництво
+					+e.item.menu-item-has-children
+						+e.link(href="#") Продукція
+						+e.UL.dropdown
+							li
+								a(href="#") Свіже м’ясо
+							li
+								a(href="#") Напівфабрикати
+							li
+								a(href="#") Готова продукція
+					+e.item
+						+e.link(href="#") Магазини
+					+e.item.menu-item-has-children
+						+e.link(href="#") Співпраця
+						+e.UL.dropdown
+							li
+								a(href="#") Партнерам
+							li
+								a(href="#") Постачальникам
+							li
+								a(href="#") Нерухомість
+							li
+								a(href="#") Реклама
+					+e.item
+						+e.link(href="#") Контакти
+
+			+b.contacts
+				+e.main
+					.phone
+						+phone("+38 (067) 340-58-01")
+					.email
+						+email("info@tmrybak.com.ua")
+				+e.social
+					a(href="https://www.facebook.com/")
+						+icon('facebook')
+					a(href="https://www.instagram.com/")
+						+icon('instagram')
