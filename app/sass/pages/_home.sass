@@ -3,6 +3,12 @@
 	position: relative
 	height: calc(100vh - 100px)
 	min-height: 600px
+	+media-breakpoint-down(md)
+		max-height: 900px
+	+media-breakpoint-down(sm)
+		height: calc(100vh - 70px)
+		min-height: 500px
+		max-height: 640px
 	&-content
 		display: flex
 		align-items: center
@@ -16,6 +22,10 @@
 			margin-bottom: 0
 			font-size: 22px
 			animation: fadeInUp 1s ease 0.25s both
+			+media-breakpoint-down(sm)
+				font-size: 20px
+			+media-breakpoint-down(xs)
+				font-size: 18px
 
 	&-bg
 		position: absolute
@@ -41,6 +51,19 @@
 
 // Section: Advantages
 .h-advantages
+	&-pattern
+		position: relative
+		display: inline-block
+		.r-pattern
+			position: absolute
+			left: 100%
+			bottom: 0
+			width: 100vw
+			height: 96px
+			margin-left: 50px
+			opacity: 0.7
+			+media-breakpoint-down(lg)
+				display: none
 	&-item
 		.picture
 			position: relative
@@ -60,10 +83,13 @@
 				height: 100%
 				fill: $red-200
 
+
 // Section: Gallery
 .h-gallery
 	&-photos
 		display: flex
+		+media-breakpoint-down(sm)
+			margin-bottom: 40px
 		.photo-01,
 		.photo-02
 			position: relative
@@ -74,24 +100,28 @@
 			+media-breakpoint-down(xl)
 				width: 300px
 				height: 400px
-			+media-breakpoint-down(lg)
-				width: 270px
-				height: 370px
 		.photo-01
 			top: -50px
 			z-index: 1
 			+media-breakpoint-down(lg)
 				top: 0
+				width: 360px
+				height: 440px
+			+media-breakpoint-down(md)
+				width: 270px
+				height: 370px
+			+media-breakpoint-down(sm)
+				width: 100%
 		.photo-02
 			margin-left: 60px
 			+media-breakpoint-down(lg)
 				display: none
-		.rybak-pattern
+		.r-pattern
 			position: absolute
-			left: -75px
-			bottom: 0
+			left: -70px
+			bottom: 10px
 			width: 600px
-			height: 226px
+			height: 192px
 			opacity: 0.7
 			+media-breakpoint-down(lg)
 				display: none
@@ -102,5 +132,14 @@
 			padding-left: 30px
 		+media-breakpoint-down(lg)
 			max-width: 100%
+		+media-breakpoint-down(sm)
+			padding-left: 0
 
+
+// Section: News
+.h-news
+	&-heading
+		.button
+			+media-breakpoint-down(xs)
+				margin-top: 8px
 

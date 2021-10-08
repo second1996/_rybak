@@ -16,6 +16,8 @@ body
 	font-size: 20px
 	font-weight: $w-book
 	line-height: $lineheight
+	+media-breakpoint-down(xs)
+		font-size: 18px
 	&.lock-scroll
 		overflow: hidden
 		height: 100%
@@ -96,7 +98,7 @@ hr
 		transform-origin: 50%
 		animation: spinner 1s infinite linear
 
-.rybak-pattern
+.r-pattern
 	user-select: none
 	pointer-events: none
 	width: 60px

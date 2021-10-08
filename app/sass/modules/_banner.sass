@@ -1,4 +1,9 @@
 .r-banner
+	+media-breakpoint-down(xs)
+		padding:
+			top: 45px
+			bottom: 45px
+		background-color: $lightblue
 	&-inner
 		overflow: hidden
 		position: relative
@@ -6,20 +11,49 @@
 		padding: 50px 50px 75px
 		border-radius: 6px
 		background-color: $lightblue
+		+media-breakpoint-down(md)
+			padding-bottom: 50px
+		+media-breakpoint-down(sm)
+			padding: 30px
+		+media-breakpoint-down(xs)
+			padding: 0
+			background-color: $trsp
 	&-content
 		max-width: 600px
 		.title
 			margin-bottom: 16px
 			font-size: 42px
+			+media-breakpoint-down(sm)
+				font-size: 36px
+			+media-breakpoint-down(xs)
+				font-size: 28px
+				line-height: 1.2
 		.descr
 			margin-bottom: 0
 			font-size: 18px
 		.button
 			margin-top: 32px
+			+media-breakpoint-down(xs)
+				margin-top: 16px
 	&-photo
 		position: absolute
 		top: 0
 		right: 0
 		bottom: 0
+		height: 100%
+		object-fit: cover
 		z-index: -1
 		mix-blend-mode: multiply
+		+media-breakpoint-down(xl)
+			right: -380px
+		+media-breakpoint-down(lg)
+			right: -460px
+		+media-breakpoint-down(md)
+			top: auto
+			right: -440px
+			object-fit: contain
+			object-position: bottom
+		+media-breakpoint-down(sm)
+			right: -340px
+		+media-breakpoint-down(xs)
+			display: none

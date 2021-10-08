@@ -4,9 +4,17 @@ $r-mp-sies: 16, 24, 32, 48, 64, 80, 120
 @each $size in $r-mp-sies
 	.mt-#{$size}
 		margin-top: $size + px
+		+media-breakpoint-down(md)
+			margin-top: $size / 1.5 + px
 	.mb-#{$size}
 		margin-bottom: $size + px
+		+media-breakpoint-down(md)
+			margin-bottom: $size / 1.5 + px
 	.pt-#{$size}
 		padding-top: $size + px
+		+media-breakpoint-down(md)
+			padding-top: $size / 1.5 + px
 	.pb-#{$size}
 		padding-bottom: $size + px
+		+media-breakpoint-down(md)
+			padding-bottom: $size / 1.5 + px

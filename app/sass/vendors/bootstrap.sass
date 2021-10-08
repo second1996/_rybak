@@ -15,7 +15,7 @@
 .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl
 	padding-left: 30px
 	padding-right: 30px
-	+media-breakpoint-down(xs)
+	+media-breakpoint-down(md)
 		padding-left: 15px
 		padding-right: 15px
 
@@ -23,22 +23,19 @@
 	min-width: 0 // Fix Swiper width in Bootstrap columns
 
 .row-items-60
-	margin-bottom: -60px
 	> [class*="col"]
 		margin-bottom: 60px
-		+media-breakpoint-down(xs)
+		+media-breakpoint-down(sm)
 			margin-bottom: 40px
 
 .row-items-40
-	margin-bottom: -40px
 	> [class*="col"]
 		margin-bottom: 40px
-		+media-breakpoint-down(xs)
+		+media-breakpoint-down(sm)
 			margin-bottom: 30px
 
 .row-items-30
-	margin-bottom: -30px
 	> [class*="col"]
 		margin-bottom: 30px
-		+media-breakpoint-down(xs)
+		+media-breakpoint-down(sm)
 			margin-bottom: 20px

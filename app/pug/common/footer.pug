@@ -2,8 +2,8 @@
 	.container
 		+e.inner
 
-			+e.main.row.justify-content-between
-				+e.info.col-3
+			+e.main.row.row-items-40.justify-content-between
+				+e.info.col-xl-3
 					+b.logo
 						+e.A.link(href="index.html")
 							+e.IMG.img(src="./images/logo-light.svg" alt="ТМ \"Рибак\"")
@@ -18,9 +18,9 @@
 							a(href="https://www.instagram.com/")
 								+icon('instagram')
 
-				+b.footer-nav.col-4
+				+b.footer-nav.col-md-6.col-xl-4
 					h5.footer-title.text-white.text-sm Навігація по сайту
-					.row.row-cols-2
+					.row.row-cols-1.row-cols-xs-2
 						.col
 							+e.UL.list
 								li
@@ -40,9 +40,9 @@
 								li
 									a(href="#") Контакти
 
-				+b.footer-contacts.col-4
+				+b.footer-contacts.col-md-6.col-xl-4
 					h5.footer-title.text-white.text-sm Контактна інформація
-					.row.row-cols-2.row-items-30
+					.row.row-cols-1.row-cols-xs-2.row-items-30
 						.col
 							+e.item
 								+e.SPAN.title.footer-suptitle Відділ збуту

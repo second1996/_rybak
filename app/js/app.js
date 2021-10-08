@@ -82,4 +82,11 @@ $(document).ready(function() {
 		$('.mmenu').removeClass('_is-active')
 	})
 
+	// Toggle submenu
+	$('.mmenu .menu-item-has-children .menu-link').on('click', function(e) {
+		e.preventDefault()
+		$(this).parent('.menu-item-has-children').toggleClass('_is-opened')
+		$(this).siblings('ul').slideToggle()
+	})
+
 })

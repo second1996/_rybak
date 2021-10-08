@@ -19,9 +19,11 @@ block content
 		+b.SECTION.h-advantages.section.mt-120
 			.container
 				.section-heading.mb-48
-					h3.suptitle Що ми робимо?
-					h2.title РИБАК — це
-				.row.row-items-30.row-cols-3
+					+e.pattern
+						h3.suptitle Що ми робимо?
+						h2.title РИБАК — це
+						.r-pattern
+				.row.row-items-40.row-cols-1.row-cols-md-2.row-cols-xl-3
 					.col
 						+e.item
 							.picture.mb-24
@@ -47,12 +49,12 @@ block content
 		+b.SECTION.h-gallery.section.mt-120
 			.container
 				.row.align-items-center
-					.col-auto
+					.col-md-auto
 						+e.photos
 							img(src="./images/h-gallery-photo-01.jpg" alt="Фотогалерея ТМ \"Рибак\" #1").photo-01
 							img(src="./images/h-gallery-photo-02.jpg" alt="Фотогалерея ТМ \"Рибак\" #2").photo-02
-							.rybak-pattern
-					.col
+							.r-pattern
+					.col-md
 						+e.content
 							h2.mb-16.text-xl Фотогалерея
 							.descr
@@ -72,12 +74,13 @@ block content
 
 		+b.h-news.section.mt-120
 			.container
-				.row.align-items-center
-					.col
-						h2.text-xl Останні новини
-					.col-auto
-						+btn-arrow('#', 'До всіх новин')
-				.row.row-cols-4.mt-48
+				+e.heading.row.align-items-center
+					.col-sm
+						h2.title.text-xl Останні новини
+					.col-sm-auto
+						.button
+							+btn-arrow('#', 'До всіх новин')
+				.row.row-items-40.row-cols-1.row-cols-md-2.row-cols-xl-4.mt-48
 					.col
 						.card.card-news-xs
 							.date 23 липня 2021

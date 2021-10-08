@@ -2,6 +2,10 @@
 	overflow: hidden
 	margin-top: 160px
 	background-color: #3F3F3F
+	+media-breakpoint-down(md)
+		margin-top: 120px
+	+media-breakpoint-down(sm)
+		margin-top: 80px
 	&-inner
 		position: relative
 		&::before
@@ -18,20 +22,24 @@
 
 	&-main
 		padding-top: 68px
-		padding-bottom: 50px
 
 	&-title
-		padding-top: 18px
 		margin-bottom: 40px
+		padding-top: 18px
 		line-height: 1.3
+		+media-breakpoint-down(lg)
+			margin-bottom: 30px
 
 	&-suptitle
 		display: block
 		color: #AAAAAA
-		+font-size(xxs)
+		font-size: 18px
+		line-height: 1.3
 	
 	&-info
 		margin-right: 90px
+		+media-breakpoint-down(lg)
+			margin-right: 0
 		.logo
 			&-link
 				display: inline-block
@@ -41,12 +49,16 @@
 		.adress,
 		.social
 			margin-top: 30px
+			+media-breakpoint-down(lg)
+				margin-top: 20px
 		.adress
+			&-title
+				margin-bottom: 8px
 			&-link
 				display: inline-block
 		.social
 			&-title
-				margin-bottom: 8px
+				margin-bottom: 12px
 			&-list
 				display: inline-flex
 				align-items: center
@@ -100,11 +112,14 @@
 			.phone > a
 				font-weight: $w-heavy
 			.email > a
-				+font-size(xxs)
+				font-size: 16px
 			.phone,
 			.email
 				> a
+					display: inline-block
 					color: $white
+					line-height: 1.3
+					word-break: break-all
 					&::before
 						content: ''
 						position: absolute
@@ -130,14 +145,21 @@
 			top: 28px
 			bottom: 28px
 		border-top: 1px solid rgba($white, 0.15)
+		+media-breakpoint-down(sm)
+			flex-direction: column
 
 	&-copyright
 		color: #A0A0A0
 		font-size: 16px
+		+media-breakpoint-down(sm)
+			text-align: center
 
 	&-madeby
 		font-size: 16px
 		text-align: right
+		+media-breakpoint-down(sm)
+			margin-top: 16px
+			text-align: center
 		> a
 			color: $white
 			border-bottom: 1px solid $trsp

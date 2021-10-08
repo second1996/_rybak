@@ -5,7 +5,7 @@ let preprocessor = 'sass', // Preprocessor (sass, scss, less, styl)
 		imageswatch  = 'jpg,jpeg,png,webp,svg', // List of images extensions for watching & compression (comma separated)
 		sourceDir    = 'app', // Source directory path without «/» at the end
 		projectDir   = 'dist', // Dist directory path without «/» at the end
-		online       = false; // If «false» - Browsersync will work offline without internet connection
+		online       = true; // If «false» - Browsersync will work offline without internet connection
 
 /**
 * Project path
