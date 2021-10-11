@@ -6,6 +6,7 @@ block vars
 block content
 	main.page-main
 
+		// Section: Heroes
 		+b.SECTION.h-heroes
 			+e.content
 				.container
@@ -16,11 +17,12 @@ block content
 				video(autoplay muted playsinline loop)
 					source(src="https://rodynna-kovbaska.ua/themes/rk/assets/static/v/rk-top.mp4" type="video/mp4")
 
+		// Section: Advantages
 		+b.SECTION.h-advantages.section.mt-120
 			.container
 				.section-heading.mb-48
 					+e.pattern
-						h3.suptitle Що ми робимо?
+						h3.suptitle.title-xs Що ми робимо?
 						h2.title РИБАК — це
 						.r-pattern
 				.row.row-items-40.row-cols-1.row-cols-md-2.row-cols-xl-3
@@ -46,6 +48,7 @@ block content
 							h2.title.mb-12.text-sm.w-demi Доставка два рази на день
 							p.descr.mb-0 Запрошуємо до співпраці магазини, супермаркети, гуртівні, та дилерів. Пропонуємо вигідні умови співпраці. Широкий асортимент м’ясних та ковбасних виробів, більше 150 найменувань.
 
+		// Section: Gallery
 		+b.SECTION.h-gallery.section.mt-120
 			.container
 				.row.align-items-center
@@ -62,6 +65,7 @@ block content
 							.button.mt-32
 								+btn('#', 'Переглянути')
 
+		// Section: Banner
 		+b.r-banner.section.mt-120
 			.container
 				+e.inner
@@ -72,6 +76,7 @@ block content
 							+btn-arrow('#', 'Знайти магазин на карті')
 					+e.IMG.photo(src="./images/banner-01.png" alt="Шукайте наші фірмові магазини поблизу")
 
+		// Section: News
 		+b.h-news.section.mt-120
 			.container
 				+e.heading.row.align-items-center

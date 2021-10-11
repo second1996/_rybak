@@ -1,0 +1,226 @@
+extends ../common/layout
+
+block vars
+	- var title = 'Про нас'
+
+block content
+	main.page-main
+
+		+b.SECTION.page-heading
+			.container
+				+b.breadcrumbs
+					+e.list
+						li
+							a(href="home.html")
+								+icon('home')
+								span Головна
+						li
+							span Про нас
+				+b.H1.title.text-xl.w-bold Про нас
+
+		// Section: History
+		+b.SECTION.a-history.section
+			.container
+				.row
+					.col-7
+						+e.content
+							h2.title.title-xs Історія виникнення
+							p.descr Ідея виробництва ковбасних виробів прийшла і була втілена в життя у 2008 році. Успіх в даному починанні заключався в наступному, — робити ковбаси та шинки так, як робили наші батьки, дідусі та прадіди з давніх давен!
+							.adv.mt-64.row.row-items-30.row-cols-2
+								.col
+									h3.mb-16.text-red-200.text-xs Цінності
+									p.mb-0 Як вважають багато експертів м’ясної галузі, наші вироби можна з гордістю називати «HANDMADE»!
+								.col
+									h3.mb-16.text-red-200.text-xs Місія
+									p.mb-0 Успіх в даному починанні заключався в наступному, — робити ковбаси та шинки так, як робили наші батьки, дідусі та прадіди з давніх давен!
+					.col-5
+						+e.photo
+							img(src="./images/big-logo.svg" alt="Історія виникнення ТМ \"Рибак\"")
+							.r-pattern
+
+		// Section: Chronology
+		+b.SECTION.a-chronology.section.mt-120
+			.container
+				+e.slider.swiper
+
+					+e.pagination.swiper-pagination
+
+					.swiper-wrapper
+						// Slide
+						+e.slide.swiper-slide(data-slide-title="2008")
+							.row
+								.col-6
+									+e.IMG.photo(src="./images/rybak-shop.png" alt="2008-2009 роки")
+								.col-6
+									+e.content
+										h5.title.text-xl 2008-2009 роки
+										p Тринадцять років тому ми почали свою невелику сімейну справу. За цей час вона розрослася до компанії, але так і залишилась родинною.
+										p Три покоління нашої сім’ї працюють у ТМ “Рибак”.
+										p Усю продукцію ми виготовляємо на власному виробництві та пекарні в селі Підбірці, поруч зі Львовом. Щодня доставляємо ковбасні вироби, свіже м’ясо та випічку у магазини «Родинна ковбаска» по всій Україні, щоб ви могли смакувати лише найкраще.
+						// Slide
+						+e.slide.swiper-slide(data-slide-title="2010")
+							.row
+								.col-6
+									+e.IMG.photo(src="./images/rybak-shop.png" alt="2010-2011 роки")
+								.col-6
+									+e.content
+										h5.title.text-xl 2010-2011 роки
+										p Тринадцять років тому ми почали свою невелику сімейну справу. За цей час вона розрослася до компанії, але так і залишилась родинною.
+										p Три покоління нашої сім’ї працюють у ТМ “Рибак”.
+										p Усю продукцію ми виготовляємо на власному виробництві та пекарні в селі Підбірці, поруч зі Львовом. Щодня доставляємо ковбасні вироби, свіже м’ясо та випічку у магазини «Родинна ковбаска» по всій Україні, щоб ви могли смакувати лише найкраще.
+						// Slide
+						+e.slide.swiper-slide(data-slide-title="2012")
+							.row
+								.col-6
+									+e.IMG.photo(src="./images/rybak-shop.png" alt="2012-2013 роки")
+								.col-6
+									+e.content
+										h5.title.text-xl 2012-2013 роки
+										p Тринадцять років тому ми почали свою невелику сімейну справу. За цей час вона розрослася до компанії, але так і залишилась родинною.
+										p Три покоління нашої сім’ї працюють у ТМ “Рибак”.
+										p Усю продукцію ми виготовляємо на власному виробництві та пекарні в селі Підбірці, поруч зі Львовом. Щодня доставляємо ковбасні вироби, свіже м’ясо та випічку у магазини «Родинна ковбаска» по всій Україні, щоб ви могли смакувати лише найкраще.
+						// Slide
+						+e.slide.swiper-slide(data-slide-title="2014")
+							.row
+								.col-6
+									+e.IMG.photo(src="./images/rybak-shop.png" alt="2014-2015 роки")
+								.col-6
+									+e.content
+										h5.title.text-xl 2014-2015 роки
+										p Тринадцять років тому ми почали свою невелику сімейну справу. За цей час вона розрослася до компанії, але так і залишилась родинною.
+										p Три покоління нашої сім’ї працюють у ТМ “Рибак”.
+										p Усю продукцію ми виготовляємо на власному виробництві та пекарні в селі Підбірці, поруч зі Львовом. Щодня доставляємо ковбасні вироби, свіже м’ясо та випічку у магазини «Родинна ковбаска» по всій Україні, щоб ви могли смакувати лише найкраще.
+						// Slide
+						+e.slide.swiper-slide(data-slide-title="2016")
+							.row
+								.col-6
+									+e.IMG.photo(src="./images/rybak-shop.png" alt="2016-2017 роки")
+								.col-6
+									+e.content
+										h5.title.text-xl 2016-2017 роки
+										p Тринадцять років тому ми почали свою невелику сімейну справу. За цей час вона розрослася до компанії, але так і залишилась родинною.
+										p Три покоління нашої сім’ї працюють у ТМ “Рибак”.
+										p Усю продукцію ми виготовляємо на власному виробництві та пекарні в селі Підбірці, поруч зі Львовом. Щодня доставляємо ковбасні вироби, свіже м’ясо та випічку у магазини «Родинна ковбаска» по всій Україні, щоб ви могли смакувати лише найкраще.
+						// Slide
+						+e.slide.swiper-slide(data-slide-title="Сьогодні")
+							.row
+								.col-6
+									+e.IMG.photo(src="./images/rybak-shop.png" alt="Сьогодні")
+								.col-6
+									+e.content
+										h5.title.text-xl Сьогодні
+										p Тринадцять років тому ми почали свою невелику сімейну справу. За цей час вона розрослася до компанії, але так і залишилась родинною.
+										p Три покоління нашої сім’ї працюють у ТМ “Рибак”.
+										p Усю продукцію ми виготовляємо на власному виробництві та пекарні в селі Підбірці, поруч зі Львовом. Щодня доставляємо ковбасні вироби, свіже м’ясо та випічку у магазини «Родинна ковбаска» по всій Україні, щоб ви могли смакувати лише найкраще.
+
+		// Section: Advantages
+		+b.SECTION.a-advantages.section.mt-120
+			.container
+				.row.row-cols-1.row-cols-lg-3
+					.col
+						+e.item
+							.number.text-red-200.text-xxl.w-bold 64
+							p.descr Відкритих точок продажу продукції ТМ “Рибак” в Україні
+					.col
+						+e.item
+							.number.text-red-200.text-xxl.w-bold 30+
+							p.descr Партнерів з якими ми успішно співпрацюємо вже не один рік
+					.col
+						+e.item
+							.number.text-red-200.text-xxl.w-bold 100+
+							p.descr Дестрибюторів продукції ТМ “Рибак” по всій Україні
+
+		// Section: Partners
+		+b.SECTION.a-partners.section.mt-120
+			.container
+				+e.heading.row.align-items-center
+					.col-sm
+						h2.title.text-xl Наші партнери
+						p.descr Тринадцять років тому ми почали свою невелику сімейну справу. 
+					.col-sm-auto
+						.button
+							+btn('#', 'Стати партнером')
+	
+				+e.slider.mt-16
+					.swiper
+						.swiper-wrapper
+							// Slide
+							+e.slide.swiper-slide
+								.logotype.img-scale
+									img(src="./images/partners/1.png" alt="Партнер #1")
+							// Slide
+							+e.slide.swiper-slide
+								.logotype.img-scale
+									img(src="./images/partners/2.png" alt="Партнер #2")
+							// Slide
+							+e.slide.swiper-slide
+								.logotype.img-scale
+									img(src="./images/partners/3.png" alt="Партнер #3")
+							// Slide
+							+e.slide.swiper-slide
+								.logotype.img-scale
+									img(src="./images/partners/4.png" alt="Партнер #4")
+							// Slide
+							+e.slide.swiper-slide
+								.logotype.img-scale
+									img(src="./images/partners/5.png" alt="Партнер #5")
+							// Slide
+							+e.slide.swiper-slide
+								.logotype.img-scale
+									img(src="./images/partners/6.png" alt="Партнер #6")
+
+						+e.navigation.swiper-navigation
+							.swiper-button-prev
+								+icon('arrow')
+								+icon('icon-mask')
+							.swiper-button-next
+								+icon('arrow')
+								+icon('icon-mask')
+
+					+e.pagination.swiper-pagination
+
+		// Section: Banner
+		+b.r-banner.section.mt-120
+			.container
+				+e.inner
+					+e.content
+						h2.title Шукайте наші фірмові магазини поблизу
+						p.descr.text-dark Мережа фірмових магазинів від ТМ “Рибак”.
+						.button
+							+btn-arrow('#', 'Знайти магазин на карті')
+					+e.IMG.photo(src="./images/banner-01.png" alt="Шукайте наші фірмові магазини поблизу")
+
+		// Section: News
+		+b.h-news.section.mt-120
+			.container
+				+e.heading.row.align-items-center
+					.col-sm
+						h2.title.text-xl Новини компанії
+					.col-sm-auto
+						.button
+							+btn-arrow('#', 'До всіх новин')
+				.row.row-items-40.row-cols-1.row-cols-md-2.row-cols-xl-4.mt-48
+					.col
+						.card.card-news-xs
+							.date 23 липня 2021
+							h4.title
+								a(href="#") Новинка від ТМ “Рибак” — сало в банках — це неймовірно смачно та зручно
+							p.descr Обирайте: сало по-домашньому чи пряне. Або куштуйте обидва. Ідеально смакують з хлібом та цибулькою.
+					.col
+						.card.card-news-xs
+							.date 10 липня 2021
+							h4.title
+								a(href="#") Запрошуємо комунікабельних продавців та досвідчених водіїв-експедиторів
+							p.descr Хочете стати частиною нашої великої та дружньої команди? Запрошуємо комунікабельних продавців та досвідчених водіїв-експедиторів!
+					.col
+						.card.card-news-xs
+							.date 13 червня 2021
+							h4.title
+								a(href="#") Даруємо 2 кг шашлику, щоб ви могли насолодитись вихідними з сім'єю чи друзями!
+							p.descr Ніжне соковите м'яско, що просто тане у роті — зізнавайтесь, захотіли скуштувати? Результати розіграшу — 31.05.
+					.col
+						.card.card-news-xs
+							.date 4 червня 2021
+							h4.title
+								a(href="#") Літо яскравіше з оновленою вареною курячою ковбасою
+							p.descr Купуйте у магазинах ТМ ”Рибак” за ціною лише 9,50 грн/100 грам до 6.06.21. Зізнавайтесь, любите?

@@ -1,0 +1,112 @@
+// Section: History
+.a-history
+	&-content
+		.descr
+			margin-bottom: 0
+			color: $dark
+			font-size: 26px
+			font-weight: $w-heavy
+		.adv
+			padding-right: 120px
+	&-photo
+		position: relative
+		padding-left: 60px
+		> img
+			position: relative
+			z-index: 1
+			width: 100%
+			height: auto
+		.r-pattern
+			position: absolute
+			top: 0
+			left: 45%
+			width: 100%
+			height: 192px
+
+
+// Section: Chronology
+.a-chronology
+	&-slider
+		.swiper-pagination
+			position: static
+			display: flex
+			justify-content: space-between
+			margin-bottom: 48px
+			&-bullet
+				position: relative
+				box-sizing: border-box
+				width: auto
+				height: auto
+				margin: 0
+				padding-left: 12px
+				border-radius: 0
+				border: 0
+				background-color: $trsp
+				color: $text
+				+font-size(xxs)
+				font-weight: $w-demi
+				line-height: 1.5
+				text-align: left
+				&::before
+					content: ''
+					position: absolute
+					top: 0
+					left: 0
+					bottom: 0
+					display: inline-block
+					width: 3px
+					height: 100%
+					background-color: $border
+					transition: background-color .3s ease
+				&:not(:last-child)
+					flex: 1 1 auto
+					margin-right: 16px
+				&:hover:not(.swiper-pagination-bullet-active)
+					background-color: $lightred
+				&-active
+					background-color: $trsp
+
+				&-active,
+				&:hover:not(.swiper-pagination-bullet-active)
+					border-color: none
+					color: $red-200
+					&:before
+						background-color: $red-200
+
+	&-photo
+		width: 100%
+		height: auto
+		border-radius: 6px
+		object-fit: cover
+	&-content
+		padding:
+			top: 40px
+			left: 60px
+		.title
+			margin-bottom: 24px
+
+
+// Section: Advantages
+.a-advantages
+	&-item
+		display: flex
+		.number
+			margin-right: 30px
+			line-height: 1
+		.descr
+			margin-bottom: 0
+			padding-top: 8px
+
+
+// Section: Partners
+.a-partners
+	&-slider
+		position: relative
+		padding-left: 64px
+		padding-right: 64px
+		.swiper
+			position: static
+	&-slide
+		.logotype
+			height: 200px
+			padding: 25px 40px
