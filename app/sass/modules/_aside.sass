@@ -1,0 +1,22 @@
+// Aside: Filters
+.filters
+	&-item
+		&:not(:last-child)
+			margin-bottom: 40px
+			+media-breakpoint-down(lg)
+				margin-bottom: 20px
+	&-title
+		margin-bottom: 24px
+	&-form
+		+media-breakpoint-down(lg)
+			display: flex
+			flex-wrap: wrap
+			align-items: baseline
+		.form-checkbox
+			+media-breakpoint-down(lg)
+				flex: 0 0 25%
+				padding-right: 8px
+			+media-breakpoint-down(sm)
+				flex-basis: 33.33333%
+			+media-breakpoint-down(xs)
+				flex-basis: 50%

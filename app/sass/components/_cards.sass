@@ -32,3 +32,58 @@
 	.descr
 		margin-bottom: 0
 		+font-size(xxs)
+
+
+/* ==========================================================================
+	 Product card
+	 ========================================================================== */
+.card-product
+	.card-photo:hover ~ .card-meta
+		.permalink
+			color: $red-200
+	.card-labels
+		pointer-events: none
+		user-select: none
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 1
+		display: flex
+		flex-wrap: wrap
+		margin: -3px
+		.label
+			flex: 0 0 auto
+			margin: 3px
+			padding: 6px 8px
+			border-radius: 3px
+			font-size: 16px
+			font-weight: $w-medium
+			line-height: 1
+			+media-breakpoint-down(xs)
+				padding: 4px 6px
+				font-size: 14px
+			&-new
+				background-color: #159600
+				color: $white
+			&-popular
+				background-color: #FF7A00
+				color: $white
+	.card-photo
+		height: 300px
+		+media-breakpoint-down(lg)
+			height: 260px
+		+media-breakpoint-down(md)
+			height: 200px
+		+media-breakpoint-down(xs)
+			height: 140px
+		+media-breakpoint-down(xxs)
+			height: 120px
+	.card-meta
+		margin-top: 20px
+		+media-breakpoint-down(xs)
+			margin-top: 10px
+		.permalink
+			display: block
+			+font-size(xs)
+			font-weight: $w-medium
+			line-height: 1.3

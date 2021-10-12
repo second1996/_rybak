@@ -1,5 +1,5 @@
 /* ==========================================================================
-	 Images
+	 Image scaling
 	 ========================================================================== */
 .img-cover,
 .img-scale
@@ -13,13 +13,26 @@
 .img-scale img
 	object-fit: scale-down
 
-.zoom-photo
+
+/* ==========================================================================
+	 Image animation
+	 ========================================================================== */
+.zoom-photo,
+.zoom-out-photo
 	overflow: hidden
-	transform: translate3d(0, 0, 0)
+	-webkit-mask-image: -webkit-radial-gradient(white, black)
 	img
 		will-change: transform
 		transition: transform .5s
+
+.zoom-photo
+	img
 		transform: scale(1.005) // Fix drug photo when scaling
-	&:hover
-		img
-			transform: scale(1.125)
+	&:hover img
+		transform: scale(1.125)
+
+.zoom-out-photo
+	img
+		transform: scale(1.005) // Fix drug photo when scaling
+	&:hover img
+		transform: scale(0.95)

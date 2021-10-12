@@ -1,0 +1,96 @@
+extends ../common/layout
+
+//- Filter product types
+mixin productTypes(products)
+	for product, index in products
+		+b.form-checkbox
+			input(type="checkbox" id="product-type-" + index)
+			+e.label(for="product-type-" + index) #{product}
+
+block vars
+	- var title = 'Готова продукція'
+
+block content
+	main.page-main
+
+		+b.SECTION.page-heading
+			.container
+				+b.breadcrumbs
+					+e.list
+						li
+							a(href="home.html")
+								+icon('home')
+								span Головна
+						li
+							a(href="production.html") Продукція ТМ "Рибак"
+						li
+							span Готова продукція
+				+b.H1.title.text-xl.w-bold Готова продукція
+
+		// Section: Production catalog main
+		+b.SECTION.pdc-main.section
+			.container
+				.row.row-items-60
+
+					// Aside filters
+					.col-xl-3
+						+b.ASIDE.filters
+							+e.item
+								+e.H5.title.text-xs.w-demi Вид продукту
+								+e.FORM.form
+									+productTypes(['Курятина', 'Свинина', 'Баранина', 'Індичатина', 'Кролятина', 'М’ясо качки', 'Яловичина', 'Телятина'])
+
+					// Products list
+					.col-xl-9
+						.row.row-items-60.row-cols-2.row-cols-md-3
+							.col
+								.card.card-product.zoom-out-photo
+									.card-labels
+										.label.label-new Новинка
+										.label.label-popular Популярне
+									.card-photo.img-scale
+										a(href="production-single.html")
+											img(src="./images/production/product-1.png" alt="Куряча ковбаса варена")
+									.card-meta
+										a.permalink(href="production-single.html") Куряча ковбаса варена
+							.col
+								.card.card-product.zoom-out-photo
+									.card-photo.img-scale
+										a(href="production-single.html")
+											img(src="./images/production/product-2.png" alt="Свинячі легені")
+									.card-meta
+										a.permalink(href="production-single.html") Свинячі легені
+							.col
+								.card.card-product.zoom-out-photo
+									.card-photo.img-scale
+										a(href="production-single.html")
+											img(src="./images/production/product-3.png" alt="Кручене сало з часником і зеленню")
+									.card-meta
+										a.permalink(href="production-single.html") Кручене сало з часником і зеленню
+							.col
+								.card.card-product.zoom-out-photo
+									.card-photo.img-scale
+										a(href="production-single.html")
+											img(src="./images/production/product-4.png" alt="Свинячі легені")
+									.card-meta
+										a.permalink(href="production-single.html") Свинячі легені
+							.col
+								.card.card-product.zoom-out-photo
+									.card-labels
+										.label.label-new Новинка
+									.card-photo.img-scale
+										a(href="production-single.html")
+											img(src="./images/production/product-5.png" alt="Свинячі нирки")
+									.card-meta
+										a.permalink(href="production-single.html") Свинячі нирки
+							.col
+								.card.card-product.zoom-out-photo
+									.card-labels
+										.label.label-popular Популярне
+									.card-photo.img-scale
+										a(href="production-single.html")
+											img(src="./images/production/product-6.png" alt="Свиняча шкірка парена")
+									.card-meta
+										a.permalink(href="production-single.html") Свиняча шкірка парена
+
+
