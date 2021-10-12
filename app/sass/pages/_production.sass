@@ -1,0 +1,98 @@
+// Section: Production assortment
+.pd-assortment
+	&-item
+		overflow: hidden
+		position: relative
+		border-radius: 6px
+		&::after
+			content: ''
+			position: absolute
+			left: 0
+			right: 0
+			bottom: 0
+			height: 50%
+			background: linear-gradient(180deg, rgba(46, 46, 46, 0) 0%, #2E2E2E 100%)
+		.permalink
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			z-index: 2
+			display: block
+		.content
+			position: absolute
+			left: 0
+			right: 0
+			bottom: 0
+			z-index: 1
+			padding: 40px
+			+media-breakpoint-down(xl)
+				padding: 30px
+			.title
+				margin-bottom: 0
+				color: $white
+				font-size: 32px
+				font-weight: $w-bold
+				line-height: 1.3
+				+media-breakpoint-down(xl)
+					font-size: 28px
+				+media-breakpoint-down(lg)
+					font-size: 24px
+					font-weight: $w-heavy
+			.link
+				color: $white
+				font-size: 14px
+				font-weight: $w-demi
+				text-transform: uppercase
+				&::before
+					content: ''
+					display: block
+					width: 60px
+					height: 3px
+					margin-top: 16px
+					margin-bottom: 8px
+					background-color: $red-300
+					+media-breakpoint-down(lg)
+						margin-top: 12px
+						margin-bottom: 4px
+		.photo
+			height: 460px
+			+media-breakpoint-down(xl)
+				height: 400px
+			+media-breakpoint-down(sm)
+				height: 320px
+			+media-breakpoint-down(xs)
+				height: 280px
+
+
+// Section: Production catalogs
+.pd-catalogs
+	&-item
+		display: flex
+		align-items: center
+		height: 100%
+		padding: 30px
+		border-radius: 6px
+		border: 1px solid $border
+		background-color: $lightblue
+		+media-breakpoint-down(xl)
+			padding: 20px
+		&:hover
+			border-color: $red-200
+			background-color: $lightred
+		.extension
+			flex: 0 0 auto
+			margin-right: 30px
+			+media-breakpoint-down(xl)
+				margin-right: 20px
+			.icon
+				fill: $red-200
+				font-size: 42px
+				+media-breakpoint-down(xl)
+					font-size: 36px
+		.title
+			flex: 1 1 auto
+			margin-bottom: 0
+			line-height: 1.3
+
