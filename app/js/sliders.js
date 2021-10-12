@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	*/
 	const partnersSwiper = new Swiper('.a-partners-slider .swiper', {
 		loop: true,
-		slidesPerView: 6,
+		slidesPerView: 1,
 		navigation: {
 			prevEl: '.a-partners-navigation .swiper-button-prev',
 			nextEl: '.a-partners-navigation .swiper-button-next',
@@ -46,6 +46,23 @@ document.addEventListener('DOMContentLoaded', function() {
 			el: '.a-partners-pagination',
 			type: 'bullets',
 			clickable: true,
+		},
+		breakpoints: {
+			375: {
+				slidesPerView: 2,
+			},
+			576: {
+				slidesPerView: 3,
+			},
+			992: {
+				slidesPerView: 4,
+			},
+			1240: {
+				slidesPerView: 5,
+			},
+			1620: {
+				slidesPerView: 6,
+			},
 		},
 	})
 })

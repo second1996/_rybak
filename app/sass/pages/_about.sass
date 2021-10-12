@@ -4,24 +4,37 @@
 		.descr
 			margin-bottom: 0
 			color: $dark
-			font-size: 26px
 			font-weight: $w-heavy
 		.adv
 			padding-right: 120px
+			+media-breakpoint-down(xl)
+				padding-right: 0
 	&-photo
 		position: relative
 		padding-left: 60px
+		+media-breakpoint-down(md)
+			margin-bottom: 64px
+			padding-left: 0
 		> img
 			position: relative
 			z-index: 1
 			width: 100%
 			height: auto
+			+media-breakpoint-down(md)
+				max-width: 340px
+			+media-breakpoint-down(xs)
+				max-width: 260px
 		.r-pattern
 			position: absolute
 			top: 0
 			left: 45%
 			width: 100%
 			height: 192px
+			+media-breakpoint-down(md)
+				left: 30%
+			+media-breakpoint-down(xs)
+				left: 30%
+				height: 158px
 
 
 // Section: Chronology
@@ -30,6 +43,7 @@
 		.swiper-pagination
 			position: static
 			display: flex
+			flex-wrap: wrap
 			justify-content: space-between
 			margin-bottom: 48px
 			&-bullet
@@ -37,7 +51,7 @@
 				box-sizing: border-box
 				width: auto
 				height: auto
-				margin: 0
+				margin-bottom: 10px
 				padding-left: 12px
 				border-radius: 0
 				border: 0
@@ -61,6 +75,8 @@
 				&:not(:last-child)
 					flex: 1 1 auto
 					margin-right: 16px
+					+media-breakpoint-down(xs)
+						
 				&:hover:not(.swiper-pagination-bullet-active)
 					background-color: $lightred
 				&-active
@@ -68,7 +84,7 @@
 
 				&-active,
 				&:hover:not(.swiper-pagination-bullet-active)
-					border-color: none
+					border-color: $trsp
 					color: $red-200
 					&:before
 						background-color: $red-200
@@ -79,17 +95,26 @@
 		border-radius: 6px
 		object-fit: cover
 	&-content
-		padding:
-			top: 40px
-			left: 60px
+		padding-top: 40px
+		padding-left: 60px
+		+media-breakpoint-down(xl)
+			padding-left: 30px
+		+media-breakpoint-down(lg)
+			padding-left: 0
 		.title
 			margin-bottom: 24px
+		p:last-child
+			margin-bottom: 0
 
 
 // Section: Advantages
 .a-advantages
 	&-item
 		display: flex
+		+media-breakpoint-down(xl)
+			flex-direction: column
+		+media-breakpoint-down(md)
+			margin-bottom: 30px
 		.number
 			margin-right: 30px
 			line-height: 1
@@ -104,9 +129,19 @@
 		position: relative
 		padding-left: 64px
 		padding-right: 64px
+		+media-breakpoint-down(xs)
+			padding-left: 56px
+			padding-right: 56px
 		.swiper
 			position: static
 	&-slide
 		.logotype
 			height: 200px
 			padding: 25px 40px
+			+media-breakpoint-down(sm)
+				height: 160px
+				padding: 15px 20px
+			+media-breakpoint-down(xs)
+				padding: 10px
+			+media-breakpoint-down(xxs)
+				padding: 20px 10px
