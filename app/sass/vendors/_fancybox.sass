@@ -1,0 +1,24 @@
+/* ==========================================================================
+	 Import Fancybox, helper functions
+	 ========================================================================== */
+@function max($numbers...)
+	@return m#{a}x(#{$numbers})
+
+@function min($numbers...)
+	@return m#{i}n(#{$numbers})
+
+@import 'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min'
+
+
+/* ==========================================================================
+	 Fancybox customize
+	 ========================================================================== */
+.fancybox-slide--image
+	padding: 44px 30px
+.fancybox-button:focus
+	box-shadow: none
+.fancybox-close-small
+	top: -56px
+	right: -18px
+	width: 52px
+	height: 52px

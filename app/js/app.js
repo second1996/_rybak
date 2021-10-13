@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	*/
 	$.fancybox.defaults.animationEffect = 'fade'
 	$.fancybox.defaults.buttons = ['zoom', 'thumbs', 'close']
+	$.fancybox.defaults.smallBtn = true
 
 
 	/**

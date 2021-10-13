@@ -1,0 +1,162 @@
+extends ../common/layout
+
+//- Filter product types
+mixin productTypes(products)
+	for product, index in products
+		+b.form-checkbox
+			input(type="checkbox" id="product-type-" + index)
+			+e.label(for="product-type-" + index) #{product}
+
+block vars
+	- var title = 'Куряча ковбаса варена'
+
+block content
+	main.page-main
+
+		+b.SECTION.page-heading
+			.container
+				+b.breadcrumbs
+					+e.list
+						li
+							a(href="home.html")
+								+icon('home')
+								span Головна
+						li
+							a(href="production.html") Продукція ТМ "Рибак"
+						li
+							a(href="production-catalog.html") Готова продукція
+						li
+							span Куряча ковбаса варена
+				+b.H1.title.text-xl.w-bold Куряча ковбаса варена
+
+		// Section: Production single
+		+b.SECTION.pd-single.section
+			.container
+				+e.wrapper.row.row-items-60
+
+					// Product gallery slider
+					.col-xl-5.col-xxl-6
+						+e.gallery
+							.product-labels
+								.label.label-new Новинка
+								// .label.label-popular Популярне
+
+							+e.gallery-wrapper
+
+								+e.gallery-thumbs.swiper
+									.swiper-wrapper
+										.swiper-slide
+											.product-thumb.img-cover
+												img(src="./images/production/product-single.jpg" alt="Куряча ковбаса варена")
+										.swiper-slide
+											.product-thumb.img-cover
+												img(src="./images/production/product-2.png" alt="Куряча ковбаса варена")
+										.swiper-slide
+											.product-thumb.img-cover
+												img(src="./images/production/product-3.png" alt="Куряча ковбаса варена")
+										.swiper-slide
+											.product-thumb.img-cover
+												img(src="./images/production/product-4.png" alt="Куряча ковбаса варена")
+										.swiper-slide
+											.product-thumb.img-cover
+												img(src="./images/production/product-5.png" alt="Куряча ковбаса варена")
+										.swiper-slide
+											.product-thumb.img-cover
+												img(src="./images/production/product-6.png" alt="Куряча ковбаса варена")
+									.swiper-scrollbar
+
+								+e.gallery-slider.swiper
+									.swiper-wrapper
+										.swiper-slide
+											a.product-photo.img-cover(href="./images/production/product-single.jpg" data-fancybox)
+												img(src="./images/production/product-single.jpg" alt="Куряча ковбаса варена")
+										.swiper-slide
+											a.product-photo.img-cover(href="./images/production/product-single.jpg" data-fancybox)
+												img(src="./images/production/product-2.png" alt="Куряча ковбаса варена")
+										.swiper-slide
+											a.product-photo.img-cover(href="./images/production/product-1.png" data-fancybox)
+												img(src="./images/production/product-3.png" alt="Куряча ковбаса варена")
+										.swiper-slide
+											a.product-photo.img-cover(href="./images/production/product-single.jpg" data-fancybox)
+												img(src="./images/production/product-4.png" alt="Куряча ковбаса варена")
+										.swiper-slide
+											a.product-photo.img-cover(href="./images/production/product-1.png" data-fancybox)
+												img(src="./images/production/product-5.png" alt="Куряча ковбаса варена")
+										.swiper-slide
+											a.product-photo.img-cover(href="./images/production/product-single.jpg" data-fancybox)
+												img(src="./images/production/product-6.png" alt="Куряча ковбаса варена")
+
+					// Product meta
+					.col-xl-7.col-xxl-6
+						+e.meta
+							.title.text-dark.w-heavy Куряча ковбаса варена
+							.descr
+								p <b>Склад:</b> напівфабрикат м’ясний (шинка теляча) 100,0%
+							+b.attributes
+								+e.item
+									img.icon(src="./images/icons/thermometer.svg" alt="Температура зберігання")
+									.name Температура зберігання
+									.value 4-6°C
+								+e.item
+									img.icon(src="./images/icons/time.svg" alt="Термін придатності")
+									.name Термін придатності
+									.value 48 годин
+								+e.item
+									img.icon(src="./images/icons/weight.svg" alt="Мінімальне замовлення")
+									.name Мінімальне замовлення
+									.value від 0,1 кг
+								+e.item
+									img.icon(src="./images/icons/quality.svg" alt="Стандарт якості")
+									.name Стандарт якості
+									.value ISO-500
+							+b.order-buttons
+								+e.A.btn.--telegram(href="#" target="_blank" rel="nofollow noopener")
+									+icon('telegram')
+									span Замовити в Telegram
+								+e.A.btn.--viber(href="#" target="_blank" rel="nofollow noopener")
+									+icon('viber')
+									span Замовити в Viber
+
+		// Section: Other products
+		+b.SECTION.pd-other-products.section.mt-80
+			.container
+				.section-heading.mb-48.row.align-items-end
+					.col-md
+						h3.suptitle.title-xs Інші товари
+						h2.title Вас також може зацікавити
+					.col-md-auto
+						.button
+							+btn-arrow('production-catalog.html', 'Переглянути всі товари')
+				.row.row-items-30.row-cols-2.row-cols-xl-4
+					.col
+						.card.card-product.zoom-out-photo
+							.card-labels
+								.label.label-new Новинка
+							.card-photo.img-scale
+								a(href="production-single.html")
+									img(src="./images/production/product-1.png" alt="Куряча ковбаса варена")
+							.card-meta
+								a.permalink(href="production-single.html") Куряча ковбаса варена
+					.col
+						.card.card-product.zoom-out-photo
+							.card-photo.img-scale
+								a(href="production-single.html")
+									img(src="./images/production/product-2.png" alt="Свинячі легені")
+							.card-meta
+								a.permalink(href="production-single.html") Свинячі легені
+					.col
+						.card.card-product.zoom-out-photo
+							.card-labels
+								.label.label-popular Популярне
+							.card-photo.img-scale
+								a(href="production-single.html")
+									img(src="./images/production/product-3.png" alt="Кручене сало з часником і зеленню")
+							.card-meta
+								a.permalink(href="production-single.html") Кручене сало з часником і зеленню
+					.col
+						.card.card-product.zoom-out-photo
+							.card-photo.img-scale
+								a(href="production-single.html")
+									img(src="./images/production/product-4.png" alt="Свинячі легені")
+							.card-meta
+								a.permalink(href="production-single.html") Свинячі легені

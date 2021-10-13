@@ -6,6 +6,9 @@
 @import 'node_modules/swiper/swiper.scss'
 @import 'node_modules/swiper/modules/pagination/pagination.scss'
 @import 'node_modules/swiper/modules/effect-fade/effect-fade.scss'
+@import 'node_modules/swiper/modules/free-mode/free-mode.scss'
+@import 'node_modules/swiper/modules/thumbs/thumbs.scss'
+@import 'node_modules/swiper/modules/scrollbar/scrollbar.scss'
 
 
 /* ==========================================================================
@@ -15,6 +18,21 @@
 	position: relative
 	.swiper-slide
 		height: auto
+
+
+/* ==========================================================================
+	 Scrollbar customize
+	 ========================================================================== */
+.swiper-horizontal > .swiper-scrollbar
+	left: 0
+	width: 100%
+	height: 3px
+.swiper-scrollbar
+	background-color: #eee
+.swiper-scrollbar-drag
+	background-color: rgba($dark, 0.18)
+	&:hover
+		background-color: $red-200
 
 
 /* ==========================================================================
@@ -75,9 +93,6 @@
 /* ==========================================================================
 	 Pagination customize
 	 ========================================================================== */
-.swiper-dots
-	margin-top: 12px
-
 .swiper-pagination
 	position: relative
 	display: flex
@@ -85,6 +100,7 @@
 	align-items: center
 	justify-content: center
 	width: 100%
+	margin-top: 12px
 	&-horizontal.swiper-pagination-bullets
 		.swiper-pagination-bullet
 			margin: 5px

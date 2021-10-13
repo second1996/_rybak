@@ -65,4 +65,45 @@ document.addEventListener('DOMContentLoaded', function() {
 			},
 		},
 	})
+
+
+	/**
+	*-------------------------------------------------------------------------------------------------------------------------------------------
+	* Single page Production: Product gallery slider
+	*-------------------------------------------------------------------------------------------------------------------------------------------
+	*/
+	const productGalleryThumbsSwiper = new Swiper('.pd-single-gallery-thumbs', {
+		direction: 'horizontal',
+		slidesPerView: 4.5,
+		spaceBetween: 16,
+		autoHeight: false,
+		freeMode: {
+			sticky: true,
+		},
+		scrollbar: {
+			el: '.pd-single-gallery-thumbs .swiper-scrollbar',
+			draggable: true,
+		},
+		breakpoints: {
+			992: {
+				slidesPerView: 'auto',
+				slidesPerView: 6.5,
+			},
+			1240: {
+				slidesPerView: 4.5,
+			},
+			1620: {
+				direction: 'vertical',
+				slidesPerView: 5,
+				autoHeight: true,
+			},
+		},
+	})
+
+	const productGallerySwiper = new Swiper('.pd-single-gallery-slider', {
+		slidesPerView: 1,
+		thumbs: {
+			swiper: productGalleryThumbsSwiper,
+		},
+	})
 })

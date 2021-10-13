@@ -23,16 +23,13 @@
 	-webkit-mask-image: -webkit-radial-gradient(white, black)
 	img
 		will-change: transform
+		transform: scale(1.005) // Fix drug photo when scaling
 		transition: transform .5s
 
-.zoom-photo
+.zoom-photo:hover
 	img
-		transform: scale(1.005) // Fix drug photo when scaling
-	&:hover img
 		transform: scale(1.125)
 
-.zoom-out-photo
+.zoom-out-photo:hover
 	img
-		transform: scale(1.005) // Fix drug photo when scaling
-	&:hover img
 		transform: scale(0.95)

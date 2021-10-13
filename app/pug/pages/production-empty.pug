@@ -1,0 +1,53 @@
+extends ../common/layout
+
+//- Filter product types
+mixin productTypes(products)
+	for product, index in products
+		+b.form-checkbox
+			input(type="checkbox" id="product-type-" + index)
+			+e.label(for="product-type-" + index) #{product}
+
+block vars
+	- var title = 'Готова продукція'
+
+block content
+	main.page-main
+
+		+b.SECTION.page-heading
+			.container
+				+b.breadcrumbs
+					+e.list
+						li
+							a(href="home.html")
+								+icon('home')
+								span Головна
+						li
+							a(href="production.html") Продукція ТМ "Рибак"
+						li
+							span Готова продукція
+				+b.H1.title.text-xl.w-bold Готова продукція
+
+		// Section: Production catalog main
+		+b.SECTION.pdc-main.section
+			.container
+				.row.row-items-60
+
+					// Aside filters
+					.col-xl-3
+						+b.ASIDE.filters
+							+e.item
+								+e.H5.title.text-xs.w-demi Вид продукту
+								+e.FORM.form
+									+productTypes(['Курятина', 'Свинина', 'Баранина', 'Індичатина', 'Кролятина', 'М’ясо качки', 'Яловичина', 'Телятина'])
+
+					// Products list
+					.col-xl-9
+						+b.pdc-empty
+							+e.photo
+								img(src="./images/man.svg" alt="Ой... Продукцію ще не завезли.")
+							+e.H2.title.title-xl Ой... Продукцію ще не завезли.
+							+e.P.descr Спробуйте завітати до нас трішки пізніше, коли вона з’явиться.
+							+e.button
+								+btn('production-catalog.html', 'До продукції')
+
+
