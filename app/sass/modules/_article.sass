@@ -6,21 +6,11 @@ article, .article
 	ul,
 	ol,
 	blockquote, table
-		margin-bottom: 24px
-		+media-breakpoint-down(md)
-			margin-bottom: 16px
+		margin-bottom: 16px
 
 	b,
 	strong
-		font-weight: $w-bold
-
-	p,
-	ul > li,
-	ul > li > a
-		+font-size(xs)
-		+media-breakpoint-down(sm)
-			font-size: 13px
-			line-height: 20px
+		font-weight: $w-demi
 
 	a
 		color: blue
@@ -28,13 +18,20 @@ article, .article
 			text-decoration: underline
 
 	ul
+		margin-bottom: 16px
 		> li
 			position: relative
 			display: flex
-			padding-top: 8px
-			+media-breakpoint-down(xs)
-				padding-top: 0
+			align-items: baseline
 			&:not(:last-child)
 				margin-bottom: 8px
-				+media-breakpoint-down(xs)
-					margin-bottom: 16px
+			&::before
+				content: ''
+				flex: 0 0 auto
+				display: inline-block
+				width: 7px
+				height: 7px
+				margin-left: 12px
+				margin-right: 12px
+				border-radius: 50%
+				background-color: $text

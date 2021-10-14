@@ -89,4 +89,15 @@ document.addEventListener('DOMContentLoaded', function() {
 		$(this).siblings('ul').slideToggle()
 	})
 
+
+	/**
+	*-------------------------------------------------------------------------------------------------------------------------------------------
+	* BS Accordion: Scroll to open vacancy item
+	*-------------------------------------------------------------------------------------------------------------------------------------------
+	*/
+	$('.collapse').on('shown.bs.collapse', function() {
+		$('html,body').animate({
+			scrollTop: $(this).closest('.vacancy').offset().top
+		}, 500)
+	})
 })

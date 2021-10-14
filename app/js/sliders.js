@@ -98,12 +98,26 @@ document.addEventListener('DOMContentLoaded', function() {
 				autoHeight: true,
 			},
 		},
+		on: {
+			init: function(swiper) {
+				if (swiper.slides.length < 2) {
+					document.querySelector('.pd-single-gallery-thumbs').classList.add('d-none')
+				}
+			},
+		},
 	})
 
 	const productGallerySwiper = new Swiper('.pd-single-gallery-slider', {
 		slidesPerView: 1,
 		thumbs: {
 			swiper: productGalleryThumbsSwiper,
+		},
+		on: {
+			init: function(swiper) {
+				if (swiper.slides.length < 2) {
+					swiper.destroy()
+				}
+			},
 		},
 	})
 })

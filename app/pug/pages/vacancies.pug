@@ -1,0 +1,97 @@
+extends ../common/layout
+
+//- Filter product types
+mixin productTypes(products)
+	for product, index in products
+		+b.form-checkbox
+			input(type="checkbox" id="product-type-" + index)
+			+e.label(for="product-type-" + index) #{product}
+
+block vars
+	- var title = 'Вакасії'
+
+block content
+	main.page-main
+
+		+b.SECTION.page-heading
+			.container
+				+b.breadcrumbs
+					+e.list
+						li
+							a(href="home.html")
+								+icon('home')
+								span Головна
+						li
+							span Вакасії
+				+b.H1.title.text-xl.w-bold Вакасії
+
+		// Section: Vacancies list
+		+b.SECTION.v-main.section
+			.container
+				+e.heading.section-heading
+					h2.title Відкриті вакансії в фірмовій мережі ТМ “Рибак”
+					.descr
+						p Надсилайте Ваше резюме через форму «Подати резюме», або перегляньте наявні вакансії, обравши посаду та місто, де Ви бажаєте працювати.
+				+e.list.mt-64#vacancies
+					+b.vacancy
+						+e.heading#v-heading-1(data-toggle="collapse" data-target="#v-collapse-1" aria-expanded="true" aria-controls="v-collapse-1")
+							+b.meta
+								+e.H4.title.w-demi Водій-експедитор
+								+e.location
+									+icon('location')
+									span Івано-Франківська область
+							.trigger
+						+e.body.collapse.show#v-collapse-1(aria-labelledby="v-heading-1" data-parent="#vacancies")
+							+e.inner
+								+e.ARTICLE.text
+									p ТМ «Рибак» — лідер м’ясопереробної галузі, запрошує у свою команду Водія-експедитора.
+									p <b>Вимоги до кандидата:</b>
+									ul
+										li посвідчення водія кат В, С, водійська медична довідка
+										li досвід роботи водієм-експедитором буде перевагою
+										li відмінні навики водіння, досвід від 2 років
+										li охайність, відповідальність
+										li вік до 45 років
+									p <b>Обов’язки:</b>
+									ul
+										li доставка готової продукції та м’ясної сировини
+										li контроль товару згідно накладних, робота з накладними
+										li матеріальна відповідальність за товар та транспорт
+										li знання асортименту продукції компанії
+									p <b>Умови роботи:</b>
+									ul
+										li графік роботи Пн-Сб, Нд — вихідний
+										li офіційне працевлаштування
+								+e.apply
+									+btn('#', 'Заповнити анкету')
+					+b.vacancy
+						+e.heading#v-heading-2(data-toggle="collapse" data-target="#v-collapse-2" aria-expanded="false" aria-controls="v-collapse-2")
+							+b.meta
+								+e.H4.title.w-demi Заступник керуючого магазином
+								+e.location
+									+icon('location')
+									span м. Тернопіль
+							.trigger
+						+e.body.collapse#v-collapse-2(aria-labelledby="v-heading-2" data-parent="#vacancies")
+							+e.inner
+								+e.ARTICLE.text
+									p ТМ «Рибак» — лідер м’ясопереробної галузі, запрошує у свою команду Водія-експедитора.
+									p <b>Вимоги до кандидата:</b>
+									ul
+										li посвідчення водія кат В, С, водійська медична довідка
+										li досвід роботи водієм-експедитором буде перевагою
+										li відмінні навики водіння, досвід від 2 років
+										li охайність, відповідальність
+										li вік до 45 років
+									p <b>Обов’язки:</b>
+									ul
+										li доставка готової продукції та м’ясної сировини
+										li контроль товару згідно накладних, робота з накладними
+										li матеріальна відповідальність за товар та транспорт
+										li знання асортименту продукції компанії
+									p <b>Умови роботи:</b>
+									ul
+										li графік роботи Пн-Сб, Нд — вихідний
+										li офіційне працевлаштування
+								+e.apply
+									+btn('#', 'Заповнити анкету')

@@ -1,0 +1,94 @@
+.v-main
+	&-list
+		.vacancy
+			margin-top: -1px
+			&-heading
+				display: flex
+				align-items: center
+				min-height: 94px
+				padding: 20px 30px 20px 40px
+				border-top: 1px solid $border
+				border-bottom: 1px solid $border
+				background-color: $white
+				transition: background-color .3s ease
+				+media-breakpoint-down(md)
+					padding: 20px
+				&:hover
+					cursor: pointer
+					background-color: $lightred
+				&[aria-expanded="true"]
+					.trigger::after
+						transform: scaleY(0)
+				.meta
+					flex: 1 1 auto
+					display: flex
+					flex-wrap: wrap
+					&-title
+						flex: 0 0 40%
+						margin-bottom: 0
+						font-size: 22px
+						line-height: 1.1
+						+media-breakpoint-down(md)
+							font-size: 20px
+						+media-breakpoint-down(sm)
+							font-size: 18px
+						+media-breakpoint-down(xs)
+							flex-basis: 100%
+					&-location
+						flex: 0 0 60%
+						display: flex
+						align-items: center
+						padding-left: 30px
+						font-size: 20px
+						+media-breakpoint-down(lg)
+							font-size: 18px
+						+media-breakpoint-down(sm)
+							font-size: 16px
+						+media-breakpoint-down(xs)
+							flex-basis: 100%
+							padding-top: 10px
+							padding-left: 0
+						.icon
+							flex: 0 0 auto
+							fill: $red-200
+						span
+							margin-left: 10px
+							line-height: 1
+							+media-breakpoint-down(sm)
+								margin-left: 6px
+				.trigger
+					position: relative
+					flex: 0 0 auto
+					width: 28px
+					height: 28px
+					margin-left: 20px
+					+media-breakpoint-down(md)
+						width: 20px
+						height: 20px
+					&::before,
+					&::after
+						content: ''
+						position: absolute
+						display: block
+						background-color: $red-200
+						transition: transform .3s ease
+					&::before
+						top: 50%
+						width: 100%
+						height: 2px
+						margin-top: -1px
+					&::after
+						left: 50%
+						width: 2px
+						height: 100%
+						margin-left: -1px
+			&-body
+			&-inner
+				padding: 30px 40px 40px
+				background-color: $lightblue
+				+media-breakpoint-down(md)
+					padding: 20px 20px 30px
+			&-apply
+				margin-top: 32px
+				+media-breakpoint-down(md)
+					margin-top: 24px
