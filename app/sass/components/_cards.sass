@@ -9,29 +9,42 @@
 
 
 /* ==========================================================================
-	 News card XS
+	 News card
 	 ========================================================================== */
-.card-news-xs
-	.date
-		margin-bottom: 16px
-		padding-left: 12px
-		border-left: 3px solid $red-200
-		color: $red-200
-		font-size: 14px
-		font-weight: $w-demi
-		text-transform: uppercase
-		+media-breakpoint-down(sm)
-			margin-bottom: 8px
-	.title
-		margin-bottom: 12px
-		+font-size(xxs)
-		+media-breakpoint-down(sm)
-			margin-bottom: 8px
-		> a
-			display: inline-block
-	.descr
-		margin-bottom: 0
-		+font-size(xxs)
+.card-news
+	.card-photo
+		overflow: hidden
+		height: 360px
+		margin-bottom: 32px
+		border-radius: 6px
+		+media-breakpoint-down(xl)
+			height: 320px
+		+media-breakpoint-down(lg)
+			height: 260px
+		+media-breakpoint-down(md)
+			height: 230px
+		+media-breakpoint-down(xxs)
+			height: 200px
+	.card-meta
+		.date
+			margin-bottom: 16px
+			padding-left: 12px
+			border-left: 3px solid $red-200
+			color: $red-200
+			font-size: 14px
+			font-weight: $w-demi
+			text-transform: uppercase
+			+media-breakpoint-down(sm)
+				margin-bottom: 8px
+		.title
+			margin-bottom: 12px
+			+media-breakpoint-down(sm)
+				margin-bottom: 8px
+			> a
+				display: inline-block
+		.descr
+			margin-bottom: 0
+			+font-size(xxs)
 
 
 /* ==========================================================================

@@ -6,11 +6,13 @@ article, .article
 	ul,
 	ol,
 	blockquote, table
-		margin-bottom: 16px
+		margin-bottom: 24px
 
-	b,
-	strong
-		font-weight: $w-demi
+	h1, h2, h3, h4, h5, h6
+		+font-size(sm)
+
+	img
+		border-radius: 6px
 
 	a
 		color: blue
@@ -18,7 +20,6 @@ article, .article
 			text-decoration: underline
 
 	ul
-		margin-bottom: 16px
 		> li
 			position: relative
 			display: flex
@@ -35,3 +36,7 @@ article, .article
 				margin-right: 12px
 				border-radius: 50%
 				background-color: $text
+
+	blockquote
+		padding-left: 24px
+		border-left: 3px solid $red-200

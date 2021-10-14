@@ -1,0 +1,119 @@
+extends ../common/layout
+
+//- Filter product types
+mixin productTypes(products)
+	for product, index in products
+		+b.form-checkbox
+			input(type="checkbox" id="product-type-" + index)
+			+e.label(for="product-type-" + index) #{product}
+
+block vars
+	- var title = 'Літо яскравіше з оновленою вареною курячою ковбасою'
+
+block content
+	main.page-main
+
+		+b.SECTION.news-single.section
+			+e.heading
+				+e.heading-content
+					.container
+						+b.breadcrumbs--white
+							+e.list
+								li
+									a(href="home.html")
+										+icon('home')
+										span Головна
+								li
+									a(href="news.html") Новини
+								li
+									span Літо яскравіше з оновленою вареною курячою ковбасою
+						+b.H1.title.text-white.text-xl.w-bold Літо яскравіше з оновленою вареною курячою ковбасою
+				+e.heading-photo.img-cover
+					img(src="./images/news/news-single.jpg" alt="Літо яскравіше з оновленою вареною курячою ковбасою")
+
+			// Section: News single
+			+e.article
+				.container
+					.article-published
+						+icon('calendar')
+						span.text-xs.w-medium Опубліковано: 4 серпня 2021
+					article.article-body
+						h2 ТМ “Рибак” — магазини, де завжди є якісні і смачні продукти!
+						p Тому, ми раді запропонувати вам, корисну новинку Епікур – куряче м’ясо, вирощене без антибіотиків та стимул яторів росту.
+						p Виробництво Епікур — це просторі пташники й доглянуті курочки, що зростають на натуральних рослинних кормах і чистій воді. Це свіже волинське повітря й перевірені європейські технології, що допомагають виробляти ніжне та якісне куряче м’ясо без використання стимуляторів росту та антибіотиків для профілактики.
+						p <b>Шукайте смачну і натуральну курочку в м. Івано-Франківськ в наших магазинах:</b>
+						blockquote вул. Чорновола, 12<br> вул. Коновальця, 142Б
+						p Виробництво Епікур — це просторі пташники й доглянуті курочки, що зростають на натуральних рослинних кормах і чистій воді. Це свіже волинське повітря й перевірені європейські технології, що допомагають виробляти ніжне та якісне куряче м’ясо без використання стимуляторів росту та антибіотиків для профілактики.
+
+			// Section: Last news
+			+e.other.section.mt-120
+				.container
+					+e.other-heading.row.align-items-center
+						.col-sm
+							h2.title.text-xl Останні публікації
+						.col-sm-auto
+							.button
+								+btn-arrow('#', 'До всіх новин')
+					+e.other-slider.swiper.mt-48
+						.swiper-wrapper
+							.swiper-slide
+								.card.card-news
+									.card-photo.img-cover.zoom-photo
+										a(href="news-single.html")
+											img(src="./images/news/1.jpg" alt="Новинка від ТМ “Рибак” — сало в банках — це неймовірно смачно та зручно")
+									.card-meta
+										.date 23 липня 2021
+										h4.title.text-sm
+											a(href="news-single.html") Новинка від ТМ “Рибак” — сало в банках — це неймовірно смачно та зручно
+										p.descr Обирайте: сало по-домашньому чи пряне. Або куштуйте обидва. Ідеально смакують з хлібом та цибулькою.
+							.swiper-slide
+								.card.card-news
+									.card-photo.img-cover.zoom-photo
+										a(href="news-single.html")
+											img(src="./images/news/2.jpg" alt="Запрошуємо комунікабельних продавців та досвідчених водіїв-експедиторів")
+									.card-meta
+										.date 10 липня 2021
+										h4.title.text-sm
+											a(href="news-single.html") Запрошуємо комунікабельних продавців та досвідчених водіїв-експедиторів
+										p.descr Хочете стати частиною нашої великої та дружньої команди? Запрошуємо комунікабельних продавців та досвідчених водіїв-експедиторів!
+							.swiper-slide
+								.card.card-news
+									.card-photo.img-cover.zoom-photo
+										a(href="news-single.html")
+											img(src="./images/news/3.jpg" alt="Даруємо 2 кг шашлику, щоб ви могли насолодитись вихідними з сім'єю чи друзями!")
+									.card-meta
+										.date 13 червня 2021
+										h4.title.text-sm
+											a(href="news-single.html") Даруємо 2 кг шашлику, щоб ви могли насолодитись вихідними з сім'єю чи друзями!
+										p.descr Ніжне соковите м'яско, що просто тане у роті — зізнавайтесь, захотіли скуштувати? Результати розіграшу — 31.05.
+							.swiper-slide
+								.card.card-news
+									.card-photo.img-cover.zoom-photo
+										a(href="news-single.html")
+											img(src="./images/news/1.jpg" alt="Новинка від ТМ “Рибак” — сало в банках — це неймовірно смачно та зручно")
+									.card-meta
+										.date 23 липня 2021
+										h4.title.text-sm
+											a(href="news-single.html") Новинка від ТМ “Рибак” — сало в банках — це неймовірно смачно та зручно
+										p.descr Обирайте: сало по-домашньому чи пряне. Або куштуйте обидва. Ідеально смакують з хлібом та цибулькою.
+							.swiper-slide
+								.card.card-news
+									.card-photo.img-cover.zoom-photo
+										a(href="news-single.html")
+											img(src="./images/news/2.jpg" alt="Запрошуємо комунікабельних продавців та досвідчених водіїв-експедиторів")
+									.card-meta
+										.date 10 липня 2021
+										h4.title.text-sm
+											a(href="news-single.html") Запрошуємо комунікабельних продавців та досвідчених водіїв-експедиторів
+										p.descr Хочете стати частиною нашої великої та дружньої команди? Запрошуємо комунікабельних продавців та досвідчених водіїв-експедиторів!
+							.swiper-slide
+								.card.card-news
+									.card-photo.img-cover.zoom-photo
+										a(href="news-single.html")
+											img(src="./images/news/3.jpg" alt="Даруємо 2 кг шашлику, щоб ви могли насолодитись вихідними з сім'єю чи друзями!")
+									.card-meta
+										.date 13 червня 2021
+										h4.title.text-sm
+											a(href="news-single.html") Даруємо 2 кг шашлику, щоб ви могли насолодитись вихідними з сім'єю чи друзями!
+										p.descr Ніжне соковите м'яско, що просто тане у роті — зізнавайтесь, захотіли скуштувати? Результати розіграшу — 31.05.
+						+e.other-pagination.swiper-pagination.mt-48

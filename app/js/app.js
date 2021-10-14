@@ -100,4 +100,5 @@ document.addEventListener('DOMContentLoaded', function() {
 			scrollTop: $(this).closest('.vacancy').offset().top
 		}, 500)
 	})
+
 })

@@ -37,3 +37,18 @@
 			> a,
 			> span
 				+font-size(xxs)
+
+
+/* ==========================================================================
+	 Light breadcrumbs
+	 ========================================================================== */
+.breadcrumbs--white
+	.breadcrumbs-list
+		> li
+			color: $white
+			&:first-child > a
+				color: $red-300
+			> a
+				color: $white
+				&:hover
+					opacity: 0.7

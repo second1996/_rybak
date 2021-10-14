@@ -120,4 +120,35 @@ document.addEventListener('DOMContentLoaded', function() {
 			},
 		},
 	})
+
+
+	/**
+	*-------------------------------------------------------------------------------------------------------------------------------------------
+	* Single page News: Other news slider
+	*-------------------------------------------------------------------------------------------------------------------------------------------
+	*/
+	const otherNewsSwiper = new Swiper('.news-single-other-slider', {
+		slidesPerView: 1.2,
+		spaceBetween: 30,
+		pagination: {
+			el: '.news-single-other-pagination',
+			type: 'bullets',
+			clickable: true,
+		},
+		breakpoints: {
+			576: {
+				slidesPerView: 1.5,
+			},
+			768: {
+				slidesPerView: 2,
+			},
+			992: {
+				slidesPerView: 2.5,
+			},
+			1620: {
+				slidesPerView: 3,
+			},
+		},
+	})
+
 })
