@@ -100,3 +100,37 @@
 			+font-size(xs)
 			font-weight: $w-medium
 			line-height: 1.3
+
+
+/* ==========================================================================
+	 Team card
+	 ========================================================================== */
+.card-team
+	.card-photo
+		height: 380px
+		border-radius: 6px
+		+media-breakpoint-down(xs)
+			height: auto
+	.card-meta
+		margin-top: 24px
+		.title
+			margin-bottom: 0
+		.post
+			margin-top: 6px
+			color: #858585
+			+font-size(xxs)
+		.contacts
+			margin-top: 12px
+			padding-top: 12px
+			border-top: 1px solid $border
+			&-item
+				> a
+					display: inline-block
+					+font-size(xxs)
+					word-break: break-all
+				> a[href*="tel"]
+					font-weight: $w-demi
+				> a[href*="mailto"]
+					color: $red-200
+					&:hover
+						color: $red-400

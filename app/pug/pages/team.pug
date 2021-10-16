@@ -1,0 +1,115 @@
+extends ../common/layout
+
+//- Filter product types
+mixin productTypes(products)
+	for product, index in products
+		+b.form-checkbox
+			input(type="checkbox" id="product-type-" + index)
+			+e.label(for="product-type-" + index) #{product}
+
+block vars
+	- var title = 'Наша команда'
+
+block content
+	main.page-main
+
+		+b.SECTION.page-heading
+			.container
+				+b.breadcrumbs
+					+e.list
+						li
+							a(href="home.html")
+								+icon('home')
+								span Головна
+						li
+							span Наша команда
+				+b.H1.title.text-xl.w-bold Наша команда
+
+		// Section: Team
+		+b.SECTION.team-main.section
+			.container
+				// Team list
+				+e.list.row.row-items-60.row-cols-1.row-cols-sm-2.row-cols-lg-3.row-cols-xxl-4
+					.col
+						.card.card-team
+							.card-photo.img-cover
+								img(src="./images/team/1.png" alt="Степанишин Роман Вікторович")
+							.card-meta
+								h5.title.text-sm Степанишин Роман Вікторович
+								.post Засновник компанії
+								+b.UL.contacts
+									+e.LI.item
+										+email('stepanyshyn.r.v@gmail.com')
+					.col
+						.card.card-team
+							.card-photo.img-cover
+								img(src="./images/team/2.png" alt="Демків Андрій Васильович")
+							.card-meta
+								h5.title.text-sm Демків Андрій Васильович
+								.post Керівник відділу продажу
+								+b.UL.contacts
+									+e.LI.item
+										+email('demkiv.andriy@gmail.com')
+					.col
+						.card.card-team
+							.card-photo.img-cover
+								img(src="./images/team/3.png" alt="Безкоровайний Віктор Васильович")
+							.card-meta
+								h5.title.text-sm Безкоровайний Віктор Васильович
+								.post Директор відділу виробництва
+								+b.UL.contacts
+									+e.LI.item
+										+email('bezkorov26@gmail.com')
+					.col
+						.card.card-team
+							.card-photo.img-cover
+								img(src="./images/team/4.png" alt="Глушков Сергій Юрійович")
+							.card-meta
+								h5.title.text-sm Глушков Сергій Юрійович
+								.post Директор відділу маркетингу
+								+b.UL.contacts
+									+e.LI.item
+										+email('glushkoooov@gmail.com')
+					.col
+						.card.card-team
+							.card-photo.img-cover
+								img(src="./images/team/5.png" alt="Давидова Оксана Анатоліївна")
+							.card-meta
+								h5.title.text-sm Давидова Оксана Анатоліївна
+								.post Директор відділу HR
+								+b.UL.contacts
+									+e.LI.item
+										+email('davydova@gmail.com')
+					.col
+						.card.card-team
+							.card-photo.img-cover
+								img(src="./images/team/6.png" alt="Глушков Сергій Юрійович")
+							.card-meta
+								h5.title.text-sm Глушков Сергій Юрійович
+								.post Директор відділу маркетингу
+								+b.UL.contacts
+									+e.LI.item
+										+phone('+380 50 437 14 56')
+									+e.LI.item
+										+email('glushkovvv23@gmail.com')
+					.col
+						.card.card-team
+							.card-photo.img-cover
+								img(src="./images/team/7.png" alt="Степанишин Роман Вікторович")
+							.card-meta
+								h5.title.text-sm Степанишин Роман Вікторович
+								.post Керівник відділу продажу
+								+b.UL.contacts
+									+e.LI.item
+										+phone('+380 50 437 14 56')
+									+e.LI.item
+										+email('stepanyshyn.r.v@gmail.com')
+				// Team photo
+				+e.photo.mt-120
+					.section-heading.mb-48
+						h2.title ТМ “Рибак” — м’ясна історія
+						.descr
+							p Наша продукція – це не лише якісна сировина, сучасне обладнання, дотримання українських та світових стандартів. Це передусім любов до своєї праці і до українців, для яких виготовляється продукція.
+					a(href="./images/team/main.jpg" data-fancybox title="Переглянути фото")
+						img.radius-6(src="./images/team/main.jpg" alt="ТМ “Рибак” — м’ясна історія")
+
