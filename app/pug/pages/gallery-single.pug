@@ -1,0 +1,116 @@
+extends ../common/layout
+
+block vars
+	- var title = 'Фотогалерея: Продукція'
+
+block content
+	main.page-main
+
+		+b.SECTION.page-heading
+			.container
+				+b.breadcrumbs
+					+e.list
+						li
+							a(href="home.html")
+								+icon('home')
+								span Головна
+						li
+							a(href="gallery.html") Фотогалерея
+						li
+							span Продукція
+				+b.H1.title.text-xl.w-bold Фотогалерея: <span class="text-red-200">Продукція</span>
+
+		// Section: Gallery single
+		+b.SECTION.gallery-single.section
+			.container
+				.row.row-items-30.row-cols-2.row-cols-md-3.row-cols-xl-5.row-cols-xxl-6
+					.col
+						+e.A.item.zoom-photo(href="./images/gallery/1.jpg" data-fancybox="single-gallery")
+							.view
+								+icon('eye')
+								span Переглянути
+							.photo.img-cover
+								img(src="./images/gallery/1.jpg" alt="")
+					.col
+						+e.A.item.zoom-photo(href="./images/gallery/2.jpg" data-fancybox="single-gallery")
+							.view
+								+icon('eye')
+								span Переглянути
+							.photo.img-cover
+								img(src="./images/gallery/2.jpg" alt="")
+					.col
+						+e.A.item.zoom-photo(href="./images/gallery/3.jpg" data-fancybox="single-gallery")
+							.view
+								+icon('eye')
+								span Переглянути
+							.photo.img-cover
+								img(src="./images/gallery/3.jpg" alt="")
+					.col
+						+e.A.item.zoom-photo(href="./images/gallery/1.jpg" data-fancybox="single-gallery")
+							.view
+								+icon('eye')
+								span Переглянути
+							.photo.img-cover
+								img(src="./images/gallery/1.jpg" alt="")
+					.col
+						+e.A.item.zoom-photo(href="./images/gallery/2.jpg" data-fancybox="single-gallery")
+							.view
+								+icon('eye')
+								span Переглянути
+							.photo.img-cover
+								img(src="./images/gallery/2.jpg" alt="")
+					.col
+						+e.A.item.zoom-photo(href="./images/gallery/3.jpg" data-fancybox="single-gallery")
+							.view
+								+icon('eye')
+								span Переглянути
+							.photo.img-cover
+								img(src="./images/gallery/3.jpg" alt="")
+					.col
+						+e.A.item.zoom-photo(href="./images/gallery/1.jpg" data-fancybox="single-gallery")
+							.view
+								+icon('eye')
+								span Переглянути
+							.photo.img-cover
+								img(src="./images/gallery/1.jpg" alt="")
+					.col
+						+e.A.item.zoom-photo(href="./images/gallery/2.jpg" data-fancybox="single-gallery")
+							.view
+								+icon('eye')
+								span Переглянути
+							.photo.img-cover
+								img(src="./images/gallery/2.jpg" alt="")
+					.col
+						+e.A.item.zoom-photo(href="./images/gallery/3.jpg" data-fancybox="single-gallery")
+							.view
+								+icon('eye')
+								span Переглянути
+							.photo.img-cover
+								img(src="./images/gallery/3.jpg" alt="")
+
+		// Section: Other gallery
+		+b.gallery-other.section.mt-120
+			.container
+				.section-heading.row.align-items-center
+					.col-md
+						h2.text-xl Інші фотогалереї
+					.col-md-auto
+						.button
+							+btn-arrow('gallery.html', 'Повернутися назад')
+				.row.mt-48.row-items-30.row-cols-1.row-cols-lg-2
+					.col
+						a.card.card-gallery.zoom-photo(href="gallery-single.html")
+							.card-label 24 фото
+							.card-photo.img-cover
+								img(src="./images/gallery/1.jpg" alt="Виробництво")
+							.card-meta
+								h3.title Виробництво
+								span.link Перейти до розділу
+					.col
+						a.card.card-gallery.zoom-photo(href="gallery-single.html")
+							.card-label 68 фото
+							.card-photo.img-cover
+								img(src="./images/gallery/2.jpg" alt="Продукція")
+							.card-meta
+								h3.title Продукція
+								span.link Перейти до розділу

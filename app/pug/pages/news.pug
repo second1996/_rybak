@@ -1,12 +1,5 @@
 extends ../common/layout
 
-//- Filter product types
-mixin productTypes(products)
-	for product, index in products
-		+b.form-checkbox
-			input(type="checkbox" id="product-type-" + index)
-			+e.label(for="product-type-" + index) #{product}
-
 block vars
 	- var title = 'Новини'
 

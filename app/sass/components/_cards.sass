@@ -134,3 +134,83 @@
 					color: $red-200
 					&:hover
 						color: $red-400
+
+
+/* ==========================================================================
+	 Gallery card
+	 ========================================================================== */
+.card-gallery
+	border-radius: 6px
+	&::after
+		content: ''
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 0
+		height: 50%
+		background: linear-gradient(180deg, rgba(46, 46, 46, 0) 0%, #2E2E2E 100%)
+	.card-label
+		position: absolute
+		top: 40px
+		left: 40px
+		z-index: 2
+		padding: 8px 12px
+		border-radius: 3px
+		background-color: $red-200
+		color: $white
+		+font-size(xxs)
+		line-height: 1
+		+media-breakpoint-down(xl)
+			top: 30px
+			left: 30px
+		+media-breakpoint-down(sm)
+			font-size: 16px
+		+media-breakpoint-down(xs)
+			top: 24px
+			left: 24px
+	.card-photo
+		height: 460px
+		+media-breakpoint-down(xl)
+			height: 420px
+		+media-breakpoint-down(lg)
+			height: 360px
+		+media-breakpoint-down(xs)
+			height: 280px
+	.card-meta
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 0
+		z-index: 1
+		padding: 40px
+		+media-breakpoint-down(xl)
+			padding: 30px
+		+media-breakpoint-down(xs)
+			padding: 24px
+		.title
+			margin-bottom: 0
+			color: $white
+			font-size: 32px
+			font-weight: $w-bold
+			line-height: 1.3
+			+media-breakpoint-down(xl)
+				font-size: 28px
+			+media-breakpoint-down(lg)
+				font-size: 24px
+				font-weight: $w-heavy
+		.link
+			color: $white
+			font-size: 14px
+			font-weight: $w-demi
+			text-transform: uppercase
+			&::before
+				content: ''
+				display: block
+				width: 60px
+				height: 3px
+				margin-top: 16px
+				margin-bottom: 6px
+				background-color: $red-300
+				+media-breakpoint-down(lg)
+					margin-top: 12px
+					margin-bottom: 4px

@@ -1,12 +1,5 @@
 extends ../common/layout
 
-//- Filter product types
-mixin productTypes(products)
-	for product, index in products
-		+b.form-checkbox
-			input(type="checkbox" id="product-type-" + index)
-			+e.label(for="product-type-" + index) #{product}
-
 block vars
 	- var title = 'Наша команда'
 
@@ -112,4 +105,3 @@ block content
 							p Наша продукція – це не лише якісна сировина, сучасне обладнання, дотримання українських та світових стандартів. Це передусім любов до своєї праці і до українців, для яких виготовляється продукція.
 					a(href="./images/team/main.jpg" data-fancybox title="Переглянути фото")
 						img.radius-6(src="./images/team/main.jpg" alt="ТМ “Рибак” — м’ясна історія")
-

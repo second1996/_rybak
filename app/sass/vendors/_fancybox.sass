@@ -15,10 +15,19 @@
 	 ========================================================================== */
 .fancybox-slide--image
 	padding: 44px 30px
-.fancybox-button:focus
-	box-shadow: none
+
 .fancybox-close-small
 	top: -56px
 	right: -18px
 	width: 52px
 	height: 52px
+
+.fancybox-button[class*="fancybox-button--arrow"]
+	background-color: $red-200
+	color: $white
+	transition: $trs !important
+	&:hover
+		background-color: $white
+		color: $red-200
+.fancybox-button:focus
+	box-shadow: none

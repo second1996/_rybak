@@ -17,11 +17,14 @@
 	padding-left: 30px
 	padding-right: 30px
 	+media-breakpoint-down(md)
-		padding-left: 15px
-		padding-right: 15px
+		padding-left: 16px
+		padding-right: 16px
 
 [class*="col"]
 	min-width: 0 // Fix Swiper width in Bootstrap columns
+	+media-breakpoint-down(xs)
+		padding-left: 8px
+		padding-right: 8px
 
 .row-items-60
 	> [class*="col"]
@@ -38,5 +41,5 @@
 .row-items-30
 	> [class*="col"]
 		margin-bottom: 30px
-		+media-breakpoint-down(sm)
-			margin-bottom: 20px
+		+media-breakpoint-down(xs)
+			margin-bottom: 16px

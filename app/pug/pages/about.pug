@@ -133,15 +133,15 @@ block content
 		// Section: Partners
 		+b.SECTION.a-partners.section.mt-120
 			.container
-				.section-heading.row.align-items-center
+				+e.heading.row.align-items-center
 					.col-md
-						h2.title.text-xl Наші партнери
-						.descr
-							p Тринадцять років тому ми почали свою невелику сімейну справу. 
+						.section-heading
+							h2.title Наші партнери
+							.descr
+								p Тринадцять років тому ми почали свою невелику сімейну справу.
 					.col-md-auto
 						.button
 							+btn('#', 'Стати партнером')
-	
 				+e.slider.mt-16
 					.swiper
 						.swiper-wrapper
@@ -194,12 +194,12 @@ block content
 		// Section: News
 		+b.h-news.section.mt-120
 			.container
-				+e.heading.row.align-items-center
-					.col-sm
-						h2.title.text-xl Новини компанії
-					.col-sm-auto
+				.section-heading.row.align-items-center
+					.col-md
+						h2.title Новини компанії
+					.col-md-auto
 						.button
-							+btn-arrow('#', 'До всіх новин')
+							+btn-arrow('news.html', 'До всіх новин')
 				.row.row-items-40.row-cols-1.row-cols-md-2.row-cols-xl-4.mt-48
 					.col
 						.card.card-news

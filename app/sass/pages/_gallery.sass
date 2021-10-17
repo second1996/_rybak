@@ -1,0 +1,41 @@
+/* ==========================================================================
+	 Gallery Single page
+	 ========================================================================== */
+.gallery-single
+	&-item
+		display: block
+		border-radius: 6px
+		border: 3px solid $border
+		&:hover
+			.view
+				opacity: 1
+		.view
+			pointer-events: none
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			z-index: 2
+			display: flex
+			flex-direction: column
+			align-items: center
+			justify-content: center
+			background-color: rgba($dark, 0.6)
+			color: $white
+			opacity: 0
+			transition: opacity .3s ease
+			> .icon
+				font-size: 32px
+				+media-breakpoint-down(xs)
+					font-size: 24px
+			> span
+				margin-top: 6px
+				font-size: 16px
+				text-transform: uppercase
+				+media-breakpoint-down(xs)
+					font-size: 14px
+		.photo
+			height: 160px
+			+media-breakpoint-down(xs)
+				height: auto

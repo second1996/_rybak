@@ -1,12 +1,5 @@
 extends ../common/layout
 
-//- Filter product types
-mixin productTypes(products)
-	for product, index in products
-		+b.form-checkbox
-			input(type="checkbox" id="product-type-" + index)
-			+e.label(for="product-type-" + index) #{product}
-
 block vars
 	- var title = 'Літо яскравіше з оновленою вареною курячою ковбасою'
 
@@ -48,12 +41,12 @@ block content
 			// Section: Last news
 			+e.other.section.mt-120
 				.container
-					+e.other-heading.row.align-items-center
-						.col-sm
-							h2.title.text-xl Останні публікації
-						.col-sm-auto
+					.section-heading.row.align-items-center
+						.col-md
+							h2.title Останні публікації
+						.col-md-auto
 							.button
-								+btn-arrow('#', 'До всіх новин')
+								+btn-arrow('news.html', 'До всіх новин')
 					+e.other-slider.swiper.mt-48
 						.swiper-wrapper
 							.swiper-slide

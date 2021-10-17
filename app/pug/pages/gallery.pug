@@ -1,0 +1,48 @@
+extends ../common/layout
+
+block vars
+	- var title = 'Фотогалерея'
+
+block content
+	main.page-main
+
+		+b.SECTION.page-heading
+			.container
+				+b.breadcrumbs
+					+e.list
+						li
+							a(href="home.html")
+								+icon('home')
+								span Головна
+						li
+							span Фотогалерея
+				+b.H1.title.text-xl.w-bold Фотогалерея
+
+		// Section: Gallery
+		+b.SECTION.gallery-main.section
+			.container
+				.row.row-items-30.row-cols-1.row-cols-lg-2
+					.col
+						a.card.card-gallery.zoom-photo(href="gallery-single.html")
+							.card-label 24 фото
+							.card-photo.img-cover
+								img(src="./images/gallery/1.jpg" alt="Виробництво")
+							.card-meta
+								h3.title Виробництво
+								span.link Перейти до розділу
+					.col
+						a.card.card-gallery.zoom-photo(href="gallery-single.html")
+							.card-label 68 фото
+							.card-photo.img-cover
+								img(src="./images/gallery/2.jpg" alt="Продукція")
+							.card-meta
+								h3.title Продукція
+								span.link Перейти до розділу
+					.col
+						a.card.card-gallery.zoom-photo(href="gallery-single.html")
+							.card-label 53 фото
+							.card-photo.img-cover
+								img(src="./images/gallery/3.jpg" alt="Магазини")
+							.card-meta
+								h3.title Магазини
+								span.link Перейти до розділу

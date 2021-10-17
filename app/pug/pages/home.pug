@@ -63,7 +63,7 @@ block content
 							.descr
 								p Доставка продукції клієнтам здійснюється в будь-яку точку України транспортом зі спеціалізованим холодильним обладнанням, що дає змогу зберегти всі якісні характеристики продукції.
 							.button.mt-32
-								+btn('#', 'Переглянути')
+								+btn('gallery.html', 'Переглянути')
 
 		// Section: Banner
 		+b.r-banner.section.mt-120
@@ -79,12 +79,12 @@ block content
 		// Section: News
 		+b.h-news.section.mt-120
 			.container
-				+e.heading.row.align-items-center
-					.col-sm
-						h2.title.text-xl Останні новини
-					.col-sm-auto
+				.section-heading.row.align-items-center
+					.col-md
+						h2.title Останні новини
+					.col-md-auto
 						.button
-							+btn-arrow('#', 'До всіх новин')
+							+btn-arrow('news.html', 'До всіх новин')
 				.row.row-items-40.row-cols-1.row-cols-md-2.row-cols-xl-4.mt-48
 					.col
 						.card.card-news
