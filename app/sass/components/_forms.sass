@@ -2,7 +2,8 @@
 	 Base customize for forms
 	 ========================================================================== */
 ::placeholder
-	color: #999
+	color: $dark
+	transition: opacity .3s ease
 
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
@@ -37,19 +38,26 @@ label
 		appearance: none
 		display: block
 		width: 100%
-		border-radius: 4px
-		border: 1px solid $border
+		height: 68px
+		padding: 0
+		border-radius: 0
+		border: 0
+		border-bottom: 1px solid $dark
 		background-color: $white
 		background-clip: padding-box
 		color: $dark
-		font-size: 15px
-		font-weight: $w-book
-		line-height: 1.5
-		transition: border-color .2s ease-in-out, box-shadow .2s ease-in-out, background-color .3s ease-in-out
+		+font-size(xs)
+		transition: border-color .2s ease-in-out, box-shadow .2s ease-in-out
 		&:focus
 			outline: none
-			border-color: $trsp
-			box-shadow: 0 0 0 2px $border
+			border-bottom-color: $red-200
+			box-shadow: 0px 1px 0px $red-200
+			&::placeholder
+				opacity: 0.5
+
+.form-policy
+	max-width: 480px
+	margin-bottom: 0
 
 
 /* ==========================================================================
@@ -57,9 +65,6 @@ label
 	 ========================================================================== */
 .form-control,
 .form-select
-	height: 64px
-	padding-left: 16px
-	padding-right: 16px
 	&--number
 		-moz-appearance: textfield
 		&::-webkit-outer-spin-button,
@@ -73,18 +78,16 @@ label
 	 ========================================================================== */
 .form-textarea
 	resize: none
-	padding: 16px
+	min-height: 140px
+	padding: 0
 
 
 /* ==========================================================================
 	 Select
 	 ========================================================================== */
 .form-select
-	color: $dark
-	background: $white url('../images/icons/arrow-down.svg') no-repeat right 8px center / 26px
-	&:focus
-		color: $dark
-		box-shadow: 0 0 0 2px $red-200
+	cursor: pointer
+	background: url('../images/icons/arrow-down-dark.svg') no-repeat right center / 18px
 
 
 /* ==========================================================================

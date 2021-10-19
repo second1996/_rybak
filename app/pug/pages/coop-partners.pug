@@ -1,0 +1,78 @@
+extends ../common/layout
+
+block vars
+	- var title = 'Партнерам'
+
+block content
+	main.page-main
+
+		+b.SECTION.page-heading
+			.container
+				+b.breadcrumbs
+					+e.list
+						li
+							a(href="home.html")
+								+icon('home')
+								span Головна
+						li
+							a(href="coop.html") Співпраця
+						li
+							span Партнерам
+				+b.H1.title.text-xl.w-bold Партнерам
+
+		// Cooperation single
+		+b.coop-single
+
+			// Section: About
+			+e.SECTION.about.section.mb-120
+				.container
+					+e.about-content
+						h2.title.mb-24.text-xl Заголовок для партнерів
+						.descr
+							p Мережа Рибак співпрацює з провідними підприємствами України, а також із зарубіжними компаніями. Наші відносини з компаніями-партнерами базуються на взаємній довірі, прозорості та чіткому дотриманні всіх домовленостей.
+							p Ми відкриті до пропозицій, які здатні поліпшити або доповнити асортимент наших магазинів.
+						.button.mt-32
+							+btn('#', 'Завантажити каталог продукції')
+
+			// Section: Contacts
+			+e.SECTION.contacts.section
+				.container
+					.row.row-items-60
+						.col-xl-5
+							+e.contacts-info
+								.section-heading
+									h3.suptitle.title-xs Зв’яжіться з нами
+									h2.title Контактна інформація
+								.contacts.row.row-items-30.row-cols-1.row-cols-md-2.row-cols-xl-1
+									.col
+										.card.card-contacts
+											.card-photo.img-cover
+												img(src="./images/contacts/1.png" alt="Ліля Швайка")
+											.card-meta
+												.post Керівник відділу ВТМ
+												.name Ліля Швайка
+												+b.UL.phone
+													li
+														+phone('+380 50 437 14 56')
+												+b.UL.email
+													li
+														+email('l.shvajka@gmail.com')
+						.col-xl-7
+							+e.contacts-feedback
+								.section-heading
+									h2.title Зворотній зв’язок
+									.descr
+										p Якщо ви не знайшли інформацію, яка вас цікавить, залиште свої контакти і ми зв’яжемось з вами.
+								form.form.mt-32
+									.row.row-items-30
+										.col-sm-6
+											input.form-control(type="text" placeholder="Ім’я та прізвище" required=true)
+										.col-sm-6
+											input.form-control(type="tel" data-mask="+38 (099) 999-99-99" placeholder="Номер телефону" required=true)
+										.col-12
+											textarea.form-textarea(placeholder="Додаткові запитання тощо...")
+										.col-sm
+											p.form-policy Натискаючи "Надіслати", я погоджуюся з обробкою та зберіганням своїх персональних даних.
+										.col-sm-auto
+											button.form-submit.btn(type="submit") Надіслати заявку
+

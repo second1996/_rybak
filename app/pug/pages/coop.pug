@@ -1,0 +1,52 @@
+extends ../common/layout
+
+block vars
+	- var title = 'Співпраця'
+
+block content
+	main.page-main
+
+		+b.SECTION.page-heading
+			.container
+				+b.breadcrumbs
+					+e.list
+						li
+							a(href="home.html")
+								+icon('home')
+								span Головна
+						li
+							span Співпраця
+				+b.H1.title.text-xl.w-bold Співпраця
+
+		// Section: Cooperation
+		+b.SECTION.coop-main
+			.container
+				.row.row-items-30.row-cols-1.row-cols-lg-2
+					.col
+						+e.A.item.zoom-photo(href="coop-partners.html")
+							.content
+								h3.title Партнерам
+								span.link Перейти до розділу
+							.photo
+								img(src="./images/cooperation-bg.png" alt="Партнерам")
+					.col
+						+e.A.item.zoom-photo(href="coop-provider.html")
+							.content
+								h3.title Постачальникам
+								span.link Перейти до розділу
+							.photo
+								img(src="./images/cooperation-bg.png" alt="Постачальникам")
+					.col
+						+e.A.item.zoom-photo(href="coop-realty.html")
+							.content
+								h3.title Нерухомість
+								span.link Перейти до розділу
+							.photo
+								img(src="./images/cooperation-bg.png" alt="Нерухомість")
+					.col
+						+e.A.item.zoom-photo(href="coop-advertising.html")
+							.content
+								h3.title Реклама
+								span.link Перейти до розділу
+							.photo
+								img(src="./images/cooperation-bg.png" alt="Реклама")

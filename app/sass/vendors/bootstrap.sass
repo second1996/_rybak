@@ -20,11 +20,16 @@
 		padding-left: 16px
 		padding-right: 16px
 
-[class*="col"]
+.row > [class*="col"]
 	min-width: 0 // Fix Swiper width in Bootstrap columns
 	+media-breakpoint-down(xs)
 		padding-left: 8px
 		padding-right: 8px
+
+.row
+	+media-breakpoint-down(xs)
+		margin-left: -8px
+		margin-right: -8px
 
 .row-items-60
 	> [class*="col"]

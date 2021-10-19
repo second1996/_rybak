@@ -214,3 +214,58 @@
 				+media-breakpoint-down(lg)
 					margin-top: 12px
 					margin-bottom: 4px
+
+
+/* ==========================================================================
+	 Contacts card
+	 ========================================================================== */
+.card-contacts
+	max-width: 450px
+	padding: 30px
+	border-radius: 6px
+	border: 1px solid $border
+	background-color: $white
+	transition: .3s ease
+	+media-breakpoint-down(lg)
+		padding: 24px
+	+media-breakpoint-down(sm)
+		max-width: 100%
+	&:hover
+		border-color: #FFE3E3
+		box-shadow: 0px 0px 0px 1px #FFE3E3
+	.card-photo
+		position: absolute
+		top: 30px
+		right: 30px
+		width: 100px
+		height: 100px
+		border-radius: 50%
+		border: 2px solid #FFE3E3
+		+media-breakpoint-down(lg)
+			top: 24px
+			right: 24px
+			width: 80px
+			height: 80px
+	.card-meta
+		margin-right: 120px
+		+media-breakpoint-down(lg)
+			margin-right: 90px
+		.post
+			margin-bottom: 16px
+			font-weight: $w-demi
+			line-height: 1.3
+		.name
+			color: $dark
+			+font-size(xxs)
+		.phone
+			> li
+				> a
+					color: $red-200
+					+font-size(xxs)
+					font-weight: $w-demi
+					&:hover
+						color: $red-400
+		.email
+			margin-top: 16px
+
+
