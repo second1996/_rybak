@@ -98,7 +98,7 @@ block content
 										+e.services-item
 											+icon('alcohol')
 							.col
-								+b.shop-card(data-lat="" data-lng="")
+								+b.shop-card(data-lat="50.1338503" data-lng="23.8484675")
 									+e.city м. Тернопіль
 									+e.street вул. Живова, 15б
 									+e.services
@@ -109,10 +109,10 @@ block content
 
 					// Google Map
 					+e.map
-						#rybak-map
+						#map
 
 block scripts
 	script(src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js")
 	script(src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/i18n/uk.js")
-	script(src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js")
+	script(src="./js/google-maps/markerclusterer.js")
 	script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDN-SxwIq2Kzkd9rcj52RkCoBCt0vF4gT8&callback=initMap&language=ua" async)

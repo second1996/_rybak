@@ -22,7 +22,7 @@ let path = {
 		pug: [sourceDir + '/pug/pages/*.pug'],
 		css: sourceDir + '/' + preprocessor +'/**/*.' + preprocessor,
 		// js: [sourceDir + '/js/app.js', sourceDir + '/js/vendors.js'],
-		js: sourceDir + '/js/*.js',
+		js: sourceDir + '/js/**/*.js',
 		img: sourceDir + '/images/**/*.{' + imageswatch + '}',
 		fonts: sourceDir + '/fonts/*.ttf'
 	},

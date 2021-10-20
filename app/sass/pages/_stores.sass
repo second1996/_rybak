@@ -46,5 +46,32 @@
 							margin-right: 12px
 	&-map
 		height: 600px
-		#rybak-map
+		#map
 			height: 100%
+		.rybak-gm-marker
+			position: absolute
+			cursor: pointer
+			z-index: 2
+			display: flex
+			align-items: center
+			justify-content: center
+			width: 40px
+			height: 39px
+			background-image: url('../images/marker-cluster.svg')
+			background-repeat: no-repeat
+			background-position: center center
+			font-family: $userfont
+			color: $white
+			font-size: 14px
+			font-weight: $w-demi
+		.rybak-infoWindow
+			width: 300px
+			padding: 12px
+			border-radius: 6px
+			background-color: $white
+			font-family: $userfont
+			+font-size(xxs)
+			text-align: center
+			transform: translate3d(0,0,0)
+			.btn
+				height: 50px
