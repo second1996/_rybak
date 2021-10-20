@@ -1,0 +1,118 @@
+extends ../common/layout
+
+block vars
+	- var title = 'Мережа магазинів'
+
+block content
+	main.page-main
+
+		+b.SECTION.page-heading
+			.container
+				+b.breadcrumbs
+					+e.list
+						li
+							a(href="home.html")
+								+icon('home')
+								span Головна
+						li
+							span Мережа магазинів
+				+b.H1.title.text-xl.w-bold Мережа магазинів
+
+		// Section: About
+		+b.SECTION.shops-about.section
+			.container
+				.section-heading.mb-48
+					h2.title Фірмові магазини ТМ “Рибак”
+					.descr
+						p Наша продукція — це не лише якісна сировина, сучасне  обладнання, дотримання українських та світових стандартів. Це передусім любов до своєї праці і до українців, для яких виготовляється продукція.
+				+e.list.row.row-items-40.row-cols-1.row-cols-md-3
+					.col
+						+e.item
+							.number.text-red-200.text-xxl.w-bold 62
+							p.descr Власних фірмових магазинів в область України
+					.col
+						+e.item
+							.number.text-red-200.text-xxl.w-bold 200+
+							p.descr Партнерів, які торгують продукцією від ТМ “Рибак”
+					.col
+						+e.item
+							.number.text-red-200.text-xxl.w-bold 20
+							p.descr Міст України, де нас можна знайти
+				+e.photo.mt-32.img-cover.radius-6
+					img(src="./images/shops-photo.png" alt="Фірмові магазини ТМ “Рибак”")
+
+		// Section: Shops list
+		+b.SECTION.shops-list.section.mt-120
+			.container
+				.section-heading
+					h3.suptitle.title-xs Адреси магазинів
+					h2.title Шукай нас на карті
+				+e.filters
+					// Filters form
+					+e.FORM.filters-form
+						.row.row-items-30.row-cols-4
+							.col
+								select.form-select
+									option(value="" selected=true) Твоє місто
+									option(value="м. Івано-Франківськ") м. Івано-Франківськ
+									option(value="м. Бережани") м. Бережани
+							.col
+								select.form-select
+									option(value="" selected=true) Адреса магазину
+									option(value="1") 1
+									option(value="2") 2
+									option(value="3") 3
+
+					// Filters results
+					+e.filters-results
+						.row.row-items-30.row-cols-1.row-cols-md-2.row-cols-xl-3
+							.col
+								+b.shop-card(data-lat="49.4467869" data-lng="24.9262808")
+									+e.city м. Івано-Франківськ
+									+e.street вул. Вовчинецька, 126
+									+e.services
+										+e.services-item
+											+icon('restaurant')
+										+e.services-item
+											+icon('coffee')
+										+e.services-item
+											+icon('alcohol')
+							.col
+								+b.shop-card(data-lat="48.944332" data-lng="24.691440")
+									+e.city м. Івано-Франківськ
+									+e.street вул. Горбачевського, 14А (АС-2)
+									+e.services
+										+e.services-item
+											+icon('restaurant')
+										+e.services-item
+											+icon('coffee')
+										+e.services-item
+											+icon('alcohol')
+							.col
+								+b.shop-card(data-lat="48.5261087" data-lng="25.0274964")
+									+e.city м. Івано-Франківськ
+									+e.street вул. Грушевського, 70 (приміщення 7-А)
+									+e.services
+										+e.services-item
+											+icon('coffee')
+										+e.services-item
+											+icon('alcohol')
+							.col
+								+b.shop-card(data-lat="" data-lng="")
+									+e.city м. Тернопіль
+									+e.street вул. Живова, 15б
+									+e.services
+										+e.services-item
+											+icon('coffee')
+										+e.services-item
+											+icon('alcohol')
+
+					// Google Map
+					+e.map
+						#rybak-map
+
+block scripts
+	script(src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js")
+	script(src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/i18n/uk.js")
+	script(src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js")
+	script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDN-SxwIq2Kzkd9rcj52RkCoBCt0vF4gT8&callback=initMap&language=ua" async)

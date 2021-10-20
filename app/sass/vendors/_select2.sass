@@ -1,0 +1,91 @@
+@import url('https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css')
+
+/* ==========================================================================
+	 Select2 customize
+	 ========================================================================== */
+.select2-container--default
+	// Customize scrollbar
+	*
+		scrollbar-width: thin
+		scrollbar-color: $text $white
+	::-webkit-scrollbar
+		width: 10px
+	::-webkit-scrollbar-track
+		background-color: $white
+	::-webkit-scrollbar-thumb
+		background-color: rgba($dark, 0.35)
+		border-radius: 20px
+		border: 3px solid $white
+		&:hover
+			background-color: $red-200
+
+	.select2-selection--single
+		display: flex
+		align-items: center
+		height: 68px
+		border-radius: 0
+		border: 0
+		border-bottom: 1px solid $dark
+		color: $dark
+		+font-size(xs)
+		outline: none
+		transition: border-color .2s ease-in-out, box-shadow .2s ease-in-out
+		.select2-selection
+			&__rendered
+				padding-left: 0
+				color: $dark
+			&__arrow
+				top: 50%
+				right: 0
+				width: 16px
+				transform: translateY(-50%)
+				> b
+					width: 16px
+					height: 16px
+					margin: 0
+					border: 0
+					background: url('../images/icons/arrow-down-red.svg') no-repeat right center / cover
+					transform: translate(-50%, -50%)
+					transition: transform .15s ease
+					filter: grayscale(1)
+
+	// Dropdown
+	.select2-dropdown
+		border: 0
+		box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1)
+	.select2-search--dropdown
+		padding: 20px 10px
+		.select2-search__field
+			padding: 8px 16px
+			border-radius: 3px
+			border: 1px solid $border
+			+font-size(xxs)
+			&::placeholder
+				opacity: 0.5
+	.select2-results__options
+		padding: 0 10px 10px
+	.select2-results__option
+		padding-left: 10px
+		padding-right: 10px
+		border-radius: 3px
+		+font-size(xxs)
+		transition: .2s ease
+		&--selected
+			background-color: darken($lightred, 2%)
+		&--highlighted.select2-results__option--selectable
+			background-color: $red-200
+
+	// Opened state
+	&.select2-container--open
+		.select2-selection--single
+			border-bottom-color: $red-200
+			.select2-selection
+				&__rendered
+					color: $red-200
+				&__arrow > b
+					border: 0
+					transform: translate(-50%, -50%) scaleY(-1)
+					filter: none
+
+
+
