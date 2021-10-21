@@ -40,6 +40,7 @@
 		"gulp-ttf2woff2": "^4.0.1",
 		"gulp-uglify-es": "^2.0.0",
 		"jquery-mask-plugin": "^1.14.16",
+		"select2": "^4.1.0-rc.0",
 		"swiper": "^7.0.8",
 		"webpack-stream": "^6.1.2"
 	},

@@ -19,6 +19,7 @@
 		width: 50px
 		height: 50px
 		padding: 0 !important
+		border-bottom: 0 !important
 		background-color: $trsp
 		outline: none
 		+media-breakpoint-down(xs)
@@ -57,8 +58,7 @@
 		margin-left: 12px
 
 	// Page numbers
-	a.page-numbers:not(.prev),
-	a.page-numbers:not(.next),
+	a.page-numbers,
 	span.page-numbers
 		display: inline-block
 		padding: 12px
@@ -66,6 +66,10 @@
 		font-weight: $w-demi
 		+media-breakpoint-down(xs)
 			padding: 10px
+	a.page-numbers
+		border-bottom: 1px solid $trsp
+		&:hover
+			border-bottom-color: $red-200
 
 	// Current page
 	span.page-numbers.current

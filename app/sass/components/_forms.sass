@@ -48,6 +48,8 @@ label
 		color: $dark
 		+font-size(xs)
 		transition: border-color .2s ease-in-out, box-shadow .2s ease-in-out
+		+media-breakpoint-down(xs)
+			height: 56px
 		&:focus
 			outline: none
 			border-bottom-color: $red-200
