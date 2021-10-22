@@ -106,15 +106,4 @@ block content
 									h2.title Зворотній зв’язок
 									.descr
 										p Якщо ви не знайшли інформацію, яка вас цікавить, залиште свої контакти і ми зв’яжемось з вами.
-								form.form.mt-32
-									.row.row-items-30
-										.col-sm-6
-											input.form-control(type="text" placeholder="Ім’я та прізвище" required=true)
-										.col-sm-6
-											input.form-control(type="tel" data-mask="+38 (099) 999-99-99" placeholder="Номер телефону" required=true)
-										.col-12
-											textarea.form-textarea(placeholder="Додаткові запитання тощо...")
-										.col-sm
-											p.form-policy Натискаючи "Надіслати", я погоджуюся з обробкою та зберіганням своїх персональних даних.
-										.col-sm-auto
-											button.form-submit.btn(type="submit") Надіслати заявку
+								include coop/feedback-form

@@ -15,6 +15,10 @@ mixin email(mail)
 mixin btn(link, text)
 	a(href=link).btn #{text}
 
+//- Button modal
+mixin btn-modal(link, text)
+	button(type="button" data-toggle="modal" data-target=link).btn #{text}
+
 //- Button with arrow
 mixin btn-arrow(link, text)
 	a(href=link).btn-arrow

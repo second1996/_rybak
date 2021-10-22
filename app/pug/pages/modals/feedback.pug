@@ -1,0 +1,42 @@
+.modal.fade#feedback-modal(tabindex="-1" aria-labelledby="feedbackModalLabel" aria-hidden="true")
+	.modal-dialog.modal-dialog-centered.modal-lg
+		.modal-content
+			.modal-header
+				H5.modal-title.text-md#feedbackModalLabel Зворотній зв'язок
+				button.close.btn-close(type="button" data-dismiss="modal" aria-label="Close")
+					+icon('close')
+			.modal-body
+				.modal-descr
+					p Залиште свої контакти і ми зв’яжемось з вами для уточнення деталей
+				form.form
+					.row.row-items-30
+						.col-lg-6
+							.form-group-label
+								input#fb-name.form-control(type="text" placeholder="Ім'я та прізвище" required=true)
+								label(for="fb-name") Ім'я та прізвище<sup>*</sup>
+						.col-lg-6
+							.form-group-label
+								input#fb-phone.form-control(type="tel" data-mask="+38 (099) 999-99-99" placeholder="Номер телефону" required=true)
+								label(for="fb-phone") Номер телефону<sup>*</sup>
+						.col-lg-6
+							.form-group-label
+								select#fb-theme.form-select(data-minimum-results-for-search="Infinity" data-placeholder="Тема повідомлення" required=true)
+									option(value="" selected=true disabled=true) Тема повідомлення
+									option(value="Якість обслуговування") Якість обслуговування
+									option(value="Пропозиція співпраці") Пропозиція співпраці
+									option(value="Дрібний гурт") Дрібний гурт
+									option(value="Великий гурт") Великий гурт
+									option(value="Інше") Інше
+								label(for="fb-theme") Тема повідомлення<sup>*</sup>
+						.col-lg-6
+							.form-group-label
+								input#fb-email.form-control(type="email" placeholder="E-mail адреса" required=true)
+								label(for="fb-email") E-mail адреса<sup>*</sup>
+						.col-12
+							.form-group-label
+								textarea#fb-message.form-textarea(placeholder="Текст повідомлення..." required=true)
+								label(for="fb-message") Текст повідомлення...
+						.col-sm
+							p.form-policy Натискаючи "Надіслати", я погоджуюся з обробкою та зберіганням своїх персональних даних.
+						.col-sm-auto
+							button.form-submit.btn(type="submit") Надіслати заявку

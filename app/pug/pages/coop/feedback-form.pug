@@ -1,0 +1,18 @@
+form.form.mt-32
+	.row.row-items-30
+		.col-sm-6
+			.form-group-label
+				input#coop-fb-name.form-control(type="text" placeholder="Ім’я та прізвище" required=true)
+				label(for="coop-fb-name") Ім'я та прізвище<sup>*</sup>
+		.col-sm-6
+			.form-group-label
+				input#coop-fb-name.form-control(type="tel" data-mask="+38 (099) 999-99-99" placeholder="Номер телефону" required=true)
+				label(for="coop-fb-name") Номер телефону<sup>*</sup>
+		.col-12
+			.form-group-label
+				textarea#coop-fb-message.form-textarea(placeholder="Додаткові запитання тощо...")
+				label(for="coop-fb-message") Додаткові запитання тощо...
+		.col-sm
+			p.form-policy Натискаючи "Надіслати", я погоджуюся з обробкою та зберіганням своїх персональних даних.
+		.col-sm-auto
+			button.form-submit.btn(type="submit") Надіслати заявку

@@ -42,69 +42,7 @@ block content
 					img(src="./images/stores-photo.png" alt="Фірмові магазини ТМ “Рибак”")
 
 		// Section: Stores list
-		+b.SECTION.stores-list.section.mt-120
-			.container
-				.section-heading
-					h3.suptitle.title-xs Адреси магазинів
-					h2.title Шукай нас на карті
-				+e.filters
-					// Filters form
-					+e.FORM.filters-form
-						.row.row-items-30.row-cols-1.row-cols-sm-2.row-cols-lg-3.row-cols-xxl-4
-							.col
-								select.form-select#stores-filters-city
-									option(value="" selected=true) Твоє місто
-							.col
-								select.form-select#stores-filters-address
-									option(value="" selected=true) Адреса магазину
-
-					// Filters results
-					+e.filters-results
-						.row.row-items-30.row-cols-1.row-cols-md-2.row-cols-xxl-3
-							.col
-								+b.shop-card(data-lat="49.4467869" data-lng="24.9262808")
-									+e.city м. Івано-Франківськ
-									+e.street вул. Вовчинецька, 126
-									+e.services
-										+e.services-item
-											+icon('restaurant')
-										+e.services-item
-											+icon('coffee')
-										+e.services-item
-											+icon('alcohol')
-							.col
-								+b.shop-card(data-lat="48.944332" data-lng="24.691440")
-									+e.city м. Івано-Франківськ
-									+e.street вул. Горбачевського, 14А (АС-2)
-									+e.services
-										+e.services-item
-											+icon('restaurant')
-										+e.services-item
-											+icon('coffee')
-										+e.services-item
-											+icon('alcohol')
-							.col
-								+b.shop-card(data-lat="48.5261087" data-lng="25.0274964")
-									+e.city м. Івано-Франківськ
-									+e.street вул. Грушевського, 70 (приміщення 7-А)
-									+e.services
-										+e.services-item
-											+icon('coffee')
-										+e.services-item
-											+icon('alcohol')
-							.col
-								+b.shop-card(data-lat="50.1338503" data-lng="23.8484675")
-									+e.city м. Тернопіль
-									+e.street вул. Живова, 15б
-									+e.services
-										+e.services-item
-											+icon('coffee')
-										+e.services-item
-											+icon('alcohol')
-
-					// Google Map
-					+e.map
-						#map
+		include stores/google-map
 
 block scripts
 	script(src="./js/google-maps/markerclusterer.js")

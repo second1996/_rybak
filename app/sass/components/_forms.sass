@@ -57,9 +57,14 @@ label
 			&::placeholder
 				opacity: 0.5
 
+
+/* ==========================================================================
+	 Form policy
+	 ========================================================================== */
 .form-policy
 	max-width: 480px
 	margin-bottom: 0
+	line-height: 1.4
 
 
 /* ==========================================================================
@@ -175,3 +180,78 @@ label
 			opacity: 0
 		&:hover::before
 			border-color: $red-200
+
+
+/* ==========================================================================
+	 Label (::placeholder-shown)
+	 ========================================================================== */
+.form-group-label
+	position: relative
+	input::placeholder,
+	input:focus::placeholder,
+	textarea::placeholder,
+	textarea:focus::placeholder,
+	.select2-selection__placeholder
+		opacity: 0
+
+	input:-webkit-autofill,
+	input:-webkit-autofill:hover,
+	input:-webkit-autofill:focus
+		-webkit-box-shadow: 0 0 0px $white $white inset
+		transition: background-color 5000s ease-in-out 0s
+		& ~ label
+			top: 0
+			font-size: 12px
+			transform: translate3d(0, 0, 0)
+	input:not(:placeholder-shown),
+	textarea:not(:placeholder-shown),
+	.form-select--selected
+		& ~ label
+			font-size: 12px
+			transform: translate3d(0, 0, 0)
+	input:not(:placeholder-shown)
+		padding-top: 8px
+		& ~ label
+			top: 0
+			+media-breakpoint-down(xs)
+				top: -2px
+	textarea
+		margin-top: 16px
+		& ~ label
+			top: 16px
+		&:not(:placeholder-shown)
+			& ~ label
+				top: -22px
+				+media-breakpoint-down(xs)
+					top: -20px
+	.form-select--selected
+		& ~ .select2-container--default
+			.select2-selection--single
+				padding-top: 8px
+				.select2-selection__arrow
+					margin-top: 4px
+		& ~ label
+			top: 0
+			+media-breakpoint-down(xs)
+				top: -2px
+
+	label
+		cursor: text
+		pointer-events: none
+		position: absolute
+		top: 50%
+		left: 0
+		z-index: 1
+		display: block
+		width: 100%
+		margin: auto
+		color: $dark
+		will-change: transform
+		transform: translate3d(0, -50%, 0)
+		transition: .1s ease-in-out
+		+media-breakpoint-down(xs)
+			transition: font-size .1s ease-in-out
+		> sup
+			top: 0
+			font-size: 100%
+			color: $red-200

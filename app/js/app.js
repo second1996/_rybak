@@ -94,12 +94,9 @@ document.addEventListener('DOMContentLoaded', function () {
 	 *-------------------------------------------------------------------------------------------------------------------------------------------
 	 */
 	$('.collapse').on('shown.bs.collapse', function () {
-		$('html,body').animate(
-			{
-				scrollTop: $(this).closest('.vacancy').offset().top,
-			},
-			500,
-		);
+		$('html,body').animate({
+			scrollTop: $(this).closest('.vacancy').offset().top,
+		}, 500);
 	});
 
 	/**
@@ -107,14 +104,22 @@ document.addEventListener('DOMContentLoaded', function () {
 	 * Select2: Shops map filters dropdown
 	 *-------------------------------------------------------------------------------------------------------------------------------------------
 	 */
-	$('select')
-		.select2()
-		.on('select2:opening', function () {
-			$(this)
-				.data('select2')
-				.$dropdown.find(':input.select2-search__field')
-				.attr('placeholder', 'Пошук...');
-		});
+	$('.modal select').select2({
+		dropdownParent: $(".modal")
+	})
+
+	const $select2 = $('select')
+
+	$select2.select2({
+		width: '100%',
+		debug: true,
+	}).on('select2:opening', function () {
+		$(this).data('select2').$dropdown.find(':input.select2-search__field').attr('placeholder', 'Пошук...');
+	});
+
+	$select2.on('select2:select', function (e) {
+		e.currentTarget.classList.add('form-select--selected')
+	});
 });
 
 /**

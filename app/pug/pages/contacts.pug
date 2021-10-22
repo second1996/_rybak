@@ -55,75 +55,16 @@ block content
 									.email
 										+email("hr@tmrybak.com.ua")
 							.feedback
-								+btn('#', 'Форма зворотнього зв’язку')
+								+btn-modal('#feedback-modal', 'Форма зворотнього зв’язку')
 					.col-xl-6
 						+e.map
 							iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2619.11371024608!2d24.7071802!3d48.9703598!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4730c114a7e39e73%3A0xf4f666138544fca1!2z0KLQnCDQoNC40LHQsNC6!5e0!3m2!1suk!2sua!4v1634812039050!5m2!1suk!2sua" allowfullscreen loading="lazy")
 
 		// Section: Stores list
-		+b.SECTION.stores-list.section.mt-120
-			.container
-				.section-heading
-					h3.suptitle.title-xs Адреси магазинів
-					h2.title Шукай нас на карті
-				+e.filters
-					// Filters form
-					+e.FORM.filters-form
-						.row.row-items-30.row-cols-1.row-cols-sm-2.row-cols-lg-3.row-cols-xxl-4
-							.col
-								select.form-select#stores-filters-city
-									option(value="" selected=true) Твоє місто
-							.col
-								select.form-select#stores-filters-address
-									option(value="" selected=true) Адреса магазину
+		include stores/google-map
 
-					// Filters results
-					+e.filters-results
-						.row.row-items-30.row-cols-1.row-cols-md-2.row-cols-xxl-3
-							.col
-								+b.shop-card(data-lat="49.4467869" data-lng="24.9262808")
-									+e.city м. Івано-Франківськ
-									+e.street вул. Вовчинецька, 126
-									+e.services
-										+e.services-item
-											+icon('restaurant')
-										+e.services-item
-											+icon('coffee')
-										+e.services-item
-											+icon('alcohol')
-							.col
-								+b.shop-card(data-lat="48.944332" data-lng="24.691440")
-									+e.city м. Івано-Франківськ
-									+e.street вул. Горбачевського, 14А (АС-2)
-									+e.services
-										+e.services-item
-											+icon('restaurant')
-										+e.services-item
-											+icon('coffee')
-										+e.services-item
-											+icon('alcohol')
-							.col
-								+b.shop-card(data-lat="48.5261087" data-lng="25.0274964")
-									+e.city м. Івано-Франківськ
-									+e.street вул. Грушевського, 70 (приміщення 7-А)
-									+e.services
-										+e.services-item
-											+icon('coffee')
-										+e.services-item
-											+icon('alcohol')
-							.col
-								+b.shop-card(data-lat="50.1338503" data-lng="23.8484675")
-									+e.city м. Тернопіль
-									+e.street вул. Живова, 15б
-									+e.services
-										+e.services-item
-											+icon('coffee')
-										+e.services-item
-											+icon('alcohol')
-
-					// Google Map
-					+e.map
-						#map
+block modals
+	include modals/feedback
 
 block scripts
 	script(src="./js/google-maps/markerclusterer.js")
