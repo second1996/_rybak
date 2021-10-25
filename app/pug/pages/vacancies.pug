@@ -56,7 +56,7 @@ block content
 										li графік роботи Пн-Сб, Нд — вихідний
 										li офіційне працевлаштування
 								+e.apply
-									+btn('#', 'Заповнити анкету')
+									button.btn(type="button" data-toggle="modal" data-target="#vacancyModal" data-vacancy="Водій-експедитор") Заповнити анкету
 					+b.vacancy
 						+e.heading#v-heading-2(data-toggle="collapse" data-target="#v-collapse-2" aria-expanded="false" aria-controls="v-collapse-2")
 							+b.meta
@@ -87,4 +87,7 @@ block content
 										li графік роботи Пн-Сб, Нд — вихідний
 										li офіційне працевлаштування
 								+e.apply
-									+btn('#', 'Заповнити анкету')
+									button.btn(type="button" data-toggle="modal" data-target="#vacancyModal" data-vacancy="Заступник керуючого магазином") Заповнити анкету
+
+block modals
+	include modals/vacancy

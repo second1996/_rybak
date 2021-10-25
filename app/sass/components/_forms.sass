@@ -19,6 +19,13 @@ input::-webkit-inner-spin-button
 input[type=number]
 	-moz-appearance: textfield
 
+input[readonly]
+	cursor: not-allowed
+	user-select: none
+	&:focus
+		border-bottom-color: $dark
+		box-shadow: none
+
 input, textarea
 	outline: none
 	font-family: $userfont

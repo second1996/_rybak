@@ -108,17 +108,26 @@ document.addEventListener('DOMContentLoaded', function () {
 		dropdownParent: $(".modal")
 	})
 
-	const $select2 = $('select')
-
-	$select2.select2({
+	$('select').select2({
 		width: '100%',
 		debug: true,
 	}).on('select2:opening', function () {
 		$(this).data('select2').$dropdown.find(':input.select2-search__field').attr('placeholder', 'Пошук...');
+	}).on('select2:select', function (e) {
+		e.currentTarget.classList.add('form-select--selected')
 	});
 
-	$select2.on('select2:select', function (e) {
-		e.currentTarget.classList.add('form-select--selected')
+	/**
+	 *-------------------------------------------------------------------------------------------------------------------------------------------
+	 * BS Modal: Vacancy varying modal
+	 *-------------------------------------------------------------------------------------------------------------------------------------------
+	 */
+	$('#vacancyModal').on('show.bs.modal', function (e) {
+		var button = $(e.relatedTarget)
+		var vacancyName = button.data('vacancy')
+		var modal = $(this)
+
+		modal.find('#rybak-vacancy').val(vacancyName)
 	});
 });
 

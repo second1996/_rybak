@@ -7,6 +7,8 @@ article, .article
 	ol,
 	blockquote, table
 		margin-bottom: 24px
+		+media-breakpoint-down(xs)
+			margin-bottom: 16px
 
 	h1, h2, h3, h4, h5, h6
 		+font-size(sm)
@@ -15,9 +17,10 @@ article, .article
 		border-radius: 6px
 
 	a
-		color: blue
+		border-bottom: 1px solid $dark
 		&:hover
-			text-decoration: underline
+			color: $red-200
+			border-bottom-color: $red-200
 
 	ul
 		> li
@@ -29,6 +32,7 @@ article, .article
 			&::before
 				content: ''
 				flex: 0 0 auto
+				position: relative
 				display: inline-block
 				width: 7px
 				height: 7px
@@ -36,6 +40,12 @@ article, .article
 				margin-right: 12px
 				border-radius: 50%
 				background-color: $text
+				+media-breakpoint-down(xs)
+					top: -1px
+					width: 5px
+					height: 5px
+					margin-left: 8px
+					margin-right: 10px
 
 	blockquote
 		padding-left: 24px

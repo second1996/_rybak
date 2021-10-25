@@ -1,0 +1,36 @@
+.modal.fade#vacancyModal(tabindex="-1" aria-labelledby="vacancyModalLabel" aria-hidden="true")
+	.modal-dialog.modal-dialog-centered.modal-lg
+		.modal-content
+			.modal-header
+				H5.modal-title.text-md#vacancyModalLabel Анкета на роботу
+				button.close.btn-close(type="button" data-dismiss="modal" aria-label="Close")
+					+icon('close')
+			.modal-body
+				.modal-descr
+					p Залиште свої контакти і ми зв’яжемось з вами для уточнення деталей
+				form.form
+					.row.row-items-30
+						.col-lg-6
+							.form-group-label
+								input#rybak-vacancy.form-control(type="text" placeholder="Вакансія" value="Вакансія" readonly=true required=true)
+								label(for="rybak-vacancy") Вакансія<sup>*</sup>
+						.col-lg-6
+							.form-group-label
+								input#rybak-name.form-control(type="text" placeholder="ПІБ" required=true)
+								label(for="rybak-name") ПІБ<sup>*</sup>
+						.col-lg-6
+							.form-group-label
+								input#rybak-phone.form-control(type="tel" data-mask="+38 (099) 999-99-99" placeholder="Номер телефону" required=true)
+								label(for="rybak-phone") Номер телефону<sup>*</sup>
+						.col-lg-6
+							.form-group-label
+								input#rybak-email.form-control(type="email" placeholder="E-mail адреса" required=true)
+								label(for="rybak-email") E-mail адреса<sup>*</sup>
+						.col-lg-12
+							.form-group-label
+								textarea#rybak-message.form-textarea(placeholder="Текст повідомлення...")
+								label(for="rybak-message") Текст повідомлення...
+						.col-sm
+							p.form-policy Натискаючи "Надіслати", я погоджуюся з обробкою та зберіганням своїх персональних даних.
+						.col-sm-auto
+							button.form-submit.btn(type="submit") Надіслати заявку
