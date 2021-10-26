@@ -129,6 +129,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		modal.find('#rybak-vacancy').val(vacancyName)
 	});
+
+	/**
+	 *-------------------------------------------------------------------------------------------------------------------------------------------
+	 * BS Tooltip: Init
+	 *-------------------------------------------------------------------------------------------------------------------------------------------
+	 */
+	$('[data-toggle="tooltip"]').tooltip()
 });
 
 /**
@@ -399,7 +406,7 @@ function setMarkers(map, locations) {
 		});
 	}
 
-	$(document).on('click', '.stores-list-filters-results .shop-card', function () {
+	$(document).on('click', '.stores-list-filters-results .shop-card-trigger', function () {
 		var cardLat = $(this).data('lat');
 		var cardLng = $(this).data('lng');
 
@@ -474,19 +481,3 @@ function centerMap(map) {
 		map.fitBounds(bounds);
 	}
 }
-
-// // Change map center
-// $(document).on('click', '.shops-list-filters-results .shop-card', function () {
-//   const lat = $(this).data('lat');
-//   const lng = $(this).data('lng');
-
-//   map.setCenter({ lat: +lat, lng: +lng });
-//   map.setZoom(20);
-
-//   $('html,body').animate(
-//     {
-//       scrollTop: $('#rybak-map').offset().top - 60,
-//     },
-//     500,
-//   );
-// });

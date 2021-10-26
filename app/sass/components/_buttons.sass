@@ -45,9 +45,12 @@ button, .btn
 		will-change: transform
 		transition: transform .3s ease
 	&:hover
+		box-shadow: 0 0 0 4px rgba($red-200, 0.2)
 		color: $white
 		&::before
-			transform: scale(1.5) rotate(10deg)
+			transform: scale(1.5)
+	&:active
+		box-shadow: 0 0 0 2px rgba($red-200, 0.2)
 
 
 /* ==========================================================================

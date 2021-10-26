@@ -1,0 +1,15 @@
+// Custom scrollbar mixin
+@mixin scrollbar()
+	*
+		scrollbar-width: thin
+		scrollbar-color: $text $white
+	::-webkit-scrollbar
+		width: 10px
+	::-webkit-scrollbar-track
+		background-color: $white
+	::-webkit-scrollbar-thumb
+		background-color: rgba($dark, 0.35)
+		border-radius: 20px
+		border: 3px solid $white
+		&:hover
+			background-color: $red-200

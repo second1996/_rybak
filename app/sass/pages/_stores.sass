@@ -36,6 +36,13 @@
 					cursor: pointer
 					border-color: $border-red
 					background-color: $lightred
+				&-trigger
+					position: absolute
+					top: 0
+					left: 0
+					right: 0
+					bottom: 0
+					z-index: 1
 				&-city
 				&-street
 					margin-top: 4px
@@ -47,6 +54,8 @@
 					align-items: baseline
 					margin-top: 16px
 					&-item
+						position: relative
+						z-index: 2
 						color: $red-200
 						&:not(:last-child)
 							margin-right: 12px

@@ -1,0 +1,37 @@
+/* ==========================================================================
+	 404, Thanks page etc.
+	 ========================================================================== */
+.page-404
+	&-inner
+		position: relative
+		z-index: 1
+		display: flex
+		flex-direction: column
+		align-items: center
+		text-align: center
+		&::before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			z-index: -1
+			height: 520px
+			margin: -40px auto 0
+			background: url('../images/rybak-symbol.svg') no-repeat center/contain
+			+media-breakpoint-down(sm)
+				height: 460px
+			+media-breakpoint-down(xs)
+				height: 380px
+	&-character
+		img
+			max-height: 250px
+			+media-breakpoint-down(sm)
+				max-height: 160px
+			+media-breakpoint-down(xxs)
+				max-height: 120px
+	&-title
+		margin-bottom: 16px
+	&-descr
+		margin-bottom: 0
+	&-button

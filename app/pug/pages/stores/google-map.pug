@@ -22,44 +22,48 @@
 			+e.filters-results
 				.row.row-items-30.row-cols-1.row-cols-md-2.row-cols-xxl-3
 					.col
-						+b.shop-card(data-lat="49.4467869" data-lng="24.9262808")
+						+b.shop-card
+							+e.trigger(data-lat="49.4467869" data-lng="24.9262808")
 							+e.city м. Івано-Франківськ
 							+e.street вул. Вовчинецька, 126
 							+e.services
-								+e.services-item
+								+e.services-item(data-toggle="tooltip" title="Можна перекусити")
 									+icon('restaurant')
-								+e.services-item
+								+e.services-item(data-toggle="tooltip" title="Кава з собою")
 									+icon('coffee')
-								+e.services-item
+								+e.services-item(data-toggle="tooltip" title="Продаж алкоголю")
 									+icon('alcohol')
 					.col
-						+b.shop-card(data-lat="48.944332" data-lng="24.691440")
+						+b.shop-card
+							+e.trigger(data-lat="48.944332" data-lng="24.691440")
 							+e.city м. Івано-Франківськ
 							+e.street вул. Горбачевського, 14А (АС-2)
 							+e.services
-								+e.services-item
+								+e.services-item(data-toggle="tooltip" title="Можна перекусити")
 									+icon('restaurant')
-								+e.services-item
+								+e.services-item(data-toggle="tooltip" title="Кава з собою")
 									+icon('coffee')
-								+e.services-item
+								+e.services-item(data-toggle="tooltip" title="Продаж алкоголю")
 									+icon('alcohol')
 					.col
-						+b.shop-card(data-lat="48.5261087" data-lng="25.0274964")
+						+b.shop-card
+							+e.trigger(data-lat="48.5261087" data-lng="25.0274964")
 							+e.city м. Івано-Франківськ
 							+e.street вул. Грушевського, 70 (приміщення 7-А)
 							+e.services
-								+e.services-item
+								+e.services-item(data-toggle="tooltip" title="Кава з собою")
 									+icon('coffee')
-								+e.services-item
+								+e.services-item(data-toggle="tooltip" title="Продаж алкоголю")
 									+icon('alcohol')
 					.col
-						+b.shop-card(data-lat="50.1338503" data-lng="23.8484675")
+						+b.shop-card
+							+e.trigger(data-lat="50.1338503" data-lng="23.8484675")
 							+e.city м. Тернопіль
 							+e.street вул. Живова, 15б
 							+e.services
-								+e.services-item
+								+e.services-item(data-toggle="tooltip" title="Кава з собою")
 									+icon('coffee')
-								+e.services-item
+								+e.services-item(data-toggle="tooltip" title="Продаж алкоголю")
 									+icon('alcohol')
 
 			// Google Map
