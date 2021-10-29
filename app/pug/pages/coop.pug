@@ -6,7 +6,7 @@ block vars
 block content
 	main.page-main
 
-		+b.SECTION.page-heading
+		+b.SECTION.page-heading(data-aos="fade-up")
 			.container
 				+b.breadcrumbs
 					+e.list
@@ -23,28 +23,28 @@ block content
 			.container
 				.row.row-items-30.row-cols-1.row-cols-lg-2
 					.col
-						+e.A.item.zoom-photo(href="coop-partners.html")
+						+e.A.item.zoom-photo(href="coop-partners.html" data-aos="fade-up" data-aos-delay="100")
 							.content
 								h3.title Партнерам
 								span.link Перейти до розділу
 							.photo
 								img(src="./images/cooperation-bg.png" alt="Партнерам")
 					.col
-						+e.A.item.zoom-photo(href="coop-provider.html")
+						+e.A.item.zoom-photo(href="coop-provider.html" data-aos="fade-up" data-aos-delay="150")
 							.content
 								h3.title Постачальникам
 								span.link Перейти до розділу
 							.photo
 								img(src="./images/cooperation-bg.png" alt="Постачальникам")
 					.col
-						+e.A.item.zoom-photo(href="coop-realty.html")
+						+e.A.item.zoom-photo(href="coop-realty.html" data-aos="fade-up" data-aos-delay="200")
 							.content
 								h3.title Нерухомість
 								span.link Перейти до розділу
 							.photo
 								img(src="./images/cooperation-bg.png" alt="Нерухомість")
 					.col
-						+e.A.item.zoom-photo(href="coop-advertising.html")
+						+e.A.item.zoom-photo(href="coop-advertising.html" data-aos="fade-up" data-aos-delay="250")
 							.content
 								h3.title Реклама
 								span.link Перейти до розділу

@@ -1,5 +1,10 @@
 .page-main
 	overflow-x: hidden
+	padding-bottom: 160px
+	+media-breakpoint-down(md)
+		padding-bottom: 120px
+	+media-breakpoint-down(sm)
+		padding-bottom: 80px
 
 .page-tech
 	padding-top: 140px
@@ -11,8 +16,6 @@
 	+media-breakpoint-down(xxs)
 		padding-top: 60px
 		padding-bottom: 60px
-	~ .footer
-		margin-top: 0
 
 .page-heading
 	padding-top: 80px

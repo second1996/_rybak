@@ -101,9 +101,12 @@
 			transform: translate3d(0,0,0)
 			+media-breakpoint-down(xs)
 				width: 100%
+				padding: 0
 			.title
 				font-size: 17px
 				font-weight: $w-demi
+				+media-breakpoint-down(xs)
+					font-size: 15px
 			.link
 				margin-top: 12px
 				> a
@@ -111,6 +114,8 @@
 					font-size: 14px
 					font-weight: $w-demi
 					text-transform: uppercase
+					+media-breakpoint-down(xs)
+						font-size: 12px
 					&::after
 						content: ''
 						position: absolute

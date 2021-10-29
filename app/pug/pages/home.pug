@@ -10,8 +10,8 @@ block content
 		+b.SECTION.h-heroes
 			+e.content
 				.container
-					h1.title.text-white.text-xxl ТМ "Рибак"<br> насолоджуйся традиціями
-					p.descr.text-white Наша продукція – це не лише якісна сировина, сучасне обладнання, дотримання українських та світових стандартів. Це передусім любов до своєї праці і до українців, для яких виготовляється продукція.
+					h1.title.text-white.text-xxl(data-aos="fade-up") ТМ "Рибак"<br> насолоджуйся традиціями
+					p.descr.text-white(data-aos="fade-up" data-aos-duration="700") Наша продукція – це не лише якісна сировина, сучасне обладнання, дотримання українських та світових стандартів. Це передусім любов до своєї праці і до українців, для яких виготовляється продукція.
 			+e.bg
 				//- img(src="./images/heroes-photo.jpg" alt="ТМ \"Рибак\" насолоджуйся традиціями")
 				video(autoplay muted playsinline loop)
@@ -21,26 +21,26 @@ block content
 		+b.SECTION.h-advantages.section.mt-120
 			.container
 				.section-heading.mb-48
-					+e.pattern
+					+e.pattern(data-aos="fade-left")
 						h3.suptitle.title-xs Що ми робимо?
 						h2.title РИБАК — це
 						.r-pattern
 				.row.row-items-40.row-cols-1.row-cols-md-2.row-cols-xl-3
-					.col
+					.col(data-aos="fade-up" data-aos-delay="50")
 						+e.item
 							.picture.mb-24
 								img(src="./images/icons/campfire.svg" alt="Копчення на дровах")
 								+icon('icon-mask')
 							h2.title.mb-12.text-sm.w-demi Копчення на дровах
 							p.descr.mb-0 Всі ковбаси отримали найвищу оцінку експертів, адже основна частина їх виготовляється за ДСТУ із використанням лише високоякісної сировини.
-					.col
+					.col(data-aos="fade-up" data-aos-delay="100")
 						+e.item
 							.picture.mb-24
 								img(src="./images/icons/meat.svg" alt="Власне виробництво")
 								+icon('icon-mask')
 							h2.title.mb-12.text-sm.w-demi Власне виробництво
 							p.descr.mb-0 Доставка продукції клієнтам здійснюється в будь-яку точку України транспортом зі спеціалізованим холодильним обладнанням, що дає змогу зберегти всі якісні характеристики продукції.
-					.col
+					.col(data-aos="fade-up" data-aos-delay="150")
 						+e.item
 							.picture.mb-24
 								img(src="./images/icons/delivery.svg" alt="Доставка два рази на день")
@@ -53,12 +53,12 @@ block content
 			.container
 				.row.align-items-center
 					.col-md-auto
-						+e.photos
+						+e.photos(data-aos="fade-right")
 							img(src="./images/h-gallery-photo-01.jpg" alt="Фотогалерея ТМ \"Рибак\" #1").photo-01
 							img(src="./images/h-gallery-photo-02.jpg" alt="Фотогалерея ТМ \"Рибак\" #2").photo-02
 							.r-pattern
 					.col-md
-						+e.content
+						+e.content(data-aos="fade-left" data-aos-delay="100")
 							h2.mb-16.text-xl Фотогалерея
 							.descr
 								p Доставка продукції клієнтам здійснюється в будь-яку точку України транспортом зі спеціалізованим холодильним обладнанням, що дає змогу зберегти всі якісні характеристики продукції.
@@ -68,7 +68,7 @@ block content
 		// Section: Banner
 		+b.r-banner.section.mt-120
 			.container
-				+e.inner
+				+e.inner(data-aos="fade-down")
 					+e.content
 						h2.title Шукайте наші фірмові магазини поблизу
 						p.descr.text-dark Мережа фірмових магазинів від ТМ “Рибак”.
@@ -79,35 +79,35 @@ block content
 		// Section: News
 		+b.h-news.section.mt-120
 			.container
-				.section-heading.row.align-items-center
+				.section-heading.row.align-items-center(data-aos="fade-up")
 					.col-md
 						h2.title Останні новини
 					.col-md-auto
 						.button
 							+btn-arrow('news.html', 'До всіх новин')
 				.row.row-items-40.row-cols-1.row-cols-md-2.row-cols-xl-4.mt-48
-					.col
+					.col(data-aos="fade-up" data-aos-delay="50")
 						.card.card-news
 							.card-meta
 								.date 23 липня 2021
 								h4.title.text-xxs
 									a(href="news-single.html") Новинка від ТМ “Рибак” — сало в банках — це неймовірно смачно та зручно
 								p.descr Обирайте: сало по-домашньому чи пряне. Або куштуйте обидва. Ідеально смакують з хлібом та цибулькою.
-					.col
+					.col(data-aos="fade-up" data-aos-delay="100")
 						.card.card-news
 							.card-meta
 								.date 10 липня 2021
 								h4.title.text-xxs
 									a(href="news-single.html") Запрошуємо комунікабельних продавців та досвідчених водіїв-експедиторів
 								p.descr Хочете стати частиною нашої великої та дружньої команди? Запрошуємо комунікабельних продавців та досвідчених водіїв-експедиторів!
-					.col
+					.col(data-aos="fade-up" data-aos-delay="150")
 						.card.card-news
 							.card-meta
 								.date 13 червня 2021
 								h4.title.text-xxs
 									a(href="news-single.html") Даруємо 2 кг шашлику, щоб ви могли насолодитись вихідними з сім'єю чи друзями!
 								p.descr Ніжне соковите м'яско, що просто тане у роті — зізнавайтесь, захотіли скуштувати? Результати розіграшу — 31.05.
-					.col
+					.col(data-aos="fade-up" data-aos-delay="200")
 						.card.card-news
 							.card-meta
 								.date 4 червня 2021

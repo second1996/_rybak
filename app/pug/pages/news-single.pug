@@ -8,7 +8,7 @@ block content
 
 		+b.SECTION.news-single.section
 			+e.heading
-				+e.heading-content
+				+e.heading-content(data-aos="fade-up")
 					.container
 						+b.breadcrumbs--white
 							+e.list
@@ -25,7 +25,7 @@ block content
 					img(src="./images/news/news-single.jpg" alt="Літо яскравіше з оновленою вареною курячою ковбасою")
 
 			// Section: News single
-			+e.article
+			+e.article(data-aos="fade-up" data-aos-delay="100")
 				.container
 					.article-published
 						+icon('calendar')
@@ -41,13 +41,13 @@ block content
 			// Section: Last news
 			+e.other.section.mt-120
 				.container
-					.section-heading.row.align-items-center
+					.section-heading.row.align-items-center(data-aos="fade-up")
 						.col-md
 							h2.title Останні публікації
 						.col-md-auto
 							.button
 								+btn-arrow('news.html', 'До всіх новин')
-					+e.other-slider.swiper.mt-48
+					+e.other-slider.swiper.mt-48(data-aos="fade-up" data-aos-delay="100")
 						.swiper-wrapper
 							.swiper-slide
 								.card.card-news

@@ -6,7 +6,7 @@ block vars
 block content
 	main.page-main
 
-		+b.SECTION.page-heading
+		+b.SECTION.page-heading(data-aos="fade-up")
 			.container
 				+b.breadcrumbs
 					+e.list
@@ -22,21 +22,21 @@ block content
 		+b.SECTION.pd-assortment
 			.container
 				.row.row-items-40.row-cols-1.row-cols-lg-3
-					.col
+					.col(data-aos="fade-up" data-aos-delay="100")
 						+e.A.item.zoom-photo(href="production-catalog.html")
 							.content
 								h3.title Свіже м’ясо
 								span.link Перейти до розділу
 							.photo.img-cover
 								img(src="./images/production/1.png" alt="Свіже м’ясо")
-					.col
+					.col(data-aos="fade-up" data-aos-delay="150")
 						+e.A.item.zoom-photo(href="production-catalog.html")
 							.content
 								h3.title Напівфабрикати
 								span.link Перейти до розділу
 							.photo.img-cover
 								img(src="./images/production/2.png" alt="Напівфабрикати")
-					.col
+					.col(data-aos="fade-up" data-aos-delay="200")
 						+e.A.item.zoom-photo(href="production-catalog.html")
 							.content
 								h3.title Готова продукція
@@ -47,23 +47,23 @@ block content
 		// Section: Download catalogs
 		+b.SECTION.pd-catalogs.section.mt-80
 			.container
-				.section-heading.mb-48
+				.section-heading.mb-48(data-aos="fade-up")
 					h3.suptitle.title-xs завантажити в PDF
 					h2.title Каталоги продукції
 					.descr
 						p У своїй продукції компанія ТМ “Рибак” використовує інгредієнти найвищого ґатунку, які імпортують з самих різних куточків земної кулі. Власна та унікальна рецептура в парі з новітніми технологіями дозволяє виготовляти найякіснішу продукцію.
 				.row.row-items-30.row-cols-1.row-cols-md-2.row-cols-xl-3
-					.col
+					.col(data-aos="fade-up" data-aos-delay="100")
 						+e.A.item(href="#" target="_blank" rel="noopener")
 							.extension
 								+icon('pdf')
 							h4.title.text-xxs.w-medium Завантажити каталог продукції
-					.col
+					.col(data-aos="fade-up" data-aos-delay="150")
 						+e.A.item(href="#" target="_blank" rel="noopener")
 							.extension
 								+icon('pdf')
 							h4.title.text-xxs.w-medium Завантажити каталог HoReCa
-					.col
+					.col(data-aos="fade-up" data-aos-delay="200")
 						+e.A.item(href="#" target="_blank" rel="noopener")
 							.extension
 								+icon('pdf')

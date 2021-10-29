@@ -1,6 +1,17 @@
 document.addEventListener('DOMContentLoaded', function () {
 	/**
 	 *-------------------------------------------------------------------------------------------------------------------------------------------
+	 * AOS: Animate On Scroll Init
+	 *-------------------------------------------------------------------------------------------------------------------------------------------
+	 */
+	AOS.init({
+		startEvent: 'load',
+		duration: 850,
+		once: true,
+	});
+
+	/**
+	 *-------------------------------------------------------------------------------------------------------------------------------------------
 	 * Fancybox config
 	 *-------------------------------------------------------------------------------------------------------------------------------------------
 	 */
@@ -93,10 +104,17 @@ document.addEventListener('DOMContentLoaded', function () {
 	 * BS Accordion: Scroll to open vacancy item
 	 *-------------------------------------------------------------------------------------------------------------------------------------------
 	 */
-	$('.collapse').on('shown.bs.collapse', function () {
+	$('.vacancy .vacancy-body').on('shown.bs.collapse', function () {
+		var vCard = $(this).closest('.vacancy');
+		var vHeadingHeight = vCard.find('.vacancy-heading').outerHeight();
+
 		$('html,body').animate({
-			scrollTop: $(this).closest('.vacancy').offset().top,
+			scrollTop: vCard.offset().top - vHeadingHeight,
 		}, 500);
+	});
+	$('.collapse').on('hidden.bs.collapse shown.bs.collapse', function () {
+		// Recalculate all offsets and positions of elements
+		AOS.refresh();
 	});
 
 	/**
@@ -104,13 +122,22 @@ document.addEventListener('DOMContentLoaded', function () {
 	 * Select2: Shops map filters dropdown
 	 *-------------------------------------------------------------------------------------------------------------------------------------------
 	 */
-	$('.modal select').select2({
-		dropdownParent: $(".modal")
-	})
+	$('body').on('shown.bs.modal', '.modal', function () {
+		$(this).find('select').each(function () {
+			var dropdownParent = $(document.body);
+
+			if ($(this).parents('.modal.in:first').length !== 0) {
+				dropdownParent = $(this).parents('.modal.in:first');
+			}
+
+			$(this).select2({
+				dropdownParent: dropdownParent
+			});
+		});
+	});
 
 	$('select').select2({
 		width: '100%',
-		debug: true,
 	}).on('select2:opening', function () {
 		$(this).data('select2').$dropdown.find(':input.select2-search__field').attr('placeholder', 'Пошук...');
 	}).on('select2:select', function (e) {
@@ -413,7 +440,8 @@ function setMarkers(map, locations) {
 		for (markerKey in markersArr) {
 			if (markersArr[markerKey].__gm) { // check if it's realy google marker 
 				if (markersArr[markerKey].position.lat() == cardLat && markersArr[markerKey].position.lng() == cardLng) { // if lng and lat is the same with marker
-					google.maps.event.trigger(markersArr[markerKey], 'click'); // move map to marker
+					// google.maps.event.trigger(markersArr[markerKey], 'click'); // move map to marker
+					map.panTo(markersArr[markerKey].getPosition()); // move map to marker
 					map.setZoom(18); // zoom map
 
 					$('html, body').animate({

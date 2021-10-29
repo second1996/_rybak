@@ -6,7 +6,7 @@ block vars
 block content
 	main.page-main
 
-		+b.SECTION.page-heading
+		+b.SECTION.page-heading(data-aos="fade-up")
 			.container
 				+b.breadcrumbs
 					+e.list
@@ -24,24 +24,24 @@ block content
 				.row
 					.col-lg-7.order-1.order-lg-0
 						+e.content
-							h2.title.title-xs Історія виникнення
-							p.descr.text-sm Ідея виробництва ковбасних виробів прийшла і була втілена в життя у 2008 році. Успіх в даному починанні заключався в наступному, — робити ковбаси та шинки так, як робили наші батьки, дідусі та прадіди з давніх давен!
+							h2.title.title-xs(data-aos="fade-up" data-aos-delay="50") Історія виникнення
+							p.descr.text-sm(data-aos="fade-up" data-aos-delay="100") Ідея виробництва ковбасних виробів прийшла і була втілена в життя у 2008 році. Успіх в даному починанні заключався в наступному, — робити ковбаси та шинки так, як робили наші батьки, дідусі та прадіди з давніх давен!
 							.adv.mt-64.row.row-items-30.row-cols-1.row-cols-md-2
-								.col
+								.col(data-aos="fade-up" data-aos-delay="150")
 									h3.mb-16.text-red-200.text-xs Цінності
 									p.mb-0 Як вважають багато експертів м’ясної галузі, наші вироби можна з гордістю називати «HANDMADE»!
-								.col
+								.col(data-aos="fade-up" data-aos-delay="200")
 									h3.mb-16.text-red-200.text-xs Місія
 									p.mb-0 Успіх в даному починанні заключався в наступному, — робити ковбаси та шинки так, як робили наші батьки, дідусі та прадіди з давніх давен!
 					.col-lg-5.order-0.order-lg-1
 						+e.photo
-							img(src="./images/big-logo.svg" alt="Історія виникнення ТМ \"Рибак\"")
-							.r-pattern
+							img(src="./images/big-logo.svg" alt="Історія виникнення ТМ \"Рибак\"" data-aos="fade-up")
+							.r-pattern(data-aos="fade-left" data-aos-delay="150")
 
 		// Section: Chronology
 		+b.SECTION.a-chronology.section.mt-120
 			.container
-				+e.slider.swiper
+				+e.slider.swiper(data-aos="fade-up")
 
 					+e.pagination.swiper-pagination
 
@@ -117,15 +117,15 @@ block content
 		+b.SECTION.a-advantages.section.mt-120
 			.container
 				.row.row-cols-1.row-cols-md-3
-					.col
+					.col(data-aos="fade-up" data-aos-delay="50")
 						+e.item
 							.number.text-red-200.text-xxl.w-bold 64
 							p.descr Відкритих точок продажу продукції ТМ “Рибак” в Україні
-					.col
+					.col(data-aos="fade-up" data-aos-delay="100")
 						+e.item
 							.number.text-red-200.text-xxl.w-bold 30+
 							p.descr Партнерів з якими ми успішно співпрацюємо вже не один рік
-					.col
+					.col(data-aos="fade-up" data-aos-delay="150")
 						+e.item
 							.number.text-red-200.text-xxl.w-bold 100+
 							p.descr Дестрибюторів продукції ТМ “Рибак” по всій Україні
@@ -133,7 +133,7 @@ block content
 		// Section: Partners
 		+b.SECTION.a-partners.section.mt-120
 			.container
-				+e.heading.row.align-items-center
+				+e.heading.row.align-items-center(data-aos="fade-up")
 					.col-md
 						.section-heading
 							h2.title Наші партнери
@@ -142,7 +142,7 @@ block content
 					.col-md-auto
 						.button
 							+btn('coop.html', 'Стати партнером')
-				+e.slider.mt-16
+				+e.slider.mt-16(data-aos="fade-up" data-aos-delay="100")
 					.swiper
 						.swiper-wrapper
 							// Slide
@@ -183,7 +183,7 @@ block content
 		// Section: Banner
 		+b.r-banner.section.mt-120
 			.container
-				+e.inner
+				+e.inner(data-aos="fade-up")
 					+e.content
 						h2.title Шукайте наші фірмові магазини поблизу
 						p.descr.text-dark Мережа фірмових магазинів від ТМ “Рибак”.
@@ -194,35 +194,35 @@ block content
 		// Section: News
 		+b.h-news.section.mt-120
 			.container
-				.section-heading.row.align-items-center
+				.section-heading.row.align-items-center(data-aos="fade-up")
 					.col-md
 						h2.title Новини компанії
 					.col-md-auto
 						.button
 							+btn-arrow('news.html', 'До всіх новин')
 				.row.row-items-40.row-cols-1.row-cols-md-2.row-cols-xl-4.mt-48
-					.col
+					.col(data-aos="fade-up" data-aos-delay="50")
 						.card.card-news
 							.card-meta
 								.date 23 липня 2021
 								h4.title.text-xxs
 									a(href="news-single.html") Новинка від ТМ “Рибак” — сало в банках — це неймовірно смачно та зручно
 								p.descr Обирайте: сало по-домашньому чи пряне. Або куштуйте обидва. Ідеально смакують з хлібом та цибулькою.
-					.col
+					.col(data-aos="fade-up" data-aos-delay="100")
 						.card.card-news
 							.card-meta
 								.date 10 липня 2021
 								h4.title.text-xxs
 									a(href="news-single.html") Запрошуємо комунікабельних продавців та досвідчених водіїв-експедиторів
 								p.descr Хочете стати частиною нашої великої та дружньої команди? Запрошуємо комунікабельних продавців та досвідчених водіїв-експедиторів!
-					.col
+					.col(data-aos="fade-up" data-aos-delay="150")
 						.card.card-news
 							.card-meta
 								.date 13 червня 2021
 								h4.title.text-xxs
 									a(href="news-single.html") Даруємо 2 кг шашлику, щоб ви могли насолодитись вихідними з сім'єю чи друзями!
 								p.descr Ніжне соковите м'яско, що просто тане у роті — зізнавайтесь, захотіли скуштувати? Результати розіграшу — 31.05.
-					.col
+					.col(data-aos="fade-up" data-aos-delay="200")
 						.card.card-news
 							.card-meta
 								.date 4 червня 2021

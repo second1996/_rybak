@@ -1,0 +1,25 @@
+/* ==========================================================================
+	 Import AOS
+	 ========================================================================== */
+@import 'node_modules/aos/dist/aos'
+
+
+/* ==========================================================================
+	 Custom AOS classes
+	 ========================================================================== */
+[data-aos="fade-up"]
+	transform: translate3d(0, 30px, 0)
+[data-aos="fade-down"]
+	transform: translate3d(0, -30px, 0)
+[data-aos="fade-left"]
+	transform: translate3d(30px, 0, 0)
+[data-aos="fade-right"]
+	transform: translate3d(-30px, 0, 0)
+
+[data-aos="bounce"]
+	transform-origin: center bottom
+	animation-name: bounce
+	&.aos-animate
+		animation-delay: .2s
+		animation-duration: .85s
+		animation-fill-mode: both

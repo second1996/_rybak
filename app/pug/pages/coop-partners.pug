@@ -6,7 +6,7 @@ block vars
 block content
 	main.page-main
 
-		+b.SECTION.page-heading
+		+b.SECTION.page-heading(data-aos="fade-up")
 			.container
 				+b.breadcrumbs
 					+e.list
@@ -26,7 +26,7 @@ block content
 			// Section: About
 			+e.SECTION.about.section.mb-120
 				.container
-					+e.about-content
+					+e.about-content(data-aos="fade-up")
 						h2.title.mb-24.text-xl Заголовок для партнерів
 						.descr
 							p Мережа Рибак співпрацює з провідними підприємствами України, а також із зарубіжними компаніями. Наші відносини з компаніями-партнерами базуються на взаємній довірі, прозорості та чіткому дотриманні всіх домовленостей.
@@ -40,11 +40,11 @@ block content
 					.row.row-items-60
 						.col-xl-5
 							+e.contacts-info
-								.section-heading
+								.section-heading(data-aos="fade-up")
 									h3.suptitle.title-xs Зв’яжіться з нами
 									h2.title Контактна інформація
 								.contacts.row.row-items-30.row-cols-1.row-cols-md-2.row-cols-xl-1
-									.col
+									.col(data-aos="fade-up")
 										.card.card-contacts
 											.card-photo.img-cover
 												img(src="./images/contacts/1.png" alt="Ліля Швайка")
@@ -58,7 +58,7 @@ block content
 													li
 														+email('l.shvajka@gmail.com')
 						.col-xl-7
-							+e.contacts-feedback
+							+e.contacts-feedback(data-aos="fade-up" data-aos-delay="100")
 								.section-heading
 									h2.title Зворотній зв’язок
 									.descr

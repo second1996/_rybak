@@ -1,19 +1,12 @@
 extends ../common/layout
 
-//- Filter product types
-mixin productTypes(products)
-	for product, index in products
-		+b.form-checkbox
-			input(type="checkbox" id="product-type-" + index)
-			+e.label(for="product-type-" + index) #{product}
-
 block vars
 	- var title = 'Готова продукція'
 
 block content
 	main.page-main
 
-		+b.SECTION.page-heading
+		+b.SECTION.page-heading(data-aos="fade-up")
 			.container
 				+b.breadcrumbs
 					+e.list
@@ -34,15 +27,11 @@ block content
 
 					// Aside filters
 					.col-xl-3
-						+b.ASIDE.filters
-							+e.item
-								+e.H5.title.text-xs.w-demi Вид продукту
-								+e.FORM.form
-									+productTypes(['Курятина', 'Свинина', 'Баранина', 'Індичатина', 'Кролятина', 'М’ясо качки', 'Яловичина', 'Телятина'])
+						include production/filters
 
 					// Products list
 					.col-xl-9
-						+b.pdc-empty
+						+b.pdc-empty(data-aos="fade-up" data-aos-delay="100")
 							+e.photo
 								img(src="./images/man.svg" alt="Ой... Продукцію ще не завезли.")
 							+e.H2.title.title-xl Ой... Продукцію ще не завезли.
