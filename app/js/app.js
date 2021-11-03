@@ -374,7 +374,10 @@ function initMap() {
 		center: { lat: 50.4482502, lng: 30.5149951 },
 		zoom: 14,
 		mapTypeId: google.maps.MapTypeId.ROADMAP,
-		// disableDefaultUI: true
+		options: {
+			gestureHandling: 'greedy'
+		},
+		// disableDefaultUI: true,
 	});
 
 	setMarkers(map, locations);
