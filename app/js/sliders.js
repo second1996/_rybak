@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	*-------------------------------------------------------------------------------------------------------------------------------------------
 	*/
 	const chronologySwiper = new Swiper('.a-chronology-slider', {
+		grabCursor: true,
 		effect: 'fade',
 		fadeEffect: {
 			crossFade: true
@@ -36,7 +37,6 @@ document.addEventListener('DOMContentLoaded', function() {
 	*-------------------------------------------------------------------------------------------------------------------------------------------
 	*/
 	const partnersSwiper = new Swiper('.a-partners-slider .swiper', {
-		loop: true,
 		slidesPerView: 1,
 		navigation: {
 			prevEl: '.a-partners-navigation .swiper-button-prev',

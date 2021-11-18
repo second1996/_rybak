@@ -49,6 +49,7 @@
 			&-bullet
 				position: relative
 				box-sizing: border-box
+				flex: 1 1 auto
 				width: auto
 				height: auto
 				margin-bottom: 10px
@@ -73,10 +74,7 @@
 					background-color: $border
 					transition: background-color .3s ease
 				&:not(:last-child)
-					flex: 1 1 auto
 					margin-right: 16px
-					+media-breakpoint-down(xs)
-						
 				&:hover:not(.swiper-pagination-bullet-active)
 					background-color: $lightred
 				&-active
@@ -134,6 +132,10 @@
 			padding-right: 56px
 		.swiper
 			position: static
+		.swiper-button-next.swiper-button-disabled,
+		.swiper-button-prev.swiper-button-disabled
+			visibility: visible
+			opacity: 0.5
 	&-slide
 		.logotype
 			height: 200px
