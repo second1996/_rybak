@@ -24,8 +24,24 @@
 	&-filters
 		margin-top: 32px
 		&-results
+			position: relative
 			margin-top: 16px
-			.shop-card
+			&::after
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				z-index: 3
+				background-color: rgba($white, 0.75)
+				visibility: hidden
+				opacity: 0
+				transition: $trs
+			&._is-loading::after
+				visibility: visible
+				opacity: 1
+			.store-card
 				height: 100%
 				padding: 24px
 				border-radius: 6px

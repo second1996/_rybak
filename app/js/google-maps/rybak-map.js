@@ -116,7 +116,7 @@ function setMarkers(map, locations) {
 		});
 	}
 
-	$(document).on('click', '.stores-list-filters-results .shop-card-trigger', function () {
+	$(document).on('click', '.stores-list-filters-results .store-card-trigger', function () {
 		var cardLat = $(this).data('lat');
 		var cardLng = $(this).data('lng');
 

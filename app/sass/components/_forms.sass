@@ -102,6 +102,25 @@ label
 .form-select
 	cursor: pointer
 	background: url('../images/icons/arrow-down-dark.svg') no-repeat right center / 18px
+	~ .select2-container::after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		z-index: 3
+		background-color: rgba($white, 0.75)
+		visibility: hidden
+		opacity: 0
+		transition: $trs
+	&._is-loading
+		~ .select2-container::after
+			visibility: visible
+			opacity: 1
+		~ .stores-filters-address
+			pointer-events: none
+			user-select: none
 
 
 /* ==========================================================================
