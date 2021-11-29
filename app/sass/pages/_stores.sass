@@ -32,6 +32,8 @@
 				border: 1px solid $border
 				background-color: $white
 				transition: $trs
+				+media-breakpoint-down(xs)
+					padding: 12px 18px
 				&:hover
 					cursor: pointer
 					border-color: $border-red
@@ -59,6 +61,12 @@
 						color: $red-200
 						&:not(:last-child)
 							margin-right: 12px
+					&-icon
+						width: 20px
+						height: 20px
+						+media-breakpoint-down(xs)
+							width: 18px
+							height: 18px
 	&-map
 		overflow: hidden
 		height: 600px
