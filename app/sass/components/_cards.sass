@@ -272,3 +272,50 @@
 						border-bottom-color: $red-400
 		.email
 			margin-top: 16px
+
+
+/* ==========================================================================
+	 Store card
+	 ========================================================================== */
+.store-card
+	height: 100%
+	padding: 24px
+	border-radius: 6px
+	border: 1px solid $border
+	background-color: $white
+	transition: $trs
+	+media-breakpoint-down(xs)
+		padding: 12px 18px
+	&:hover
+		cursor: pointer
+		border-color: $border-red
+		background-color: $lightred
+	&-trigger
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		z-index: 1
+	&-city
+	&-street
+		margin-top: 4px
+		color: $dark
+		font-weight: $w-demi
+	&-services
+		display: flex
+		flex-wrap: wrap
+		align-items: baseline
+		margin-top: 16px
+		&-item
+			position: relative
+			z-index: 2
+			color: $red-200
+			&:not(:last-child)
+				margin-right: 12px
+		&-icon
+			width: 20px
+			height: 20px
+			+media-breakpoint-down(xs)
+				width: 18px
+				height: 18px

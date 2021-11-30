@@ -26,6 +26,20 @@
 		&-results
 			position: relative
 			margin-top: 16px
+			margin-bottom: 32px
+			+scrollbar()
+			&::before
+				content: ''
+				pointer-events: none
+				position: absolute
+				left: 0
+				right: 0
+				bottom: 0
+				z-index: 4
+				height: 60px
+				background: linear-gradient(180deg, rgba($white, 0) 0%, rgba($white, 0.95) 100%)
+				+media-breakpoint-down(xs)
+					height: 40px
 			&::after
 				content: ''
 				position: absolute
@@ -41,48 +55,12 @@
 			&._is-loading::after
 				visibility: visible
 				opacity: 1
-			.store-card
-				height: 100%
-				padding: 24px
-				border-radius: 6px
-				border: 1px solid $border
-				background-color: $white
-				transition: $trs
+			&-wrapper
+				overflow-x: hidden
+				overflow-y: auto
+				max-height: 280px
 				+media-breakpoint-down(xs)
-					padding: 12px 18px
-				&:hover
-					cursor: pointer
-					border-color: $border-red
-					background-color: $lightred
-				&-trigger
-					position: absolute
-					top: 0
-					left: 0
-					right: 0
-					bottom: 0
-					z-index: 1
-				&-city
-				&-street
-					margin-top: 4px
-					color: $dark
-					font-weight: $w-demi
-				&-services
-					display: flex
-					flex-wrap: wrap
-					align-items: baseline
-					margin-top: 16px
-					&-item
-						position: relative
-						z-index: 2
-						color: $red-200
-						&:not(:last-child)
-							margin-right: 12px
-					&-icon
-						width: 20px
-						height: 20px
-						+media-breakpoint-down(xs)
-							width: 18px
-							height: 18px
+					max-height: 220px
 	&-map
 		overflow: hidden
 		height: 600px

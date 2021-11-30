@@ -74,13 +74,11 @@
 				&-has-children
 					cursor: pointer
 					&._is-opened
-						.menu-link::after
+						> .menu-link::after
 							transform: scaleY(-1)
-					.menu-link
-						display: flex
+					> .menu-link
 						align-items: center
 						justify-content: space-between
-						font-size: 20px
 						&::after
 							content: ''
 							display: inline-block
@@ -90,10 +88,16 @@
 							filter: grayscale(1)
 							transition: $trs
 					&:hover
-						.menu-link
+						> .menu-link
 							color: $red-200
 							&::after
 								filter: none
+
+				// Menu link
+				> .menu-link
+					flex: 0 0 100%
+					display: flex
+					font-weight: $w-demi
 
 				// Dropdown menu customize
 				> ul
@@ -103,13 +107,8 @@
 						margin-top: 6px
 						> a
 							display: inline-block
-							font-size: 18px
-
-			&-link
-				flex: 0 0 100%
-				display: block
-				font-size: 18px
-				font-weight: $w-demi
+							font-size: 18px !important
+							font-weight: $w-book !important
 
 		// Contacts
 		.contacts
