@@ -1,6 +1,13 @@
 <h1>ТМ "Рибак" — М'ясна історія</h1>
 <p>Корпоративний сайт для компанії</p>
 
+<h2>How to use</h2>
+<ol>
+	<li>Clone repository</li>
+	<li>Install Node Modules: <strong>npm i</strong></li>
+	<li>Run: <strong>gulp</strong></li>
+</ol>
+
 <h2>Main Gulpfile.js options:</h2>
 
 <ul>
