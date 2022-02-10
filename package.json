@@ -8,7 +8,6 @@
 	"devDependencies": {
 		"@babel/core": "^7.13.14",
 		"@babel/preset-env": "^7.13.12",
-		"aos": "^2.3.4",
 		"babel-loader": "^8.2.2",
 		"babel-plugin-module-resolver": "^4.1.0",
 		"babel-plugin-root-import": "^6.6.0",
@@ -48,6 +47,8 @@
 	},
 	"dependencies": {
 		"@fancyapps/fancybox": "^3.5.7",
+		"aos": "^3.0.0-beta.6",
+		"countup.js": "^2.0.8",
 		"gulp-notify": "^4.0.0",
 		"jquery": "^3.6.0"
 	}

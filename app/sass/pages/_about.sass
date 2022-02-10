@@ -36,7 +36,6 @@
 				left: 30%
 				height: 158px
 
-
 // Section: Chronology
 .a-chronology
 	&-slider
@@ -45,7 +44,9 @@
 			display: flex
 			flex-wrap: wrap
 			justify-content: space-between
-			margin-bottom: 48px
+			margin-bottom: 32px
+			+media-breakpoint-down(sm)
+				margin-bottom: 24px
 			&-bullet
 				position: relative
 				box-sizing: border-box
@@ -104,22 +105,27 @@
 		p:last-child
 			margin-bottom: 0
 
-
 // Section: Advantages
 .a-advantages
+	+media-breakpoint-down(sm)
+		padding-top: 32px
+		padding-bottom: 32px
+		background-color: $lightblue
 	&-item
 		display: flex
 		+media-breakpoint-down(xl)
 			flex-direction: column
-		+media-breakpoint-down(md)
-			margin-bottom: 30px
+		+media-breakpoint-down(xs)
+			text-align: center
 		.number
 			margin-right: 30px
 			line-height: 1
+			+media-breakpoint-down(xs)
+				margin-right: 0
+				margin-bottom: 10px
 		.descr
+			align-self: center
 			margin-bottom: 0
-			padding-top: 8px
-
 
 // Section: Partners
 .a-partners
@@ -128,8 +134,8 @@
 		padding-left: 64px
 		padding-right: 64px
 		+media-breakpoint-down(xs)
-			padding-left: 56px
-			padding-right: 56px
+			padding-left: 0
+			padding-right: 0
 		.swiper
 			position: static
 		.swiper-button-next.swiper-button-disabled,
