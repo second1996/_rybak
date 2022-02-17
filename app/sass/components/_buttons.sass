@@ -31,6 +31,9 @@ button, .btn
 	color: $white
 	+media-breakpoint-down(md)
 		height: 52px
+	+media-breakpoint-down(xs)
+		padding-left: 24px
+		padding-right: 24px
 	&::before
 		content: ''
 		position: absolute
@@ -52,6 +55,7 @@ button, .btn
 
 // Button with circle arrow
 .btn-arrow
+	z-index: 2
 	display: inline-flex
 	align-items: center
 	&:hover

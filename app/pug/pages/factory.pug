@@ -21,10 +21,10 @@ block content
 		// Section: Intro
 		+b.SECTION.f-intro.section
 			.container
-				.row.row-items-40
-					.col-xl-6
+				.row
+					.col-xxl-6.order-1.order-xxl-0
 						img.radius-6(src="./images/factory/1.jpg" alt="Виробничі потужності" data-aos="fade-up")
-					.col-xl-6
+					.col-xxl-6.order-0.order-xxl-1
 						+e.content(data-aos="fade-up" data-aos-delay="100")
 							h2.mb-24.text-xl Виробничі потужності
 							p Виробничі потужності ТМ «Рибак» розташовані на Західній Україні: у містечку Радехів Львівської області.
@@ -34,22 +34,22 @@ block content
 		// Section: Advantages
 		+b.SECTION.f-advantages.section.mt-120(data-aos="fade-up")
 			.container
-				.row.row-items-40
-					.col-lg-4.col-xxl-3
-						+e.H2.title Продукція<br> без ГМО
-					.col-lg-5
+				.row.align-items-center
+					.col-md.order-1.order-xl-0
 						+e.content
-							p Екологічна політика – пріоритетний напрямок роботи компанії «РИБАК». Ми розуміємо масштаби проблеми галузі, тому підтримуємо екологічні ініціативи громадських організацій та активістів, маркуємо своє упакування, закликаємо сортувати сміття.
-					.col-lg-3.col-xxl-4
-						+e.character
-							img(src="./images/factory/2.png" alt="Продукція без ГМО")
+							h2.title Дотримуємось стандартів HACCP
+							.description
+								p Екологічна політика – пріоритетний напрямок роботи компанії «РИБАК». Ми розуміємо масштаби проблеми галузі, тому підтримуємо екологічні ініціативи громадських організацій та активістів, маркуємо своє упакування, закликаємо сортувати сміття.
+					.col-md-3.order-0.order-xl-2
+						+e.photo
+							img(src="./images/factory/haccp.svg" alt="Дотримуємось стандартів HACCP")
 
 		// Section: Production
 		+b.SECTION.f-production.section.mt-120
 			.container
 				.row.row-items-40
 					.col-xl-6
-						img.radius-6(src="./images/factory/3.jpg" alt="Наша продукція" data-aos="fade-up")
+						img.radius-6(src="./images/factory/factory-process.svg" alt="Наша продукція" data-aos="fade-up")
 					.col-xl-6
 						+e.content(data-aos="fade-up" data-aos-delay="100")
 							h2.mb-24.text-xl Наша продукція

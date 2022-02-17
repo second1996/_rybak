@@ -1,24 +1,22 @@
 // Cooperation base customize
 .coop-main
 	&-item
-		overflow: hidden
+		height: 100%
 		&-inner
+			overflow: hidden
 			position: relative
 			z-index: 1
 			display: flex
 			flex-direction: column
-			height: 350px
+			height: 100%
+			min-height: 350px
 			padding: 30px
 			border-radius: 6px
 			border: 1px solid $border
 			background-color: $white
 			transition: border $trs, background-color $trs
-			+media-breakpoint-down(xl)
-				height: 320px
 			+media-breakpoint-down(lg)
-				padding: 24px
-			+media-breakpoint-down(xs)
-				height: 280px
+				min-height: 260px
 				padding: 24px
 			&:hover
 				border-color: $border-red
@@ -41,6 +39,7 @@
 						font-size: 24px
 						font-weight: $w-heavy
 				.descr
+					max-width: 480px
 					margin-bottom: 0
 					color: $text
 					&::before
@@ -58,6 +57,9 @@
 							margin-bottom: 12px
 			.link
 				flex: 0 0 auto
+				margin-top: 32px
+				+media-breakpoint-down(xs)
+					margin-top: 24px
 				.btn-arrow
 					padding-left: 0
 					padding-right: 0
@@ -66,14 +68,26 @@
 			.symbol
 				position: absolute
 				right: 60px
-				bottom: 32px
+				top: 0
+				bottom: 0
 				z-index: -1
+				display: flex
+				align-items: center
 				color: $border-red
 				font-size: 220px
+				line-height: 1
 				opacity: 0
 				transition: opacity $trs
 				+media-breakpoint-down(xl)
 					font-size: 180px
+				+media-breakpoint-down(lg)
+					right: 32px
+				+media-breakpoint-down(md)
+					font-size: 140px
+				+media-breakpoint-down(sm)
+					right: 24px
+				+media-breakpoint-down(xs)
+					right: 16px
 
 // Cooperation Single page
 .coop-single
@@ -88,10 +102,18 @@
 				flex-wrap: wrap
 				align-items: center
 				margin-bottom: -16px
+				+media-breakpoint-down(xs)
+					flex-direction: column
 				> .btn
 					margin-bottom: 16px
+					+media-breakpoint-down(xs)
+						align-self: flex-start
 					&:not(:last-child)
 						margin-right: 32px
+						+media-breakpoint-down(md)
+							margin-right: 24px
+						+media-breakpoint-down(xs)
+							margin-right: 0
 
 	// Section: Terms of cooperation
 	&-terms

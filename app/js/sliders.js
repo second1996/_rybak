@@ -5,6 +5,9 @@ document.addEventListener('DOMContentLoaded', function () {
    *-------------------------------------------------------------------------------------------------------------------------------------------
    */
   const hAdvantagesSwiper = new Swiper('.h-advantages-slider', {
+    autoplay: {
+      delay: 3000,
+    },
     slidesPerView: 1,
     spaceBetween: 30,
     autoHeight: true,
@@ -28,6 +31,9 @@ document.addEventListener('DOMContentLoaded', function () {
    *-------------------------------------------------------------------------------------------------------------------------------------------
    */
   const hNewsSwiper = new Swiper('.h-news-slider', {
+    autoplay: {
+      delay: 4000,
+    },
     slidesPerView: 1,
     spaceBetween: 30,
     autoHeight: true,
@@ -76,10 +82,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
   /**
    *-------------------------------------------------------------------------------------------------------------------------------------------
-   * Page About: Chronology slider
+   * Page About: Advantages slider
    *-------------------------------------------------------------------------------------------------------------------------------------------
    */
   const aboutAdvantagesSwiper = new Swiper('.a-advantages-slider', {
+    autoplay: {
+      delay: 3000,
+    },
     slidesPerView: 1,
     spaceBetween: 30,
     autoHeight: true,
@@ -105,6 +114,9 @@ document.addEventListener('DOMContentLoaded', function () {
    *-------------------------------------------------------------------------------------------------------------------------------------------
    */
   const partnersSwiper = new Swiper('.a-partners-slider .swiper', {
+    autoplay: {
+      delay: 2000,
+    },
     slidesPerView: 1,
     navigation: {
       prevEl: '.a-partners-navigation .swiper-button-prev',
@@ -116,6 +128,9 @@ document.addEventListener('DOMContentLoaded', function () {
       clickable: true,
     },
     breakpoints: {
+      320: {
+        slidesPerView: 2,
+      },
       375: {
         slidesPerView: 3,
       },
@@ -127,6 +142,34 @@ document.addEventListener('DOMContentLoaded', function () {
       },
       1620: {
         slidesPerView: 6,
+      },
+    },
+  });
+
+  /**
+   *-------------------------------------------------------------------------------------------------------------------------------------------
+   * Page Stores: Advantages slider
+   *-------------------------------------------------------------------------------------------------------------------------------------------
+   */
+  const storesAdvantagesSwiper = new Swiper('.stores-about-slider', {
+    autoplay: {
+      delay: 3000,
+    },
+    slidesPerView: 1,
+    spaceBetween: 30,
+    autoHeight: true,
+    pagination: {
+      el: '.stores-about-pagination',
+      clickable: true,
+    },
+    breakpoints: {
+      576: {
+        slidesPerView: 2,
+        autoHeight: false,
+      },
+      768: {
+        slidesPerView: 3,
+        autoHeight: false,
       },
     },
   });
@@ -191,6 +234,9 @@ document.addEventListener('DOMContentLoaded', function () {
    *-------------------------------------------------------------------------------------------------------------------------------------------
    */
   const otherNewsSwiper = new Swiper('.news-single-other-slider', {
+    autoplay: {
+      delay: 4000,
+    },
     slidesPerView: 1.2,
     spaceBetween: 30,
     pagination: {

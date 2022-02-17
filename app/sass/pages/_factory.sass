@@ -4,23 +4,50 @@
 		padding-top: 30px
 		padding-left: 60px
 		+media-breakpoint-down(xl)
-			padding-left: 30px
-		+media-breakpoint-down(lg)
-			padding-top: 0
 			padding-left: 0
+			padding-top: 0
+			margin-bottom: 48px
+		+media-breakpoint-down(xs)
+			margin-bottom: 32px
 
 // Section: Advantages
 .f-advantages
-	&-title
-		margin-bottom: 0
+	padding-top: 64px
+	padding-bottom: 64px
+	background-color: $lightblue
+	+media-breakpoint-down(xs)
+		padding-top: 32px
+		padding-bottom: 32px
 	&-content
-		padding-left: 30px
-		padding-right: 30px
-		+media-breakpoint-down(xl)
+		display: flex
+		align-items: center
+		+media-breakpoint-down(lg)
+			flex-direction: column
+			align-items: flex-start
+		+media-breakpoint-down(md)
+			padding-left: 32px
+		+media-breakpoint-down(sm)
+			padding-top: 32px
 			padding-left: 0
-			padding-right: 0
-		> p:last-child
+		.title
 			margin-bottom: 0
-	&-character
-		margin-left: 45px
-
+			padding-right: 64px
+			+media-breakpoint-down(lg)
+				margin-bottom: 16px
+				padding-right: 0
+		.description
+			> p:last-child
+				margin-bottom: 0
+	&-photo
+		+media-breakpoint-down(xl)
+			text-align: right
+		+media-breakpoint-down(lg)
+			text-align: left
+		> img
+			max-height: 230px
+			+media-breakpoint-down(xl)
+				max-height: 200px
+			+media-breakpoint-down(lg)
+				max-height: 160px
+			+media-breakpoint-down(sm)
+				max-height: 120px

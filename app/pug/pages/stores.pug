@@ -25,19 +25,23 @@ block content
 					h2.title Фірмові магазини ТМ “Рибак”
 					.descr
 						p Наша продукція — це не лише якісна сировина, сучасне  обладнання, дотримання українських та світових стандартів. Це передусім любов до своєї праці і до українців, для яких виготовляється продукція.
-				+e.list.row.row-items-40.row-cols-1.row-cols-md-3
-					.col
-						+e.item(data-aos="fade-up" data-aos-delay="100")
-							.number.text-red-200.text-xxl.w-bold 62
-							p.descr Власних фірмових магазинів в область України
-					.col
-						+e.item(data-aos="fade-up" data-aos-delay="150")
-							.number.text-red-200.text-xxl.w-bold 200+
-							p.descr Партнерів, які торгують продукцією від ТМ “Рибак”
-					.col
-						+e.item(data-aos="fade-up" data-aos-delay="200")
-							.number.text-red-200.text-xxl.w-bold 20
-							p.descr Міст України, де нас можна знайти
+				+e.slider.swiper(data-aos="fade-up" data-aos-id="counter-number")
+					.swiper-wrapper.mb-48
+						.swiper-slide
+							+e.item
+								.number.text-red-200.text-xxl.w-bold(data-end-value="62") 62
+								p.descr Власних фірмових магазинів в область України
+						.swiper-slide
+							+e.item
+								.number.text-red-200.text-xxl.w-bold(data-end-value="200") 200
+								p.descr Партнерів, які торгують продукцією від ТМ “Рибак”
+						.swiper-slide
+							+e.item
+								.number.text-red-200.text-xxl.w-bold(data-end-value="20") 20
+								p.descr Міст України, де нас можна знайти
+
+					+e.pagination.swiper-pagination
+
 				+e.photo.mt-32.img-cover.radius-6(data-aos="fade-up" data-aos-delay="100")
 					img(src="./images/stores-photo.png" alt="Фірмові магазини ТМ “Рибак”")
 
@@ -45,6 +49,6 @@ block content
 		include stores/google-map
 
 block scripts
-	script(src="./js/google-maps/rybak-map.js")
+	script(src="./js/google-maps/rybak-map-local.js")
 	script(src="./js/google-maps/markerclusterer.js")
 	script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDN-SxwIq2Kzkd9rcj52RkCoBCt0vF4gT8&callback=initMap&language=ua" async)

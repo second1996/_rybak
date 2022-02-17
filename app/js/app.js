@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded', function () {
    * Countup.js: About advantages counter
    *-------------------------------------------------------------------------------------------------------------------------------------------
    */
-  const advNumbers = document.querySelectorAll('.a-advantages-item .number');
+  const advNumbers = document.querySelectorAll('[data-end-value]');
 
   advNumbers.forEach((number) => {
     const endVal = number.dataset.endValue;

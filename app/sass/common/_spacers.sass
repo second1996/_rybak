@@ -5,16 +5,24 @@ $r-mp-sies: 16, 24, 32, 48, 64, 80, 120
 	.mt-#{$size}
 		margin-top: $size + px
 		+media-breakpoint-down(lg)
-			margin-top: calc($size / 1.5) + px
+			margin-top: round(calc($size / 1.5) * 1000 / 1000) + px
+		+media-breakpoint-down(xs)
+			margin-top: round(calc($size / 2) * 1000 / 1000) + px
 	.mb-#{$size}
 		margin-bottom: $size + px
 		+media-breakpoint-down(lg)
-			margin-bottom: calc($size / 1.5) + px
+			margin-bottom: round(calc($size / 1.5) * 1000 / 1000) + px
+		+media-breakpoint-down(xs)
+			margin-bottom: round(calc($size / 2) * 1000 / 1000) + px
 	.pt-#{$size}
 		padding-top: $size + px
 		+media-breakpoint-down(lg)
-			padding-top: calc($size / 1.5) + px
+			padding-top: round(calc($size / 1.5) * 1000 / 1000) + px
+		+media-breakpoint-down(sm)
+			padding-top: round(calc($size / 2) * 1000 / 1000) + px
 	.pb-#{$size}
 		padding-bottom: $size + px
 		+media-breakpoint-down(lg)
-			padding-bottom: calc($size / 1.5) + px
+			padding-bottom: round(calc($size / 1.5) * 1000 / 1000) + px
+		+media-breakpoint-down(sm)
+			padding-bottom: round(calc($size / 2) * 1000 / 1000) + px

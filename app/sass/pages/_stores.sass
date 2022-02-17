@@ -3,13 +3,17 @@
 	&-item
 		display: flex
 		align-items: center
-		padding-right: 45px
 		+media-breakpoint-down(xl)
 			flex-direction: column
 			align-items: flex-start
 			padding-right: 0
+		+media-breakpoint-down(xs)
+			align-items: center
+			text-align: center
 		.number
 			margin-right: 30px
+			+media-breakpoint-down(xl)
+				margin-right: 0
 			line-height: 1
 		.descr
 			margin-bottom: 0
@@ -55,7 +59,7 @@
 			&-wrapper
 				overflow-x: hidden
 				overflow-y: auto
-				max-height: 280px
+				max-height: 380px
 				+media-breakpoint-down(xs)
 					max-height: 220px
 	&-map
