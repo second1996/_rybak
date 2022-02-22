@@ -72,14 +72,14 @@ block content
 								+btn('gallery.html', 'Переглянути')
 
 		// Section: Banner
-		+b.SECTION.r-banner.section.mt-120
+		+b.SECTION.r-banner.section.mt-120(data-aos="fade-up")
 			.container
-				+e.inner(data-aos="fade-down")
+				+e.inner
 					+e.content
 						h2.title Шукайте наші фірмові магазини поблизу
 						p.descr.text-dark Мережа фірмових магазинів від ТМ “Рибак”.
 						.button
-							+btn-arrow('stores.html', 'Знайти магазин на карті')
+							+btn-arrow('stores.html', 'Знайти магазин поруч')
 					+e.photo
 						img(src="./images/stores.svg" alt="Шукайте наші фірмові магазини поблизу")
 

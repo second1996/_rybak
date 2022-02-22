@@ -14,6 +14,8 @@ button, .btn
 	white-space: nowrap
 	outline: none !important
 	transition: $trs
+	+media-breakpoint-down(xs)
+		font-size: 16px
 	&:focus
 		box-shadow: 0 0 0 4px rgba($red-200, 0.2)
 	&:disabled
@@ -32,8 +34,10 @@ button, .btn
 	+media-breakpoint-down(md)
 		height: 52px
 	+media-breakpoint-down(xs)
-		padding-left: 24px
-		padding-right: 24px
+		height: 46px
+		min-width: 160px
+		padding-left: 20px
+		padding-right: 20px
 	&::before
 		content: ''
 		position: absolute

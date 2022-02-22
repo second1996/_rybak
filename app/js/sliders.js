@@ -57,6 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
    *-------------------------------------------------------------------------------------------------------------------------------------------
    */
   const chronologySwiper = new Swiper('.a-chronology-slider', {
+    autoHeight: true,
     grabCursor: true,
     speed: 1000,
     spaceBetween: 60,

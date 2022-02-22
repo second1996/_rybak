@@ -16,7 +16,7 @@ block content
 								span Головна
 						li
 							span Про нас
-				+b.H1.title.text-xl.w-bold Про нас
+				+b.H1.title.w-bold Про нас
 
 		// Section: History
 		+b.SECTION.a-history.section
@@ -144,7 +144,7 @@ block content
 						h2.title Наші партнери
 						.descr
 							p Тринадцять років тому ми почали свою невелику сімейну справу.
-					.col-md-auto
+					.col-md-auto.d-none.d-md-block
 						.button
 							+btn('coop.html', 'Стати партнером')
 				+e.slider.mt-16(data-aos="fade-up" data-aos-delay="100")
@@ -179,7 +179,7 @@ block content
 								.logotype.img-scale
 									img(src="./images/partners/1.png" alt="Партнер #7")
 
-						+e.navigation.swiper-navigation.d-none.d-md-block
+						+e.navigation.swiper-navigation.d-none.d-sm-block
 							.swiper-button-prev
 								+icon('arrow')
 								+icon('icon-mask')
@@ -189,15 +189,18 @@ block content
 
 					+e.pagination.swiper-pagination
 
+				+e.button.d-block.d-md-none.mt-32.text-center(data-aos="fade-up")
+					+btn('coop.html', 'Стати партнером')
+
 		// Section: Banner
-		+b.SECTION.r-banner.section.mt-120
+		+b.SECTION.r-banner.section.mt-120(data-aos="fade-up")
 			.container
-				+e.inner(data-aos="fade-up")
+				+e.inner
 					+e.content
 						h2.title Шукайте наші фірмові магазини поблизу
 						p.descr.text-dark Мережа фірмових магазинів від ТМ “Рибак”.
 						.button
-							+btn-arrow('stores.html', 'Знайти магазин на карті')
+							+btn-arrow('stores.html', 'Знайти магазин поруч')
 					+e.photo
 						img(src="./images/stores.svg" alt="Шукайте наші фірмові магазини поблизу")
 

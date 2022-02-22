@@ -16,7 +16,7 @@ block content
 								span Головна
 						li
 							span Виробництво
-				+b.H1.title.text-xl.w-bold Виробництво
+				+b.H1.title.w-bold Виробництво
 
 		// Section: Intro
 		+b.SECTION.f-intro.section
@@ -37,10 +37,12 @@ block content
 				.row.align-items-center
 					.col-md.order-1.order-xl-0
 						+e.content
-							h2.title Дотримуємось стандартів HACCP
+							+b.heading
+								+e.H2.title Дотримуємось стандартів HACCP
+								+e.IMG(src="./images/factory/haccp.svg" alt="Дотримуємось стандартів HACCP").photo
 							.description
 								p Екологічна політика – пріоритетний напрямок роботи компанії «РИБАК». Ми розуміємо масштаби проблеми галузі, тому підтримуємо екологічні ініціативи громадських організацій та активістів, маркуємо своє упакування, закликаємо сортувати сміття.
-					.col-md-3.order-0.order-xl-2
+					.col-md-3.order-0.order-xl-1.d-none.d-md-block
 						+e.photo
 							img(src="./images/factory/haccp.svg" alt="Дотримуємось стандартів HACCP")
 
@@ -48,9 +50,9 @@ block content
 		+b.SECTION.f-production.section.mt-120
 			.container
 				.row.row-items-40
-					.col-xl-6
+					.col-xl-6.order-1.order-xl-0
 						img.radius-6(src="./images/factory/factory-process.svg" alt="Наша продукція" data-aos="fade-up")
-					.col-xl-6
+					.col-xl-6.order-0.order-xl-1
 						+e.content(data-aos="fade-up" data-aos-delay="100")
 							h2.mb-24.text-xl Наша продукція
 							p <b>98% сировини</b> ТМ «Рибак» отримує з фермерських господарств, що забезпечує високий вміст білка та якісні показники молока у виготовлені продукції.

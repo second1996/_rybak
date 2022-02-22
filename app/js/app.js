@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
   AOS.init({
     startEvent: 'load',
     duration: 850,
+    offset: 60,
     once: true,
   });
 

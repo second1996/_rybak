@@ -27,14 +27,29 @@
 		+media-breakpoint-down(md)
 			padding-left: 32px
 		+media-breakpoint-down(sm)
-			padding-top: 32px
 			padding-left: 0
-		.title
-			margin-bottom: 0
+		.heading
+			display: flex
+			align-items: center
 			padding-right: 64px
 			+media-breakpoint-down(lg)
 				margin-bottom: 16px
 				padding-right: 0
+			&-title
+				flex: 1 1 auto
+				margin-bottom: 0
+			&-photo
+				flex: 0 0 auto
+				display: none
+				margin-left: 48px
+				height: 80px
+				+media-breakpoint-down(sm)
+					display: block
+				+media-breakpoint-down(xs)
+					height: 60px
+					margin-left: 32px
+				+media-breakpoint-down(xxs)
+					margin-left: 24px
 		.description
 			> p:last-child
 				margin-bottom: 0

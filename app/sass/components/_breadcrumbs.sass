@@ -19,7 +19,9 @@
 					line-height: 1
 				&:hover
 					color: $red-400
-			&:not(:last-child)::after
+			&:last-child
+				display: none
+			&:not(:first-child)::before
 				content: ''
 				display: inline-block
 				width: 4px

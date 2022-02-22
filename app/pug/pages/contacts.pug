@@ -16,7 +16,7 @@ block content
 								span Головна
 						li
 							span Контактна інформація
-				+b.H1.title.text-xl.w-bold Контактна інформація
+				+b.H1.title.w-bold Контактна інформація
 
 		// Section: Contacts main
 		+b.SECTION.contacts-main.section
@@ -25,11 +25,11 @@ block content
 					.col-xl-6.col-xxl-5(data-aos="fade-up")
 						+e.info
 							.address
-								h5.mb-16.text-xs.w-demi Центральний офіс
+								h5.title.mb-16.text-xs.w-demi Центральний офіс
 								a(href="https://goo.gl/maps/BrXCx8HPzcSQwxHd7" title="Перейти на Google Maps" target="_blank" rel="nofollow noopener") Івано-Франківська обл., Тисменицький р-н, с. Ямниця, вул. Галицька, 2Г.
 							+b.offices
 								+e.item
-									h5.mb-16.text-xs.w-demi Відділ збуту
+									h5.title.mb-16.text-xs.w-demi Відділ збуту
 									.phone
 										+phone("067 635 70 42")
 									.phone
@@ -37,26 +37,26 @@ block content
 									.email
 										+email("sale@tmrybak.com.ua")
 								+e.item
-									h5.mb-16.text-xs.w-demi Відділ закупок сировини
+									h5.title.mb-16.text-xs.w-demi Відділ закупок сировини
 									.phone
 										+phone("067 635 70 89")
 									.email
 										+email("postach@tmrybak.com.ua")
 								+e.item
-									h5.mb-16.text-xs.w-demi Адміністрація
+									h5.title.mb-16.text-xs.w-demi Адміністрація
 									.phone
 										+phone("067 340 58 01")
 									.email
 										+email("info@tmrybak.com.ua")
 								+e.item
-									h5.mb-16.text-xs.w-demi Відділ персоналу
+									h5.title.mb-16.text-xs.w-demi Відділ персоналу
 									.phone
 										+phone("095 147 48 71")
 									.email
 										+email("hr@tmrybak.com.ua")
 							.feedback
 								+btn-modal('#feedbackModal', 'Форма зворотнього зв’язку')
-					.col-xl-6(data-aos="fade-up" data-aos-delay="100")
+					.col-xl-6.d-none.d-sm-block(data-aos="fade-up" data-aos-delay="100")
 						+e.map
 							iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2619.11371024608!2d24.7071802!3d48.9703598!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4730c114a7e39e73%3A0xf4f666138544fca1!2z0KLQnCDQoNC40LHQsNC6!5e0!3m2!1suk!2sua!4v1634812039050!5m2!1suk!2sua" allowfullscreen loading="lazy")
 
