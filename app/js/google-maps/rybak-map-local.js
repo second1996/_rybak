@@ -102,11 +102,11 @@ function setMarkers(map, locations) {
     var infoWindow = new google.maps.InfoWindow();
     google.maps.event.addListener(marker, 'click', function () {
       infoWindow.setContent(`<div class="rybak-infoWindow">
-				<div class="title">${body.address}</div>
-				<div class="link">
-					<a href="http://maps.google.com/?q=${body.lat},${body.lng}&z=20" target="_blank">Відкрити на карті</a>
-				</div>
-			</div>`);
+        <div class="title">${body.address}</div>
+        <div class="link">
+          <a href="http://maps.google.com/?q=${body.lat},${body.lng}&z=20" target="_blank">Відкрити на карті</a>
+        </div>
+      </div>`);
       infoWindow.open(map, marker);
     });
   }
@@ -127,7 +127,6 @@ function setMarkers(map, locations) {
 
           $('html, body').animate({
             scrollTop: $('.stores-list-map').offset().top - $('header').height() // smooth scroll to map
-
           }, 500);
         }
       }
@@ -169,7 +168,7 @@ function destroyMarkers() {
   }
 
   markersArr = [];
-  cleanMarkersArr = []; // $('.buy-place-map-info-inner').empty();
+  cleanMarkersArr = [];
 }
 
 function clearClusters(e) {

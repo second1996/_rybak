@@ -127,6 +127,10 @@
 // Gallery card
 .card-gallery
 	border-radius: 6px
+	&:hover
+		.card-meta
+			.link::before
+				width: 90px
 	&::after
 		content: ''
 		position: absolute
@@ -197,6 +201,8 @@
 				margin-top: 16px
 				margin-bottom: 6px
 				background-color: $red-300
+				will-change: transform
+				transition: width $trs
 				+media-breakpoint-down(lg)
 					margin-top: 12px
 					margin-bottom: 4px
@@ -249,8 +255,7 @@
 		padding: 12px 18px
 	&:hover
 		cursor: pointer
-		border-color: $border-red
-		background-color: $lightred
+		background-color: $lightblue
 	&-trigger
 		position: absolute
 		top: 0

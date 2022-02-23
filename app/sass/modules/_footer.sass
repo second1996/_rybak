@@ -75,6 +75,8 @@
 						color: $red-200
 
 	&-nav
+		+media-breakpoint-down(sm)
+			display: none
 		&-list
 			> li
 				margin-bottom: 12px
@@ -102,6 +104,8 @@
 							transform: none
 
 	&-contacts
+		// +media-breakpoint-down(sm)
+		// 	display: none
 		&-title
 			margin-bottom: 8px
 		&-item

@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
   $('.header .menu-burger .btn-burger').on('click', function () {
     mmenuBackdrop();
 
-    $('body').addClass('lock-scroll');
+    $('html, body').addClass('lock-scroll');
     $('.mmenu').addClass('_is-active');
   });
 
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function () {
   $('.mmenu .mmenu-heading .btn-close').on('click', function () {
     mmenuBackdrop();
 
-    $('body').removeClass('lock-scroll');
+    $('html, body').removeClass('lock-scroll');
     $('.mmenu').removeClass('_is-active');
   });
 

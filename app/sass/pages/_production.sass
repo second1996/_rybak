@@ -1,4 +1,14 @@
 // Production base customize
+.pd-wrapper
+	display: flex
+	flex-direction: column
+	+media-breakpoint-down(md)
+		.pd-assortment
+			order: 1
+			margin-top: 10px
+		.pd-catalogs
+			order: 0
+			margin-top: 0
 
 // Section: Production assortment
 .pd-assortment
@@ -7,6 +17,10 @@
 		position: relative
 		display: block
 		border-radius: 6px
+		&:hover
+			.content
+				.link::before
+					width: 90px
 		&::after
 			content: ''
 			position: absolute
@@ -50,6 +64,8 @@
 					margin-top: 16px
 					margin-bottom: 6px
 					background-color: $red-300
+					will-change: transform
+					transition: width $trs
 					+media-breakpoint-down(lg)
 						margin-top: 12px
 						margin-bottom: 4px
@@ -115,10 +131,6 @@
 .pdc-empty
 	display: flex
 	flex-direction: column
-	padding: 64px 32px
-	border-radius: 6px
-	border: 3px solid $border-red
-	background-color: $lightred
 	align-items: center
 	text-align: center
 	&-title
@@ -262,11 +274,12 @@
 			padding-top: 0
 			padding-left: 0
 		.title
-			margin-bottom: 0
+			margin-bottom: 16px
 			font-size: 52px
 			+media-breakpoint-down(xl)
 				font-size: 46px
 			+media-breakpoint-down(lg)
+				display: none
 				font-size: 40px
 				line-height: 1.1
 			+media-breakpoint-down(md)
@@ -276,7 +289,6 @@
 			+media-breakpoint-down(xs)
 				font-size: 26px
 		.descr
-			margin-top: 16px
 			+media-breakpoint-down(sm)
 				font-size: 16px
 		.attributes

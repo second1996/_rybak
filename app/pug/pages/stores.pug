@@ -18,35 +18,37 @@ block content
 							span Мережа магазинів
 				+b.H1.title.w-bold Мережа магазинів
 
-		// Section: About
-		+b.SECTION.stores-about.section
-			.container
-				.section-heading.mb-48(data-aos="fade-up")
-					h2.title Фірмові магазини ТМ “Рибак”
-					.descr
-						p Наша продукція — це не лише якісна сировина, сучасне  обладнання, дотримання українських та світових стандартів. Це передусім любов до своєї праці і до українців, для яких виготовляється продукція.
-				+e.slider.swiper(data-aos="fade-up" data-aos-id="counter-number")
-					.swiper-wrapper.mb-48
-						.swiper-slide
-							+e.item
-								.number.text-red-200.text-xxl.w-bold(data-end-value="62") 62
-								p.descr Власних фірмових магазинів в область України
-						.swiper-slide
-							+e.item
-								.number.text-red-200.text-xxl.w-bold(data-end-value="200") 200
-								p.descr Партнерів, які торгують продукцією від ТМ “Рибак”
-						.swiper-slide
-							+e.item
-								.number.text-red-200.text-xxl.w-bold(data-end-value="20") 20
-								p.descr Міст України, де нас можна знайти
+		+b.stores-wrapper
 
-					+e.pagination.swiper-pagination
+			// Section: About
+			+b.SECTION.stores-about.section
+				.container
+					.section-heading.mb-48(data-aos="fade-up")
+						h2.title Фірмові магазини ТМ “Рибак”
+						.descr
+							p Наша продукція — це не лише якісна сировина, сучасне  обладнання, дотримання українських та світових стандартів. Це передусім любов до своєї праці і до українців, для яких виготовляється продукція.
+					+e.slider.swiper(data-aos="fade-up" data-aos-id="counter-number")
+						.swiper-wrapper.mb-48
+							.swiper-slide
+								+e.item
+									.number.text-red-200.text-xxl.w-bold(data-end-value="62") 62
+									p.descr Власних фірмових магазинів в область України
+							.swiper-slide
+								+e.item
+									.number.text-red-200.text-xxl.w-bold(data-end-value="200") 200
+									p.descr Партнерів, які торгують продукцією від ТМ “Рибак”
+							.swiper-slide
+								+e.item
+									.number.text-red-200.text-xxl.w-bold(data-end-value="20") 20
+									p.descr Міст України, де нас можна знайти
 
-				+e.photo.mt-32.img-cover.radius-6(data-aos="fade-up" data-aos-delay="100")
-					img(src="./images/stores-photo.png" alt="Фірмові магазини ТМ “Рибак”")
+						+e.pagination.swiper-pagination
 
-		// Section: Stores list
-		include stores/google-map
+					+e.photo.mt-32.img-cover.radius-6(data-aos="fade-up" data-aos-delay="100")
+						img(src="./images/stores-photo.png" alt="Фірмові магазини ТМ “Рибак”")
+
+			// Section: Stores list
+			include stores/google-map
 
 block scripts
 	script(src="./js/google-maps/rybak-map-local.js")

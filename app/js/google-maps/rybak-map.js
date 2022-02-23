@@ -72,11 +72,11 @@ function setMarkers(map, locations) {
     var infoWindow = new google.maps.InfoWindow();
     google.maps.event.addListener(marker, 'click', function () {
       infoWindow.setContent(`<div class="rybak-infoWindow">
-				<div class="title">${body.address}</div>
-				<div class="link">
-					<a href="http://maps.google.com/?q=${body.lat},${body.lng}&z=20" target="_blank">Відкрити на карті</a>
-				</div>
-			</div>`);
+        <div class="title">${body.address}</div>
+        <div class="link">
+          <a href="http://maps.google.com/?q=${body.lat},${body.lng}&z=20" target="_blank">Відкрити на карті</a>
+        </div>
+      </div>`);
       infoWindow.open(map, marker);
     });
   }

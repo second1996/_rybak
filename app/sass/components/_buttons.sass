@@ -123,3 +123,38 @@ button, .btn
 		box-shadow: none
 	&:active
 		transform: scale(0.9)
+
+// Go up button
+.go-up
+	position: fixed
+	right: 16px
+	bottom: 16px
+	z-index: 999
+	opacity: 0
+	visibility: hidden
+	transform: translateY(6px)
+	transition: $trs
+	&._is-shown
+		opacity: 1
+		visibility: visible
+		transform: translateY(0)
+	&-btn
+		width: 48px
+		height: 48px
+		border-radius: 4px
+		background-color: $red-200
+		color: $white
+		font-size: 16px
+		+media-breakpoint-down(xs)
+			width: 42px
+			height: 42px
+			font-size: 14px
+		+media-breakpoint-down(xxs)
+			width: 36px
+			height: 36px
+		&:hover
+			box-shadow: 0 0 0 4px rgba($red-200, 0.2)
+		&:active
+			box-shadow: 0 0 0 3px rgba($red-200, 0.2)
+		.icon
+			transform: rotate(-90deg)

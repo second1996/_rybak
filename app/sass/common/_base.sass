@@ -6,6 +6,8 @@
 
 html, body
 	overflow-x: hidden
+	&.lock-scroll
+		overflow: hidden
 
 body
 	position: relative
@@ -17,9 +19,7 @@ body
 	line-height: $lineheight
 	+media-breakpoint-down(xs)
 		font-size: 18px
-	&.lock-scroll
-		overflow: hidden
-		height: 100%
+
 
 *
 	box-sizing: border-box

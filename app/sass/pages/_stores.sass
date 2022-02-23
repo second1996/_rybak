@@ -1,3 +1,16 @@
+.stores-wrapper
+	display: flex
+	flex-direction: column
+	+media-breakpoint-down(md)
+		.stores-list
+			order: 0
+			margin-top: 0
+		.stores-about
+			order: 1
+			margin-top: 80px
+			+media-breakpoint-down(xs)
+				margin-top: 60px
+
 // Section: About
 .stores-about
 	&-item

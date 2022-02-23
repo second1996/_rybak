@@ -36,4 +36,16 @@
 		.photo
 			height: 160px
 			+media-breakpoint-down(xs)
-				height: auto
+				height: 100px
+
+// Other gallery
+.gallery-other
+	.section-heading
+		.button
+			.btn-arrow
+				flex-direction: row-reverse
+				> em > svg
+					transform: scaleX(-1)
+				> span
+					margin-left: 12px
+					margin-right: 0
