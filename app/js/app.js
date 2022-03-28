@@ -185,7 +185,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
   advNumbers.forEach((number) => {
     const endVal = number.dataset.endValue;
-    const numAnim = new countUp.CountUp(number, endVal);
+		const options = {
+			duration: 5,
+			useGrouping: false,
+		};
+    const numAnim = new countUp.CountUp(number, endVal, options);
 
     document.addEventListener('aos:in:counter-number', () => {
       if (!numAnim.error) {

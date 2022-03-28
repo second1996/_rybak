@@ -25,34 +25,68 @@ block content
 						h3.suptitle.title-xs Що ми робимо?
 						h2.title РИБАК — це
 						.r-pattern
-				+e.slider.swiper(data-aos="fade-up")
-					.swiper-wrapper.mb-48
-						.swiper-slide
-							+e.item
-								+b.heading
-									+e.picture.mb-24
-										img(src="./images/icons/campfire.svg" alt="Копчення на дровах")
-										+icon('icon-mask')
-									+e.H2.title.mb-12.text-sm.w-demi Копчення на дровах
-								p.descr.mb-0 Всі ковбаси отримали найвищу оцінку експертів, адже основна частина їх виготовляється за ДСТУ із використанням лише високоякісної сировини.
-						.swiper-slide
-							+e.item
-								+b.heading
-									+e.picture.mb-24
-										img(src="./images/icons/meat.svg" alt="Власне виробництво")
-										+icon('icon-mask')
-									+e.H2.title.mb-12.text-sm.w-demi Власне виробництво
-								p.descr.mb-0 Доставка продукції клієнтам здійснюється в будь-яку точку України транспортом зі спеціалізованим холодильним обладнанням, що дає змогу зберегти всі якісні характеристики продукції.
-						.swiper-slide
-							+e.item
-								+b.heading
-									+e.picture.mb-24
-										img(src="./images/icons/delivery.svg" alt="Доставка два рази на день")
-										+icon('icon-mask')
-									+e.H2.title.mb-12.text-sm.w-demi Доставка два рази на день
-								p.descr.mb-0 Запрошуємо до співпраці магазини, супермаркети, гуртівні, та дилерів. Пропонуємо вигідні умови співпраці. Широкий асортимент м’ясних та ковбасних виробів, більше 150 найменувань.
+				.row.row-items-40
+					.col-12.col-lg-4(data-aos="fade-up" data-aos-delay="50")
+						+e.item
+							+b.heading
+								+e.picture.mb-24
+									img(src="./images/icons/campfire.svg" alt="Копчення на дровах")
+									+icon('icon-mask')
+								+e.H2.title.mb-12.text-sm.w-demi Копчення на дровах
+							p.descr.mb-0 Всі ковбаси отримали найвищу оцінку експертів, адже основна частина їх виготовляється за ДСТУ із використанням лише високоякісної сировини.
+					.col-12.col-lg-4(data-aos="fade-up" data-aos-delay="100")
+						+e.item
+							+b.heading
+								+e.picture.mb-24
+									img(src="./images/icons/meat.svg" alt="Власне виробництво")
+									+icon('icon-mask')
+								+e.H2.title.mb-12.text-sm.w-demi Власне виробництво
+							p.descr.mb-0 Доставка продукції клієнтам здійснюється в будь-яку точку України транспортом зі спеціалізованим холодильним обладнанням, що дає змогу зберегти всі якісні характеристики продукції.
+					.col-12.col-lg-4(data-aos="fade-up" data-aos-delay="150")
+						+e.item
+							+b.heading
+								+e.picture.mb-24
+									img(src="./images/icons/delivery.svg" alt="Доставка два рази на день")
+									+icon('icon-mask')
+								+e.H2.title.mb-12.text-sm.w-demi Доставка два рази на день
+							p.descr.mb-0 Запрошуємо до співпраці магазини, супермаркети, гуртівні, та дилерів. Пропонуємо вигідні умови співпраці. Широкий асортимент м’ясних та ковбасних виробів, більше 150 найменувань.
 
-					+e.pagination.swiper-pagination
+		//- // Section: Advantages
+		//- +b.SECTION.h-advantages.section.mt-120
+		//- 	.container
+		//- 		.section-heading.mb-48
+		//- 			+e.pattern(data-aos="fade-left")
+		//- 				h3.suptitle.title-xs Що ми робимо?
+		//- 				h2.title РИБАК — це
+		//- 				.r-pattern
+		//- 		+e.slider.swiper(data-aos="fade-up")
+		//- 			.swiper-wrapper.mb-48
+		//- 				.swiper-slide
+		//- 					+e.item
+		//- 						+b.heading
+		//- 							+e.picture.mb-24
+		//- 								img(src="./images/icons/campfire.svg" alt="Копчення на дровах")
+		//- 								+icon('icon-mask')
+		//- 							+e.H2.title.mb-12.text-sm.w-demi Копчення на дровах
+		//- 						p.descr.mb-0 Всі ковбаси отримали найвищу оцінку експертів, адже основна частина їх виготовляється за ДСТУ із використанням лише високоякісної сировини.
+		//- 				.swiper-slide
+		//- 					+e.item
+		//- 						+b.heading
+		//- 							+e.picture.mb-24
+		//- 								img(src="./images/icons/meat.svg" alt="Власне виробництво")
+		//- 								+icon('icon-mask')
+		//- 							+e.H2.title.mb-12.text-sm.w-demi Власне виробництво
+		//- 						p.descr.mb-0 Доставка продукції клієнтам здійснюється в будь-яку точку України транспортом зі спеціалізованим холодильним обладнанням, що дає змогу зберегти всі якісні характеристики продукції.
+		//- 				.swiper-slide
+		//- 					+e.item
+		//- 						+b.heading
+		//- 							+e.picture.mb-24
+		//- 								img(src="./images/icons/delivery.svg" alt="Доставка два рази на день")
+		//- 								+icon('icon-mask')
+		//- 							+e.H2.title.mb-12.text-sm.w-demi Доставка два рази на день
+		//- 						p.descr.mb-0 Запрошуємо до співпраці магазини, супермаркети, гуртівні, та дилерів. Пропонуємо вигідні умови співпраці. Широкий асортимент м’ясних та ковбасних виробів, більше 150 найменувань.
+
+		//- 			+e.pagination.swiper-pagination
 
 		// Section: Gallery
 		+b.SECTION.h-gallery.section.mt-120

@@ -25,7 +25,7 @@ jQuery(function ($) {
         filterResults.parents('.stores-list-filters-results').addClass('_is-loading');
       },
       success: function (data) {
-        var location = Object.values(JSON.parse(data));
+        var location = Object.values(JSON.parse(data)).sort();
 
         $.ajax({
           url: rybak_ajax_url,

@@ -4,26 +4,26 @@ document.addEventListener('DOMContentLoaded', function () {
    * Home page: Advantages slider
    *-------------------------------------------------------------------------------------------------------------------------------------------
    */
-  const hAdvantagesSwiper = new Swiper('.h-advantages-slider', {
-    autoplay: {
-      delay: 3000,
-    },
-    slidesPerView: 1,
-    spaceBetween: 30,
-    autoHeight: true,
-    pagination: {
-      el: '.h-advantages-pagination',
-      clickable: true,
-    },
-    breakpoints: {
-      768: {
-        slidesPerView: 2,
-      },
-      1240: {
-        slidesPerView: 3,
-      },
-    },
-  });
+  // const hAdvantagesSwiper = new Swiper('.h-advantages-slider', {
+  //   autoplay: {
+  //     delay: 3000,
+  //   },
+  //   slidesPerView: 1,
+  //   spaceBetween: 30,
+  //   autoHeight: true,
+  //   pagination: {
+  //     el: '.h-advantages-pagination',
+  //     clickable: true,
+  //   },
+  //   breakpoints: {
+  //     768: {
+  //       slidesPerView: 2,
+  //     },
+  //     1240: {
+  //       slidesPerView: 3,
+  //     },
+  //   },
+  // });
 
   /**
    *-------------------------------------------------------------------------------------------------------------------------------------------
