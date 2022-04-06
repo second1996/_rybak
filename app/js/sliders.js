@@ -219,6 +219,7 @@ document.addEventListener('DOMContentLoaded', function () {
     slidesPerView: 1,
     thumbs: {
       swiper: productGalleryThumbsSwiper,
+			autoScrollOffset: 1,
     },
     on: {
       init: function (swiper) {

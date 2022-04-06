@@ -5,3 +5,4 @@
 @@include('../../node_modules/select2/dist/js/select2.min.js') // Select2
 @@include('../../node_modules/select2/dist/js/i18n/uk.js') // Select2 Ukrainian language
 @@include('../../node_modules/countup.js/dist/countUp.umd.js') // CountUp library
+@@include('../../node_modules/readmore-js/readmore.min.js') // Readmore.js

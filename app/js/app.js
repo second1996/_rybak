@@ -199,4 +199,16 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
+
+  /**
+   *-------------------------------------------------------------------------------------------------------------------------------------------
+   * Readmore.js: Product description
+   *-------------------------------------------------------------------------------------------------------------------------------------------
+   */
+	$('.pd-single-meta .descr').readmore({
+		moreLink: $('#product-descr'),
+		lessLink: false,
+		embedCSS: false,
+		collapsedHeight: 104,
+	})
 });
