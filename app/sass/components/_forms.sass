@@ -151,7 +151,8 @@ label
 
 // Checkbox
 .form-checkbox
-	input[type="checkbox"]
+	input[type="checkbox"],
+	input[type="radio"]
 		&:hover:not(:checked) + label
 			&::before,
 			&::after
@@ -165,7 +166,7 @@ label
 			border-radius: 3px
 		&::after
 			border-color: $border
-			background: $red-200 url('../images/icons/checked-white.svg') no-repeat center/14px
+			background: $red-200 url('../images/icons/checked-white.svg') no-repeat center/12px
 			opacity: 0
 
 // Radio
