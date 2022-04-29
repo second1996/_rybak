@@ -9,6 +9,9 @@
 		height: calc(100vh - 70px)
 		min-height: 500px
 		max-height: 640px
+	+media-breakpoint-down(xs)
+		min-height: 320px
+		max-height: 400px
 	&-content
 		display: flex
 		align-items: center
@@ -21,9 +24,7 @@
 			margin-bottom: 0
 			font-size: 22px
 			+media-breakpoint-down(sm)
-				font-size: 20px
-			+media-breakpoint-down(xs)
-				font-size: 18px
+				display: none
 	&-bg
 		position: absolute
 		top: 0
