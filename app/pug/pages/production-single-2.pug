@@ -57,23 +57,16 @@ block content
 							H1.title.text-dark.w-heavy Куряча ковбаса варена
 							.descr
 								p <b>Склад:</b> напівфабрикат м’ясний (шинка теляча) 100,0%
-							+b.attributes
-								+e.item
-									img.icon(src="./images/icons/thermometer.svg" alt="Температура зберігання")
-									.name Температура зберігання
-									.value 4-6°C
-								+e.item
-									img.icon(src="./images/icons/time.svg" alt="Термін придатності")
-									.name Термін придатності
-									.value 48 годин
-								+e.item
-									img.icon(src="./images/icons/weight.svg" alt="Мінімальне замовлення")
-									.name Мінімальне замовлення
-									.value від 0,1 кг
-								+e.item
-									img.icon(src="./images/icons/quality.svg" alt="Стандарт якості")
-									.name Стандарт якості
-									.value ISO-500
+							+b.attributes.row.row-cols-2.row-cols-sm-3
+								+e.item.col
+									img.icon(src="./images/icons/specii.svg" alt="Тільки натуральні спеції")
+									.name Тільки натуральні спеції
+								+e.item.col
+									img.icon(src="./images/icons/oven.svg" alt="Потрібно просто покласти в духовку")
+									.name Потрібно просто покласти в духовку
+								+e.item.col
+									img.icon(src="./images/icons/ready-to-cook.svg" alt="Вже в пакеті для запікння")
+									.name Вже в пакеті для запікння
 							+b.order-buttons
 								+e.A.btn.--telegram(href="#" target="_blank" rel="nofollow noopener")
 									+icon('telegram')
