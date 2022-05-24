@@ -40,19 +40,21 @@ block content
 									.swiper-wrapper
 										.swiper-slide
 											.product-thumb.img-cover
-												img(src="./images/production/product-single.jpg" alt="Куряча ковбаса варена")
+												img(src="./images/production/product-2.png" alt="Куряча ковбаса варена")
 									.swiper-scrollbar
 
 								+e.gallery-slider.swiper
+									+e.gallery-dstu
+										img(src="./images/dstu.png" title="ДСТУ 4435:2005" alt="ДСТУ 4435:2005")
 									.swiper-wrapper
 										.swiper-slide
 											a.product-photo.img-cover(href="./images/production/product-single.jpg" data-fancybox)
-												img(src="./images/production/product-single.jpg" alt="Куряча ковбаса варена")
+												img(src="./images/production/product-2.png" alt="Куряча ковбаса варена")
 
 					// Product meta
 					.col-xl-7.col-xxl-6
 						+e.meta(data-aos="fade-up" data-aos-delay="100")
-							.title.text-dark.w-heavy Куряча ковбаса варена
+							H1.title.text-dark.w-heavy Куряча ковбаса варена
 							.descr
 								p <b>Склад:</b> напівфабрикат м’ясний (шинка теляча) 100,0%
 							+b.attributes

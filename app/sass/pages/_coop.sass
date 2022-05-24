@@ -98,22 +98,7 @@
 			.descr
 				max-width: 820px
 			.buttons
-				display: flex
-				flex-wrap: wrap
-				align-items: center
-				margin-bottom: -16px
-				+media-breakpoint-down(xs)
-					flex-direction: column
-				> .btn
-					margin-bottom: 16px
-					+media-breakpoint-down(xs)
-						align-self: flex-start
-					&:not(:last-child)
-						margin-right: 32px
-						+media-breakpoint-down(md)
-							margin-right: 24px
-						+media-breakpoint-down(xs)
-							margin-right: 0
+				margin-top: 32px
 
 	// Section: Terms of cooperation
 	&-terms
@@ -133,13 +118,7 @@
 	&-contacts
 		.section-heading
 			.title
-				font-size: 36px
-				+media-breakpoint-down(sm)
-					font-size: 32px
-				+media-breakpoint-down(xs)
-					font-size: 28px
-				+media-breakpoint-down(xxs)
-					font-size: 24px
+				+font-size(md)
 		&-info
 			padding-right: 30px
 			+media-breakpoint-down(lg)

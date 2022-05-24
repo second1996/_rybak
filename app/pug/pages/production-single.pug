@@ -4,7 +4,7 @@ block vars
 	- var title = 'Куряча ковбаса варена'
 
 block content
-	main.page-main
+	main.page-main.page-main-product
 
 		+b.SECTION.page-heading(data-aos="fade-up")
 			.container
@@ -20,7 +20,6 @@ block content
 							a(href="production-catalog.html") Готова продукція
 						li
 							span Куряча ковбаса варена
-				+b.H1.title.w-bold Куряча ковбаса варена
 
 		// Section: Production single
 		+b.SECTION.pd-single.section
@@ -59,6 +58,8 @@ block content
 												img(src="./images/production/product-6.png" alt="Куряча ковбаса варена")
 
 								+e.gallery-slider.swiper
+									+e.gallery-dstu
+										img(src="./images/dstu.png" title="ДСТУ 4435:2005" alt="ДСТУ 4435:2005")
 									.swiper-wrapper
 										.swiper-slide
 											a.product-photo.img-cover(href="./images/production/product-single.jpg" data-fancybox)
@@ -82,7 +83,7 @@ block content
 					// Product meta
 					.col-xl-7.col-xxl-6
 						+e.meta(data-aos="fade-up" data-aos-delay="50")
-							.title.text-dark.w-heavy Ковбаса напівкопчена вищого сорту «Львівська»
+							H1.title.text-dark.w-heavy Ковбаса напівкопчена вищого сорту «Львівська»
 							.descr
 								p <b>Склад:</b> яловичина знежилована першого сорту, сало хребтове, філе курчат-бройлерів, стабілізатор білковий зі шкіри свинячої, вода питна, сіль кухонна харчова, тваринні білки, крохмаль картопляний, перець чорний мелений, прянощі: кмин; екстракти прянощів: часник, коріандр, чорний перець.
 								p <b>Харчова (поживна) цінність на 100 г продукту:</b> білків – 15,3 г, жирів – 26,6 г.
