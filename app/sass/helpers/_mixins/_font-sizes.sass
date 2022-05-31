@@ -25,7 +25,6 @@
 		+media-breakpoint-down(xs)
 			font-size: 24px
 
-	
 	@if $size == 'lg'
 		font-size: 36px
 		line-height: 1.3
@@ -44,12 +43,12 @@
 		+media-breakpoint-down(xs)
 			font-size: 24px
 
-
 	@else if $size == 'sm'
 		font-size: 24px
 		line-height: 1.3
 		+media-breakpoint-down(sm)
 			font-size: 20px
+			line-height: $lineheight
 
 	@else if $size == 'xs'
 		font-size: 20px
