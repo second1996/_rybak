@@ -1,9 +1,6 @@
 .stores-wrapper
 	display: flex
 	flex-direction: column
-	.section-heading
-		.title
-			+font-size(md)
 	+media-breakpoint-down(md)
 		.stores-list
 			order: 0
@@ -16,6 +13,10 @@
 
 // Section: About
 .stores-about
+	.section-heading
+		.title
+			+font-size(md)
+
 	&-item
 		display: flex
 		align-items: center
@@ -40,6 +41,10 @@
 
 // Section: Stores (Filters & Map)
 .stores-list
+	.section-heading
+		.title
+			+font-size(md)
+
 	&-filters
 		margin-top: 32px
 		&-results
