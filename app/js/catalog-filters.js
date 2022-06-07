@@ -3,6 +3,7 @@
  */
 var products_filter = $('#catalog-products-filter');
 var products_list = $('#catalog-products-list');
+var reset_filter_btn = $('#catalog-products-filter-reset');
 // var products_filter_values = [];
 
 products_filter.find('input[type="checkbox"], input[type="radio"]').on('change', function () {
@@ -13,6 +14,8 @@ products_filter.find('input[type="checkbox"], input[type="radio"]').on('change',
 	// } else {
 	// 	products_filter_values.splice(products_filter_values.indexOf(cat_slug), 1);
 	// }
+
+	reset_filter_btn.fadeIn(350);
 
 	$.ajax({
 		url: rybak_ajax_url,

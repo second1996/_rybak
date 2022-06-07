@@ -36,3 +36,19 @@
 				flex-basis: 33.33333%
 			+media-breakpoint-down(xs)
 				flex-basis: 50%
+	&-reset
+		display: none
+		&-btn
+			display: inline-flex
+			align-items: baseline
+			padding: 12px 24px
+			border-radius: 32px
+			border: 1px solid $border
+			background-color: $lightblue
+			font-size: 16px
+			line-height: 1.25
+			+media-breakpoint-down(lg)
+				padding: 10px 20px
+			&:hover
+				border-color: $red-200
+				background-color: $lightred

@@ -5,8 +5,10 @@ mixin productTypes(products)
 			input(type="radio" name="product-type[]" id="product-type-" + index)
 			+e.label(for="product-type-" + index) #{product}
 
-+b.ASIDE.filters(data-aos="fade-up")
++b.ASIDE.filters(data-aos="fade-up")#catalog-products-filter
 	+e.item
 		+e.H5.title.text-xs.w-demi Вид продукту
 		+e.FORM.form
 			+productTypes(['Курятина', 'Свинина', 'Баранина', 'Індичатина', 'Кролятина', 'М’ясо качки', 'Яловичина', 'Телятина'])
+	+e.reset#catalog-products-filter-reset
+		+e.A.reset-btn(href="#") &times; Скасувати фільтри
