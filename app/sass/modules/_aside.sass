@@ -1,6 +1,11 @@
 // Aside: Filters
 .filters
 	position: relative
+	padding-right: 16px
+	+media-breakpoint-down(xl)
+		padding-right: 8px
+	+media-breakpoint-down(lg)
+		padding-right: 0
 	&::after
 		content: ''
 		position: absolute
@@ -16,26 +21,86 @@
 	&._is-loading::after
 		visibility: visible
 		opacity: 1
+
 	&-item
 		&:not(:last-child)
 			margin-bottom: 40px
 			+media-breakpoint-down(lg)
 				margin-bottom: 20px
-	&-title
-		margin-bottom: 24px
-	&-form
+
+	&-nav
 		+media-breakpoint-down(lg)
-			display: flex
-			flex-wrap: wrap
-			align-items: baseline
-		.form-checkbox
-			+media-breakpoint-down(lg)
-				flex: 0 0 25%
-				padding-right: 8px
+			flex: 0 0 100%
+		&:not(:last-child)
+			margin-bottom: 10px
+		&._is-current
+			.filters-nav-category
+				border-color: $border-red
+				background-color: $lightred
+				color: $red-200
+				&:hover
+					border-color: $border
+					background-color: #f9f9f9
+					color: $dark
+		&:not(._is-current)
+			.filters-nav-subcategories
+				display: none
+		&-category
+			display: block
+			padding: 12px 18px
+			border-radius: 3px
+			border: 1px solid $trsp
+			background-color: #fafafa
+			+font-size(xxs)
+			font-weight: $w-demi
 			+media-breakpoint-down(sm)
-				flex-basis: 33.33333%
-			+media-breakpoint-down(xs)
-				flex-basis: 50%
+				padding-top: 8px
+				padding-bottom: 8px
+				font-size: 16px
+			&:hover
+				border-color: $border-red
+				background-color: $lightred
+				color: $dark
+		&-subcategories
+			padding-top: 16px
+			padding-bottom: 8px
+			+media-breakpoint-down(lg)
+				display: flex
+				flex-wrap: wrap
+				align-items: baseline
+			+media-breakpoint-down(sm)
+				padding-bottom: 0
+			.form-checkbox
+				+media-breakpoint-down(lg)
+					flex: 0 0 33.33333%
+					padding-right: 8px
+				+media-breakpoint-down(sm)
+					flex-basis: 50%
+				input[type="checkbox"],
+				input[type="radio"]
+					+media-breakpoint-up(xl)
+						left: auto
+						right: 16px
+			.form-checkbox-label,
+			.form-radio-label
+				+media-breakpoint-down(sm)
+					padding-left: 30px
+					&::before,
+					&::after
+						top: 3px
+						width: 20px
+						height: 20px
+					&::after
+						background-size: 10px
+				+media-breakpoint-up(xl)
+					margin-right: 18px
+					padding-left: 18px
+					padding-right: 36px
+					&::before,
+					&::after
+						left: auto
+						right: 0
+
 	&-reset
 		display: none
 		&-btn

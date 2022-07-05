@@ -7,8 +7,19 @@ mixin productTypes(products)
 
 +b.ASIDE.filters(data-aos="fade-up")#catalog-products-filter
 	+e.item
-		+e.H5.title.text-xs.w-demi Вид продукту
 		+e.FORM.form
-			+productTypes(['Курятина', 'Свинина', 'Баранина', 'Індичатина', 'Кролятина', 'М’ясо качки', 'Яловичина', 'Телятина'])
+			+e.nav._is-current
+				+e.A.nav-category(href="#") Напівфабрикати
+				+e.nav-subcategories
+					+productTypes(['Курятина', 'Напівкопчені та копченоварені продукти', 'М’ясо качки', 'Яловичина', 'Телятина'])
+			+e.nav
+				+e.A.nav-category(href="#") Свіже м'ясо
+				+e.nav-subcategories
+					+productTypes(['Курятина', 'Свинина', 'Баранина', 'Індичатина'])
+			+e.nav
+				+e.A.nav-category(href="#") Напівфабрикати
+				+e.nav-subcategories
+					+productTypes(['Курятина', 'Свинина', 'Баранина', 'Індичатина'])
+
 	+e.reset#catalog-products-filter-reset
 		+e.A.reset-btn(href="#") &times; Скасувати фільтри
