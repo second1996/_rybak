@@ -1,0 +1,111 @@
+include ../../../node_modules/bemto.pug/bemto
+include ../mixins
+
+-
+	set_bemto_settings({
+		flat_elements: false,
+		prefix: '',
+		element: '-',
+		modifier: '--'
+	})
+
+doctype html
+html(lang="uk")
+	block head
+		head
+			meta(charset="utf-8")
+			title Залишити відгук — ТМ "Рибак"
+			meta(name="description" content="Корпоративний сайт для компанії")
+			meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1")
+
+			link(rel="icon" href="./images/favicon.png")
+
+			link(rel="stylesheet" href="./css/vendors/bootstrap.css")
+			link(rel="stylesheet" href="./css/main.css")
+	body
+		+b.MAIN.testimonials-feedback
+
+			+e.wrapper
+				.container
+					+e.logo
+						a(href="/" rel="home")
+							img(src="images/logo.svg" alt="ТМ \"Рибак\" — М'ясна історія")
+					+e.H1.title.w-bold Залишити відгук
+					+e.FORM.form.form(enctype="multipart/form-data")
+						.row.row-items-30
+							.col-12
+								.form-section
+									h3.suptitle 1. Оберіть магазин
+									.form-group-label
+										select#rybak-store.form-select(data-placeholder="Магазин" required=true)
+											option(value="" selected=true disabled=true) Оберіть магазин
+											option(value="м. Бережани, вул. Руська, 9") м. Бережани, вул. Руська, 9
+											option(value="м. Бучач, вул. Галицька, 45/1") м. Бучач, вул. Галицька, 45/1
+											option(value="м. Івано-Франківськ, вул. Пасічна, 15Б") м. Івано-Франківськ, вул. Пасічна, 15Б
+											option(value="м. Івано-Франківськ, вул. Мазепи, 164 (містечко Липки)") м. Івано-Франківськ, вул. Мазепи, 164 (містечко Липки)
+											option(value="м. Івано-Франківськ, вул. Хоткевича, 65 (корпус 2)") м. Івано-Франківськ, вул. Хоткевича, 65 (корпус 2)
+										label(for="rybak-store") Магазин<sup>*</sup>
+							.col-12
+								.form-section
+									h3.suptitle 2. Контактні дані
+									.row
+										.col-md-6
+											.form-group-label
+												input#rybak-name.form-control(type="text" placeholder="Ім'я та прізвище" required=true)
+												label(for="rybak-name") Ім'я та прізвище<sup>*</sup>
+										.col-md-6
+											.form-group-label
+												input#rybak-phone.form-control(type="tel" data-mask="+38 (099) 999-99-99" placeholder="Номер телефону" required=true)
+												label(for="rybak-phone") Номер телефону<sup>*</sup>
+							.col-12
+								.form-section
+									h3.suptitle 3. Ваші загальні враження
+									fieldset.form-rating
+										input#rybak-rating(type="hidden" value="" name="review[rating]")
+										input#rybak-rating_0(type="radio" value="5" name="review[rating]" required=true)
+										label(for="rybak-rating_0")
+										input#rybak-rating_1(type="radio" value="4" name="review[rating]" required=true)
+										label(for="rybak-rating_1")
+										input#rybak-rating_2(type="radio" value="3" name="review[rating]" required=true)
+										label(for="rybak-rating_2")
+										input#rybak-rating_3(type="radio" value="2" name="review[rating]" required=true)
+										label(for="rybak-rating_3")
+										input#rybak-rating_4(type="radio" value="1" name="review[rating]" required=true)
+										label(for="rybak-rating_4")
+							.col-12
+								.form-section
+									h3.suptitle 4. Ваш відгук дуже важливий для нас
+									.form-group-label
+										textarea#rybak-message.form-textarea(placeholder="Текст відгука..." required=true)
+										label(for="rybak-message") Текст відгука...
+							.col-12
+								.form-section
+									h3.suptitle 5. Прикрипіть медіа-файли, якщо бажаєте
+									+b.form-media
+										+e.item
+											input#rybak-media-photo(name="rybak-media[]" autocomplete="false" type="file" multiple accept=".png, .jpg, .heic" data-type="photo")
+											button.action-btn(type="button")
+												+icon('photo')
+											div.action-title Фото
+										+e.item
+											input#rybak-media-audio(name="rybak-media[]" autocomplete="false" type="file" accept=".mp3, .wav, .aac, .m4a" data-type="audio")
+											button.action-btn(type="button")
+												+icon('audio')
+											div.action-title Аудіо
+										+e.item
+											input#rybak-media-video(name="rybak-media[]" autocomplete="false" type="file" accept=".mp4, .mov" data-type="video")
+											button.action-btn(type="button")
+												+icon('video')
+											div.action-title Відео
+									+b.form-media-list
+
+							.col-sm.align-self-center
+								p.form-policy Натискаючи "Надіслати", я погоджуюся з обробкою та зберіганням своїх персональних даних.
+							.col-sm-auto
+								button.form-submit.btn(type="submit") Надіслати заявку
+
+		script(src="./js/jquery.js")
+		script(src="./js/vendors.js")
+		script(src="./js/bootstrap.bundle.js")
+		script(src="./js/app.js")
+		script(src="./js/testimonials-form.js")

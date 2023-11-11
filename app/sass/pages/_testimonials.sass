@@ -1,0 +1,170 @@
+// Testimonials Feedback form
+.testimonials-feedback
+	position: relative
+	z-index: 1
+	display: flex
+	align-items: center
+	justify-content: center
+	min-height: 100vh
+	padding: 24px 16px
+	background-color: $lightred
+	+media-breakpoint-down(md)
+		display: block
+		padding: 16px
+	&::after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		z-index: -1
+		display: block
+		background: url('../images/rybak-symbol.svg')
+		opacity: 0.75
+	&-wrapper
+		max-width: 840px
+		padding-top: 48px
+		padding-bottom: 32px
+		border: 3px solid $red-200
+		border-radius: 12px
+		background-color: $white
+		+media-breakpoint-down(xs)
+			padding-top: 24px
+	&-logo
+		margin-bottom: 32px
+		text-align: center
+		a
+			display: inline-block
+		img
+			height: 64px
+			+media-breakpoint-down(xs)
+				height: 48px
+	&-title
+		margin-bottom: 32px
+		font-size: 36px
+		text-align: center
+		line-height: 1.15
+		+media-breakpoint-down(md)
+			font-size: 28px
+		+media-breakpoint-down(xs)
+			font-size: 24px
+	&-form
+		.form-section
+			.suptitle
+				font-size: 20px
+				+media-breakpoint-down(xs)
+					font-size: 18px
+			.row
+				margin-top: -16px 
+				> [class*="col-"]
+					margin-top: 16px
+
+		.form-rating
+			position: relative
+			display: inline-block
+			margin-top: 8px
+			margin-left: -8px
+			border: none
+			+media-breakpoint-down(xs)
+				margin-left: -6px
+			&:not(:checked)
+				> label
+					float: right
+					padding: 0 8px
+					overflow: hidden
+					white-space: nowrap
+					cursor: pointer
+					font-size: 0
+					+media-breakpoint-down(xs)
+						padding: 0 6px
+					&::before
+						content: ''
+						display: inline-block
+						width: 48px
+						height: 48px
+						background-image: url('../images/icons/star.svg')
+						background-size: cover
+						background-position: center center
+						+media-breakpoint-down(xs)
+							width: 40px
+							height: 40px
+						+media-breakpoint-down(xxs)
+							width: 32px
+							height: 32px
+					&:hover:before,
+					&:hover ~ label:before
+						background-image: url('../images/icons/star-fill.svg')
+				> input
+					position: absolute
+					top: 0
+					left: 0
+					opacity: 0
+					clip: rect(0,0,0,0)
+			> label
+				margin-bottom: 0
+			input:checked ~ label:before
+				background-image: url('../images/icons/star-fill.svg')
+
+		.form-media
+			display: flex
+			flex-wrap: wrap
+			margin-top: 16px
+			&-item
+				&:not(:last-child)
+					margin-right: 48px
+					+media-breakpoint-down(xs)
+						margin-right: 32px
+				input[type="file"]
+					display: none
+				.action-btn
+					display: flex
+					align-items: center
+					justify-content: center
+					width: 64px
+					height: 64px
+					padding: 0
+					color: $red-200
+					font-size: 24px
+					border-radius: 50%
+					background-color: $lightred
+					+media-breakpoint-down(xs)
+						width: 56px
+						height: 56px
+						font-size: 20px
+					&:hover
+						background-color: $red-200
+						color: $white
+				.action-title
+					margin-top: 8px
+					font-size: 15px
+					font-weight: $w-medium
+					text-align: center
+					text-transform: uppercase
+					+media-breakpoint-down(xs)
+						font-size: 14px
+			&-list
+				&:not(:empty)
+					margin-top: 16px
+				&-item
+					overflow: hidden
+					margin-top: 8px
+					padding: 8px 16px
+					border-radius: 4px
+					border: 2px solid $border
+					background-color: $white
+					white-space: nowrap
+					text-overflow: ellipsis
+					> .icon
+						display: inline-block
+						vertical-align: middle
+						width: 20px
+						height: 20px
+						margin-right: 8px
+						color: $red-200
+					> span
+						font-size: 16px
+
+
+		.form-policy
+			font-size: 16px

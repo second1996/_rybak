@@ -185,10 +185,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   advNumbers.forEach((number) => {
     const endVal = number.dataset.endValue;
-		const options = {
-			duration: 5,
-			useGrouping: false,
-		};
+    const options = {
+      duration: 5,
+      useGrouping: false,
+    };
     const numAnim = new countUp.CountUp(number, endVal, options);
 
     document.addEventListener('aos:in:counter-number', () => {
@@ -205,10 +205,10 @@ document.addEventListener('DOMContentLoaded', function () {
    * Readmore.js: Product description
    *-------------------------------------------------------------------------------------------------------------------------------------------
    */
-	$('.pd-single-meta .descr').readmore({
-		moreLink: $('#product-descr'),
-		lessLink: false,
-		embedCSS: false,
-		collapsedHeight: 104,
-	})
+  $('.pd-single-meta .descr').readmore({
+    moreLink: $('#product-descr'),
+    lessLink: false,
+    embedCSS: false,
+    collapsedHeight: 104,
+  })
 });
