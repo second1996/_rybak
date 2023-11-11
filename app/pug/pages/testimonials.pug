@@ -1,0 +1,117 @@
+extends ../common/layout
+
+block vars
+	- var title = 'Відгуки покупців'
+
+block content
+	main.page-main
+
+		+b.SECTION.page-heading(data-aos="fade-up")
+			.container
+				+b.breadcrumbs
+					+e.list
+						li
+							a(href="home.html")
+								+icon('home')
+								span Головна
+						li
+							span Відгуки покупців
+				+b.H1.title.w-bold Відгуки покупців
+
+		// Section: Testimonials
+		+b.SECTION.testimonials-main.section
+			.container
+				.row.row-items-30.row-cols-1.row-cols-lg-2.row-cols-xxl-3
+					.col
+						.card.card-testimonials(data-aos="fade-up")
+							.card-meta
+								+b.heading
+									+e.H4.name.text-sm Андрій Михальцевич
+									+e.rating
+										+icon('star-fill')
+										+icon('star-fill')
+										+icon('star-fill')
+										+icon('star-fill')
+										+icon('star')
+								.body
+									p Обирайте: сало по-домашньому чи пряне. Або куштуйте обидва. Ідеально смакують з хлібом та цибулькою.
+					.col
+						.card.card-testimonials(data-aos="fade-up")
+							.card-meta
+								+b.heading
+									+e.H4.name.text-sm Максим Іванович
+									+e.rating
+										+icon('star-fill')
+										+icon('star-fill')
+										+icon('star-fill')
+										+icon('star-fill')
+										+icon('star')
+								.body
+									p Красивий чистенький магазин. Ціни доступні. М'ясні вироби тут завжди свіжі. Дуже привітні продавці. Якщо ви поблизу раджу цей магазин.
+					.col
+						.card.card-testimonials(data-aos="fade-up")
+							.card-meta
+								+b.heading
+									+e.H4.name.text-sm Галя Сорочинська
+									+e.rating
+										+icon('star-fill')
+										+icon('star-fill')
+										+icon('star-fill')
+										+icon('star-fill')
+										+icon('star')
+								.body
+									p Магазин від фірми «Рибак», що біля заводу. Трохи дешевші ціни, ніж в інших магазинах. Є місце, щоб припаркуватись. Можна робити замовлення наприклад на весілля.
+					.col
+						.card.card-testimonials(data-aos="fade-up")
+							.card-meta
+								+b.heading
+									+e.H4.name.text-sm Андрій Михальцевич
+									+e.rating
+										+icon('star-fill')
+										+icon('star-fill')
+										+icon('star-fill')
+										+icon('star-fill')
+										+icon('star')
+								.body
+									p Обирайте: сало по-домашньому чи пряне. Або куштуйте обидва. Ідеально смакують з хлібом та цибулькою.
+					.col
+						.card.card-testimonials(data-aos="fade-up")
+							.card-meta
+								+b.heading
+									+e.H4.name.text-sm Максим Іванович
+									+e.rating
+										+icon('star-fill')
+										+icon('star-fill')
+										+icon('star-fill')
+										+icon('star-fill')
+										+icon('star')
+								.body
+									p Красивий чистенький магазин. Ціни доступні. М'ясні вироби тут завжди свіжі. Дуже привітні продавці. Якщо ви поблизу раджу цей магазин.
+					.col
+						.card.card-testimonials(data-aos="fade-up")
+							.card-meta
+								+b.heading
+									+e.H4.name.text-sm Галя Сорочинська
+									+e.rating
+										+icon('star-fill')
+										+icon('star-fill')
+										+icon('star-fill')
+										+icon('star-fill')
+										+icon('star')
+								.body
+									p Магазин від фірми «Рибак», що біля заводу. Трохи дешевші ціни, ніж в інших магазинах. Є місце, щоб припаркуватись. Можна робити замовлення наприклад на весілля.
+
+				// Page pagination
+				nav.pagination(data-aos="fade-up")
+					.nav-links
+						a.prev.page-numbers(href="#")
+							+icon('arrow')
+							+icon('icon-mask')
+						a.page-numbers(href="#") 1
+						span.page-numbers.current 2
+						a.page-numbers(href="#") 3
+						span.page-numbers.dots …
+						a.page-numbers(href="#") 5
+						a.next.page-numbers(href="#")
+							+icon('arrow')
+							+icon('icon-mask')

@@ -284,3 +284,55 @@
 			+media-breakpoint-down(xs)
 				width: 18px
 				height: 18px
+
+// Testimonials card
+.card-testimonials
+	padding: 30px
+	border-radius: 6px
+	border: 1px solid $border
+	background-color: $white
+	+media-breakpoint-down(lg)
+		padding: 24px
+	+media-breakpoint-down(sm)
+		padding: 20px
+	+media-breakpoint-down(xxs)
+		padding: 16px
+	.card-meta
+		.heading
+			display: flex
+			align-items: center
+			justify-content: space-between
+			+media-breakpoint-down(xxs)
+				flex-direction: column-reverse
+				align-items: flex-start
+			&-name
+				margin-bottom: 0
+				font-size: 20px
+				font-weight: $w-medium
+				margin-right: 16px
+				+media-breakpoint-down(xs)
+					font-size: 18px
+			&-rating
+				display: flex
+				align-items: center
+				+media-breakpoint-down(xxs)
+					margin-bottom: 8px
+				> .icon
+					font-size: 16px
+					&:not(:last-child)
+						margin-right: 5px
+					&.icon-star
+						fill: #E8E8E8
+					&.icon-star-fill
+						fill: #FFD83A
+		.body
+			margin-top: 16px
+			line-height: 1.4
+			font-size: 18px
+			+media-breakpoint-down(xs)
+				margin-top: 8px
+				font-size: 16px
+			p
+				margin-bottom: 0
+			p + p
+				margin-top: 8px
