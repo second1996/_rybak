@@ -336,3 +336,23 @@
 				margin-bottom: 0
 			p + p
 				margin-top: 8px
+
+// Blog card
+.card-blog
+	.card-photo
+		overflow: hidden
+		height: 240px
+		margin-bottom: 16px
+		border-radius: 6px
+		+media-breakpoint-down(xxs)
+			height: 200px
+	.card-meta
+		.title
+			margin-bottom: 12px
+			+media-breakpoint-down(sm)
+				margin-bottom: 8px
+			> a
+				display: inline-block
+		.descr
+			margin-bottom: 0
+			+font-size(xxs)

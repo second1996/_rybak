@@ -1,0 +1,57 @@
+extends ../common/layout
+
+block vars
+	- var title = 'Блог'
+
+block content
+	main.page-main
+
+		+b.SECTION.page-heading(data-aos="fade-up")
+			.container
+				+b.breadcrumbs
+					+e.list
+						li
+							a(href="home.html")
+								+icon('home')
+								span Головна
+						li
+							span Блог
+				+b.H1.title.w-bold Блог
+
+		// Section: Blog
+		+b.SECTION.blog-main.section
+			.container
+				.row.row-items-60.row-cols-1.row-cols-md-2.row-cols-xl-3.row-cols-xxl-4
+					.col
+						.card.card-blog(data-aos="fade-up")
+							.card-photo.img-cover.zoom-photo
+								a(href="blog-single.html")
+									img(src="./images/news/1.jpg" alt="Новинка від ТМ “Рибак” — сало в банках — це неймовірно смачно та зручно")
+							.card-meta
+								h4.title.text-sm
+									a(href="blog-single.html") Новинка від ТМ “Рибак” — сало в банках — це неймовірно смачно та зручно
+								p.descr Обирайте: сало по-домашньому чи пряне. Або куштуйте обидва. Ідеально смакують з хлібом та цибулькою.
+					.col
+						.card.card-blog(data-aos="fade-up")
+							.card-photo.img-cover.zoom-photo
+								a(href="blog-single.html")
+									img(src="./images/news/2.jpg" alt="Запрошуємо комунікабельних продавців та досвідчених водіїв-експедиторів")
+							.card-meta
+								h4.title.text-sm
+									a(href="blog-single.html") Запрошуємо комунікабельних продавців та досвідчених водіїв-експедиторів
+								p.descr Хочете стати частиною нашої великої та дружньої команди? Запрошуємо комунікабельних продавців та досвідчених водіїв-експедиторів!
+
+				// Page pagination
+				nav.pagination(data-aos="fade-up")
+					.nav-links
+						a.prev.page-numbers(href="#")
+							+icon('arrow')
+							+icon('icon-mask')
+						a.page-numbers(href="#") 1
+						span.page-numbers.current 2
+						a.page-numbers(href="#") 3
+						span.page-numbers.dots …
+						a.page-numbers(href="#") 5
+						a.next.page-numbers(href="#")
+							+icon('arrow')
+							+icon('icon-mask')

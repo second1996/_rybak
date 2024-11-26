@@ -1,0 +1,88 @@
+extends ../common/layout
+
+block vars
+	- var title = 'Літо яскравіше з оновленою вареною курячою ковбасою'
+
+block content
+	main.page-main
+
+		+b.SECTION.blog-single.section
+			+e.heading
+				+e.heading-content(data-aos="fade-up")
+					.container
+						+b.breadcrumbs--white
+							+e.list
+								li
+									a(href="home.html")
+										+icon('home')
+										span Головна
+								li
+									a(href="blog.html") Блог
+								li
+									span Літо яскравіше з оновленою вареною курячою ковбасою
+						+b.H1.title.text-white.text-xl.w-bold Літо яскравіше з оновленою вареною курячою ковбасою
+				+e.heading-photo.img-cover
+					img(src="./images/news/news-single.jpg" alt="Літо яскравіше з оновленою вареною курячою ковбасою")
+
+			// Section: Blog single
+			+e.article(data-aos="fade-up" data-aos-delay="100")
+				.container
+					.article-published
+						+icon('calendar')
+						span.text-xs.w-medium Опубліковано: 4 серпня 2021
+					article.article-body
+						h2 ТМ “Рибак” — магазини, де завжди є якісні і смачні продукти!
+						p Тому, ми раді запропонувати вам, корисну новинку Епікур – куряче м’ясо, вирощене без антибіотиків та стимул яторів росту.
+						p Виробництво Епікур — це просторі пташники й доглянуті курочки, що зростають на натуральних рослинних кормах і чистій воді. Це свіже волинське повітря й перевірені європейські технології, що допомагають виробляти ніжне та якісне куряче м’ясо без використання стимуляторів росту та антибіотиків для профілактики.
+						p <b>Шукайте смачну і натуральну курочку в м. Івано-Франківськ в наших магазинах:</b>
+						blockquote вул. Чорновола, 12<br> вул. Коновальця, 142Б
+						p Виробництво Епікур — це просторі пташники й доглянуті курочки, що зростають на натуральних рослинних кормах і чистій воді. Це свіже волинське повітря й перевірені європейські технології, що допомагають виробляти ніжне та якісне куряче м’ясо без використання стимуляторів росту та антибіотиків для профілактики.
+
+			// Section: Last blog
+			+e.other.section.mt-120
+				.container
+					.section-heading.row.align-items-center(data-aos="fade-up")
+						.col-md
+							h2.title Останні публікації
+						.col-md-auto
+							.button
+								+btn-arrow('blog.html', 'До всіх дописів')
+					+e.other-slider.swiper.mt-48(data-aos="fade-up" data-aos-delay="100")
+						.swiper-wrapper
+							.swiper-slide
+								.card.card-blog
+									.card-photo.img-cover.zoom-photo
+										a(href="blog-single.html")
+											img(src="./images/news/1.jpg" alt="Новинка від ТМ “Рибак” — сало в банках — це неймовірно смачно та зручно")
+									.card-meta
+										h4.title.text-sm
+											a(href="blog-single.html") Новинка від ТМ “Рибак” — сало в банках — це неймовірно смачно та зручно
+										p.descr Обирайте: сало по-домашньому чи пряне. Або куштуйте обидва. Ідеально смакують з хлібом та цибулькою.
+							.swiper-slide
+								.card.card-blog
+									.card-photo.img-cover.zoom-photo
+										a(href="blog-single.html")
+											img(src="./images/news/2.jpg" alt="Запрошуємо комунікабельних продавців та досвідчених водіїв-експедиторів")
+									.card-meta
+										h4.title.text-sm
+											a(href="blog-single.html") Запрошуємо комунікабельних продавців та досвідчених водіїв-експедиторів
+										p.descr Хочете стати частиною нашої великої та дружньої команди? Запрошуємо комунікабельних продавців та досвідчених водіїв-експедиторів!
+							.swiper-slide
+								.card.card-blog
+									.card-photo.img-cover.zoom-photo
+										a(href="blog-single.html")
+											img(src="./images/news/3.jpg" alt="Даруємо 2 кг шашлику, щоб ви могли насолодитись вихідними з сім'єю чи друзями!")
+									.card-meta
+										h4.title.text-sm
+											a(href="blog-single.html") Даруємо 2 кг шашлику, щоб ви могли насолодитись вихідними з сім'єю чи друзями!
+										p.descr Ніжне соковите м'яско, що просто тане у роті — зізнавайтесь, захотіли скуштувати? Результати розіграшу — 31.05.
+							.swiper-slide
+								.card.card-blog
+									.card-photo.img-cover.zoom-photo
+										a(href="blog-single.html")
+											img(src="./images/news/1.jpg" alt="Новинка від ТМ “Рибак” — сало в банках — це неймовірно смачно та зручно")
+									.card-meta
+										h4.title.text-sm
+											a(href="blog-single.html") Новинка від ТМ “Рибак” — сало в банках — це неймовірно смачно та зручно
+										p.descr Обирайте: сало по-домашньому чи пряне. Або куштуйте обидва. Ідеально смакують з хлібом та цибулькою.
+						+e.other-pagination.swiper-pagination.mt-48
